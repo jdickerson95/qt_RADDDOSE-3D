@@ -1,0 +1,10 @@
+release/main.o
+release/mainwindow.o
+release/crystaladvanced.o
+release/runwindow.o
+release/inputedit.o
+release/qrc_logos.o
+release/moc_mainwindow.o
+release/moc_crystaladvanced.o
+release/moc_runwindow.o
+release/moc_inputedit.o

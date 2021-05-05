@@ -1,0 +1,10 @@
+debug/main.o
+debug/mainwindow.o
+debug/crystaladvanced.o
+debug/runwindow.o
+debug/inputedit.o
+debug/qrc_logos.o
+debug/moc_mainwindow.o
+debug/moc_crystaladvanced.o
+debug/moc_runwindow.o
+debug/moc_inputedit.o
