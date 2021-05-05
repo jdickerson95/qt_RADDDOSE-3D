@@ -11,7 +11,7 @@ CrystalAdvanced::CrystalAdvanced(QWidget *parent) :
     ui(new Ui::CrystalAdvanced)
 {
     ui->setupUi(this);
-    this->setFixedSize(this->size().width(), this->size().height());
+    //this->setFixedSize(this->size().width(), this->size().height());
     QPalette *palette = new QPalette();
     ui->label_containerDensity->setVisible(false);
     ui->label_containerThickness->setVisible(false);
@@ -45,7 +45,8 @@ CrystalAdvanced::CrystalAdvanced(QWidget *parent) :
         ui->label_polarisation4->setVisible(false);
         ui->comboBox_polarisation->setVisible(false);
     }
-    ui->label_SurrConc->setVisible(false);
+
+   // ui->label_SurrConc->setVisible(false);
 
     ui->label_Density->setVisible(false);
     ui->lineEdit_Density->setVisible(false);
@@ -219,16 +220,18 @@ void CrystalAdvanced::on_comboBox_Density_activated(const QString &arg1)
     if (arg1_upper=="Yes" || arg1_upper=="YES"){
         ui->comboBox_Density->setCurrentText("Yes");
         ui->label_SurrEl->setVisible(true);
+        ui->label_SurrEl->setText("Surrounding Elements");
         ui->label_Density->setVisible(true);
         ui->lineEdit_Density->setVisible(true);
-        ui->label_SurrConc->setVisible(false);
+      //  ui->label_SurrConc->setVisible(false);
     }
     else if (arg1_upper=="No" || arg1_upper=="NO"){
         ui->comboBox_Density->setCurrentText("No");
-        ui->label_SurrEl->setVisible(false);
+        ui->label_SurrEl->setVisible(true);
+        ui->label_SurrEl->setText("Surrounding Concentration");
         ui->label_Density->setVisible(false);
         ui->lineEdit_Density->setVisible(false);
-        ui->label_SurrConc->setVisible(true);
+     //   ui->label_SurrConc->setVisible(true);
     }
 }
 

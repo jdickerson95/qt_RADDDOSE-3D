@@ -15,6 +15,8 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QFormLayout>
+#include <QtWidgets/QGridLayout>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
@@ -22,10 +24,12 @@
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QScrollArea>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QToolBar>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -40,145 +44,8 @@ public:
     QAction *actionUser_guide;
     QAction *actionOpen_2;
     QWidget *centralWidget;
-    QTabWidget *tabWidget;
-    QWidget *tabCrystal;
-    QWidget *formLayoutWidget;
-    QFormLayout *formLayout_CType;
-    QLabel *label_Type;
-    QComboBox *comboBox;
-    QLabel *label_Dims;
-    QLabel *label_X;
-    QLineEdit *lineEdit_X;
-    QLabel *label_Y;
-    QLineEdit *lineEdit_Y;
-    QLabel *label_Z;
-    QLineEdit *lineEdit_Z;
-    QLabel *label_X_2;
-    QLabel *label_Y_2;
-    QLabel *label_Modelfile;
-    QLineEdit *lineEdit_modelfile;
-    QPushButton *pushButton_browsemodel;
-    QLabel *label_ppm;
-    QLineEdit *lineEdit_ppm;
-    QLabel *label_AbsCoef;
-    QComboBox *comboBox_AbsCoef;
-    QLabel *label_UnitCell;
-    QLabel *label_Monomers;
-    QLabel *label_Residues;
-    QLineEdit *lineEdit_Monomers;
-    QLineEdit *lineEdit_Residues;
-    QLabel *label_heavyProt;
-    QLineEdit *lineEdit_ElheavyProt;
-    QLineEdit *lineEdit_a;
-    QLineEdit *lineEdit_b;
-    QLineEdit *lineEdit_c;
-    QLabel *label_c;
-    QLabel *label_b;
-    QLabel *label_a;
-    QLineEdit *lineEdit_alpha;
-    QLabel *label_gamma;
-    QLabel *label_alpha;
-    QLineEdit *lineEdit_beta;
-    QLabel *label_beta;
-    QLineEdit *lineEdit_gamma;
-    QTextEdit *textEdit_heavyProt;
-    QPushButton *pushButton_heavyProt;
-    QLabel *label_heavyEl;
-    QLabel *label_heavyNum;
-    QLineEdit *lineEdit_ElheavyProt_2;
-    QLabel *label_heavyTitle;
-    QTextEdit *textEdit_solventConc;
-    QLabel *label_solventConc;
-    QLineEdit *lineEdit_Elconc;
-    QLabel *label_Solvent;
-    QLabel *label_solventTitle;
-    QPushButton *pushButton_solventConc;
-    QLabel *label_solventEl;
-    QLineEdit *lineEdit_Elsolvent;
-    QLabel *label_SolventFr;
-    QLineEdit *lineEdit_solventFr;
-    QLabel *label_Nucleotides;
-    QLabel *label_DNA;
-    QLineEdit *lineEdit_DNA;
-    QLabel *label_RNA;
-    QLineEdit *lineEdit_RNA;
-    QLabel *label_PDB;
-    QLineEdit *lineEdit_PDB;
-    QLabel *label_fasta;
-    QLineEdit *lineEdit_fasta;
-    QPushButton *pushButton_browseFasta;
-    QLabel *label_carb;
-    QLineEdit *lineEdit_carb;
-    QLabel *label_pConc;
-    QLineEdit *lineEdit_pConc;
-    QLabel *label_SmallMole;
-    QLabel *label_atomList;
-    QLabel *label_CIF;
-    QLineEdit *lineEdit_CIF;
-    QPushButton *pushButton_CIF;
-    QPushButton *pushButton_crystalAdvanced;
-    QWidget *tabBeam;
-    QLabel *label_beamType;
-    QComboBox *comboBox_beamType;
-    QLabel *label_FWHM;
-    QLabel *label_Collimation;
-    QLabel *label_collType;
-    QLabel *label_collDims;
-    QComboBox *comboBox_collType;
-    QLabel *label_collX;
-    QLabel *label_collY;
-    QLineEdit *lineEdit_collX;
-    QLineEdit *lineEdit_collY;
-    QLabel *label_beamFile;
-    QLineEdit *lineEdit_beamFile;
-    QPushButton *pushButton_beamFile;
-    QLineEdit *lineEdit_pxSizeX;
-    QLabel *label_pxSize;
-    QLabel *label_flux;
-    QLineEdit *lineEdit_flux;
-    QLabel *label_pulseEn;
-    QLineEdit *lineEdit_pulseEn;
-    QLabel *label_beamEn;
-    QLineEdit *lineEdit_beamEn;
-    QLabel *label_beamEnFWHM;
-    QLineEdit *lineEdit_beamEnFWHM;
-    QLabel *label_monochrome;
-    QComboBox *comboBox_monochrome;
-    QLineEdit *lineEdit_pxSizeY;
-    QLabel *label_pxX;
-    QLabel *label_pxY;
-    QLineEdit *lineEdit_FWHMY;
-    QLabel *label_FWHMX;
-    QLineEdit *lineEdit_FWHMX;
-    QLabel *label_FWHMY;
-    QWidget *tabWedge;
-    QLabel *label_startAngle;
-    QLineEdit *lineEdit_startAngle;
-    QLabel *label_endAngle;
-    QLineEdit *lineEdit_endAngle;
-    QLabel *label_expTime;
-    QLabel *label_pulseLength;
-    QLineEdit *lineEdit_exposureTime;
-    QLabel *label_angleRes;
-    QLineEdit *lineEdit_angleRes;
-    QLabel *label_startOffset;
-    QLineEdit *lineEdit_offsetX;
-    QLabel *label_offsetX;
-    QLabel *label_offsetY;
-    QLineEdit *lineEdit_offsetY;
-    QLabel *label_offsetZ;
-    QLineEdit *lineEdit_offsetZ;
-    QLabel *label_tns;
-    QLabel *label_rotOffset;
-    QLineEdit *lineEdit_rotOffset;
-    QLineEdit *lineEdit_tnsX;
-    QLineEdit *lineEdit_tnsY;
-    QLabel *label_tnsZ;
-    QLabel *label_tnsX;
-    QLabel *label_tnsY;
-    QLineEdit *lineEdit_tnsZ;
+    QGridLayout *gridLayout;
     QLabel *label_logo;
-    QPushButton *pushButton_run;
     QLabel *label_SubProgram;
     QComboBox *comboBox_subprogram;
     QLabel *label_photons;
@@ -186,6 +53,188 @@ public:
     QLabel *label_runs;
     QLineEdit *lineEdit_runs;
     QPushButton *pushButton_manualEdit;
+    QPushButton *pushButton_run;
+    QTabWidget *tabWidget;
+    QWidget *tabCrystal;
+    QGridLayout *gridLayout_3;
+    QScrollArea *scrollArea;
+    QWidget *scrollAreaWidgetContents_2;
+    QVBoxLayout *verticalLayout;
+    QFormLayout *formLayout;
+    QLabel *label_Type;
+    QComboBox *comboBox;
+    QHBoxLayout *horizontalLayout_2;
+    QLabel *label_Dims;
+    QLabel *label_X;
+    QLineEdit *lineEdit_X;
+    QLabel *label_Y;
+    QLineEdit *lineEdit_Y;
+    QLabel *label_Z;
+    QLineEdit *lineEdit_Z;
+    QHBoxLayout *horizontalLayout_4;
+    QLabel *label_Modelfile;
+    QLineEdit *lineEdit_modelfile;
+    QPushButton *pushButton_browsemodel;
+    QHBoxLayout *horizontalLayout_5;
+    QLabel *label_ppm;
+    QLineEdit *lineEdit_ppm;
+    QHBoxLayout *horizontalLayout_6;
+    QLabel *label_AbsCoef;
+    QComboBox *comboBox_AbsCoef;
+    QHBoxLayout *horizontalLayout_7;
+    QLabel *label_PDB;
+    QLineEdit *lineEdit_PDB;
+    QHBoxLayout *horizontalLayout_8;
+    QLabel *label_UnitCell;
+    QLabel *label_a;
+    QLineEdit *lineEdit_a;
+    QLabel *label_b;
+    QLineEdit *lineEdit_b;
+    QLabel *label_c;
+    QLineEdit *lineEdit_c;
+    QLabel *label_alpha;
+    QLineEdit *lineEdit_alpha;
+    QLabel *label_beta;
+    QLineEdit *lineEdit_beta;
+    QLabel *label_gamma;
+    QLineEdit *lineEdit_gamma;
+    QHBoxLayout *horizontalLayout_9;
+    QLabel *label_CIF;
+    QLineEdit *lineEdit_CIF;
+    QPushButton *pushButton_CIF;
+    QHBoxLayout *horizontalLayout_10;
+    QLabel *label_pConc;
+    QLineEdit *lineEdit_pConc;
+    QHBoxLayout *horizontalLayout_11;
+    QLabel *label_Monomers;
+    QLineEdit *lineEdit_Monomers;
+    QHBoxLayout *horizontalLayout_12;
+    QLabel *label_Residues;
+    QLineEdit *lineEdit_Residues;
+    QHBoxLayout *horizontalLayout_13;
+    QLabel *label_fasta;
+    QLineEdit *lineEdit_fasta;
+    QPushButton *pushButton_browseFasta;
+    QHBoxLayout *horizontalLayout_14;
+    QLabel *label_heavyProt;
+    QVBoxLayout *verticalLayout_3;
+    QFormLayout *formLayout_3;
+    QLineEdit *lineEdit_ElheavyProt;
+    QLabel *label_heavyEl;
+    QLineEdit *lineEdit_ElheavyProt_2;
+    QLabel *label_heavyNum;
+    QPushButton *pushButton_heavyProt;
+    QLabel *label_heavyTitle;
+    QTextEdit *textEdit_heavyProt;
+    QHBoxLayout *horizontalLayout_16;
+    QLabel *label_Solvent;
+    QVBoxLayout *verticalLayout_4;
+    QFormLayout *formLayout_4;
+    QLabel *label_solventEl;
+    QLineEdit *lineEdit_Elsolvent;
+    QLabel *label_solventConc;
+    QLineEdit *lineEdit_Elconc;
+    QPushButton *pushButton_solventConc;
+    QLabel *label_solventTitle;
+    QTextEdit *textEdit_solventConc;
+    QHBoxLayout *horizontalLayout_17;
+    QLabel *label_SolventFr;
+    QLineEdit *lineEdit_solventFr;
+    QHBoxLayout *horizontalLayout_18;
+    QLabel *label_Nucleotides;
+    QLabel *label_DNA;
+    QLineEdit *lineEdit_DNA;
+    QLabel *label_RNA;
+    QLineEdit *lineEdit_RNA;
+    QHBoxLayout *horizontalLayout_19;
+    QLabel *label_carb;
+    QLineEdit *lineEdit_carb;
+    QPushButton *pushButton_crystalAdvanced;
+    QWidget *tabBeam;
+    QGridLayout *gridLayout_2;
+    QScrollArea *scrollArea_2;
+    QWidget *scrollAreaWidgetContents;
+    QVBoxLayout *verticalLayout_2;
+    QHBoxLayout *horizontalLayout;
+    QLabel *label_beamType;
+    QComboBox *comboBox_beamType;
+    QHBoxLayout *horizontalLayout_3;
+    QLabel *label_beamFile;
+    QLineEdit *lineEdit_beamFile;
+    QPushButton *pushButton_beamFile;
+    QHBoxLayout *horizontalLayout_15;
+    QLabel *label_FWHM;
+    QLabel *label_FWHMX;
+    QLineEdit *lineEdit_FWHMX;
+    QLabel *label_FWHMY;
+    QLineEdit *lineEdit_FWHMY;
+    QHBoxLayout *horizontalLayout_24;
+    QLabel *label_pxSize;
+    QLabel *label_pxX;
+    QLineEdit *lineEdit_pxSizeX;
+    QLabel *label_pxY;
+    QLineEdit *lineEdit_pxSizeY;
+    QHBoxLayout *horizontalLayout_20;
+    QLabel *label_Collimation;
+    QVBoxLayout *verticalLayout_5;
+    QHBoxLayout *horizontalLayout_22;
+    QLabel *label_collType;
+    QComboBox *comboBox_collType;
+    QHBoxLayout *horizontalLayout_23;
+    QLabel *label_collDims;
+    QLabel *label_collX;
+    QLineEdit *lineEdit_collX;
+    QLabel *label_collY;
+    QLineEdit *lineEdit_collY;
+    QHBoxLayout *horizontalLayout_25;
+    QLabel *label_pulseEn;
+    QLineEdit *lineEdit_pulseEn;
+    QHBoxLayout *horizontalLayout_26;
+    QLabel *label_flux;
+    QLineEdit *lineEdit_flux;
+    QHBoxLayout *horizontalLayout_27;
+    QLabel *label_beamEn;
+    QLineEdit *lineEdit_beamEn;
+    QFormLayout *formLayout_6;
+    QLabel *label_monochrome;
+    QComboBox *comboBox_monochrome;
+    QLabel *label_beamEnFWHM;
+    QLineEdit *lineEdit_beamEnFWHM;
+    QWidget *tabWedge;
+    QGridLayout *gridLayout_4;
+    QScrollArea *scrollArea_3;
+    QWidget *scrollAreaWidgetContents_3;
+    QVBoxLayout *verticalLayout_6;
+    QHBoxLayout *horizontalLayout_28;
+    QLabel *label_startAngle;
+    QLineEdit *lineEdit_startAngle;
+    QLabel *label_endAngle;
+    QLineEdit *lineEdit_endAngle;
+    QFormLayout *formLayout_7;
+    QLabel *label_expTime;
+    QLineEdit *lineEdit_exposureTime;
+    QLabel *label_angleRes;
+    QLineEdit *lineEdit_angleRes;
+    QHBoxLayout *horizontalLayout_29;
+    QLabel *label_startOffset;
+    QLabel *label_offsetX;
+    QLineEdit *lineEdit_offsetX;
+    QLabel *label_offsetY;
+    QLineEdit *lineEdit_offsetY;
+    QLabel *label_offsetZ;
+    QLineEdit *lineEdit_offsetZ;
+    QHBoxLayout *horizontalLayout_30;
+    QLabel *label_tns;
+    QLabel *label_tnsX;
+    QLineEdit *lineEdit_tnsX;
+    QLabel *label_tnsY;
+    QLineEdit *lineEdit_tnsY;
+    QLabel *label_tnsZ;
+    QLineEdit *lineEdit_tnsZ;
+    QHBoxLayout *horizontalLayout_32;
+    QLabel *label_rotOffset;
+    QLineEdit *lineEdit_rotOffset;
+    QLabel *label_pulseLength;
     QMenuBar *menuBar;
     QMenu *menuFile;
     QToolBar *mainToolBar;
@@ -195,7 +244,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(620, 944);
+        MainWindow->resize(480, 739);
         QPalette palette;
         QBrush brush(QColor(255, 255, 255, 255));
         brush.setStyle(Qt::SolidPattern);
@@ -391,9 +440,24 @@ public:
 "#centralWidget{\n"
 "background: #025;\n"
 "}\n"
+"QScrollArea{\n"
+"backgroun"
+                        "d: #025;\n"
+"}\n"
 "\n"
-"QComboBox QAbstractIt"
-                        "emView {\n"
+"#scrollAreaWidgetContents_3{\n"
+"background: #025;\n"
+"}\n"
+"\n"
+"#scrollAreaWidgetContents_2{\n"
+"background: #025;\n"
+"}\n"
+"\n"
+"#scrollAreaWidgetContents{\n"
+"background: #025;\n"
+"}\n"
+"\n"
+"QComboBox QAbstractItemView {\n"
 "background: #025;\n"
 "}\n"
 "\n"
@@ -441,7 +505,8 @@ public:
 "    margin-top: 3px;\n"
 "}\n"
 "\n"
-"QTabBar::tab:bottom:!selected {\n"
+"QTabBar::tab:bott"
+                        "om:!selected {\n"
 "    margin-bottom: 3px;\n"
 "}\n"
 "\n"
@@ -452,8 +517,7 @@ public:
 "}\n"
 "\n"
 "QTabBar::tab:top:selected {\n"
-"    bord"
-                        "er-bottom-color: none;\n"
+"    border-bottom-color: none;\n"
 "}\n"
 "\n"
 "QTabBar::tab:bottom:selected {\n"
@@ -488,70 +552,53 @@ public:
 "}\n"
 "\n"
 "QTabBar::tab:left:last, QTabBar::tab:right:last,\n"
-"QTabBar::tab:left:only-one, QTabBar::tab:right:only-one {\n"
+"QTabBar::tab:left:o"
+                        "nly-one, QTabBar::tab:right:only-one {\n"
 "    margin-bottom: 0;\n"
 "}\n"
 ""));
-        tabWidget = new QTabWidget(centralWidget);
-        tabWidget->setObjectName(QStringLiteral("tabWidget"));
-        tabWidget->setGeometry(QRect(20, 250, 581, 561));
-        tabWidget->setStyleSheet(QStringLiteral(""));
-        tabCrystal = new QWidget();
-        tabCrystal->setObjectName(QStringLiteral("tabCrystal"));
-        formLayoutWidget = new QWidget(tabCrystal);
-        formLayoutWidget->setObjectName(QStringLiteral("formLayoutWidget"));
-        formLayoutWidget->setGeometry(QRect(10, 10, 561, 31));
-        formLayout_CType = new QFormLayout(formLayoutWidget);
-        formLayout_CType->setSpacing(6);
-        formLayout_CType->setContentsMargins(11, 11, 11, 11);
-        formLayout_CType->setObjectName(QStringLiteral("formLayout_CType"));
-        formLayout_CType->setContentsMargins(0, 0, 0, 0);
-        label_Type = new QLabel(formLayoutWidget);
-        label_Type->setObjectName(QStringLiteral("label_Type"));
+        gridLayout = new QGridLayout(centralWidget);
+        gridLayout->setSpacing(6);
+        gridLayout->setContentsMargins(11, 11, 11, 11);
+        gridLayout->setObjectName(QStringLiteral("gridLayout"));
+        label_logo = new QLabel(centralWidget);
+        label_logo->setObjectName(QStringLiteral("label_logo"));
+        label_logo->setPixmap(QPixmap(QString::fromUtf8(":/new/prefix1/raddoseLogo.png")));
 
-        formLayout_CType->setWidget(0, QFormLayout::LabelRole, label_Type);
+        gridLayout->addWidget(label_logo, 0, 0, 1, 2);
 
-        comboBox = new QComboBox(formLayoutWidget);
-        comboBox->setObjectName(QStringLiteral("comboBox"));
+        label_SubProgram = new QLabel(centralWidget);
+        label_SubProgram->setObjectName(QStringLiteral("label_SubProgram"));
 
-        formLayout_CType->setWidget(0, QFormLayout::FieldRole, comboBox);
+        gridLayout->addWidget(label_SubProgram, 1, 0, 1, 1);
 
-        label_Dims = new QLabel(tabCrystal);
-        label_Dims->setObjectName(QStringLiteral("label_Dims"));
-        label_Dims->setGeometry(QRect(10, 40, 70, 21));
-        label_X = new QLabel(tabCrystal);
-        label_X->setObjectName(QStringLiteral("label_X"));
-        label_X->setGeometry(QRect(90, 40, 20, 21));
-        lineEdit_X = new QLineEdit(tabCrystal);
-        lineEdit_X->setObjectName(QStringLiteral("lineEdit_X"));
-        lineEdit_X->setGeometry(QRect(110, 40, 131, 23));
-        label_Y = new QLabel(tabCrystal);
-        label_Y->setObjectName(QStringLiteral("label_Y"));
-        label_Y->setGeometry(QRect(250, 40, 20, 20));
-        lineEdit_Y = new QLineEdit(tabCrystal);
-        lineEdit_Y->setObjectName(QStringLiteral("lineEdit_Y"));
-        lineEdit_Y->setGeometry(QRect(270, 40, 121, 23));
-        label_Z = new QLabel(tabCrystal);
-        label_Z->setObjectName(QStringLiteral("label_Z"));
-        label_Z->setGeometry(QRect(410, 40, 20, 20));
-        lineEdit_Z = new QLineEdit(tabCrystal);
-        lineEdit_Z->setObjectName(QStringLiteral("lineEdit_Z"));
-        lineEdit_Z->setGeometry(QRect(440, 40, 131, 23));
-        label_X_2 = new QLabel(tabCrystal);
-        label_X_2->setObjectName(QStringLiteral("label_X_2"));
-        label_X_2->setGeometry(QRect(90, 40, 20, 20));
-        label_Y_2 = new QLabel(tabCrystal);
-        label_Y_2->setObjectName(QStringLiteral("label_Y_2"));
-        label_Y_2->setGeometry(QRect(250, 40, 20, 21));
-        label_Modelfile = new QLabel(tabCrystal);
-        label_Modelfile->setObjectName(QStringLiteral("label_Modelfile"));
-        label_Modelfile->setGeometry(QRect(10, 40, 70, 21));
-        lineEdit_modelfile = new QLineEdit(tabCrystal);
-        lineEdit_modelfile->setObjectName(QStringLiteral("lineEdit_modelfile"));
-        lineEdit_modelfile->setGeometry(QRect(110, 40, 371, 23));
-        pushButton_browsemodel = new QPushButton(tabCrystal);
-        pushButton_browsemodel->setObjectName(QStringLiteral("pushButton_browsemodel"));
-        pushButton_browsemodel->setGeometry(QRect(490, 40, 80, 23));
+        comboBox_subprogram = new QComboBox(centralWidget);
+        comboBox_subprogram->setObjectName(QStringLiteral("comboBox_subprogram"));
+
+        gridLayout->addWidget(comboBox_subprogram, 1, 1, 1, 1);
+
+        label_photons = new QLabel(centralWidget);
+        label_photons->setObjectName(QStringLiteral("label_photons"));
+
+        gridLayout->addWidget(label_photons, 2, 0, 1, 1);
+
+        lineEdit_photons = new QLineEdit(centralWidget);
+        lineEdit_photons->setObjectName(QStringLiteral("lineEdit_photons"));
+
+        gridLayout->addWidget(lineEdit_photons, 2, 1, 1, 1);
+
+        label_runs = new QLabel(centralWidget);
+        label_runs->setObjectName(QStringLiteral("label_runs"));
+
+        gridLayout->addWidget(label_runs, 3, 0, 1, 1);
+
+        lineEdit_runs = new QLineEdit(centralWidget);
+        lineEdit_runs->setObjectName(QStringLiteral("lineEdit_runs"));
+
+        gridLayout->addWidget(lineEdit_runs, 3, 1, 1, 1);
+
+        pushButton_manualEdit = new QPushButton(centralWidget);
+        pushButton_manualEdit->setObjectName(QStringLiteral("pushButton_manualEdit"));
         QPalette palette2;
         palette2.setBrush(QPalette::Active, QPalette::WindowText, brush6);
         QLinearGradient gradient(0, 0, 0, 1);
@@ -689,85 +736,12 @@ public:
         palette2.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush23);
         palette2.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush8);
         palette2.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush6);
-        pushButton_browsemodel->setPalette(palette2);
-        label_ppm = new QLabel(tabCrystal);
-        label_ppm->setObjectName(QStringLiteral("label_ppm"));
-        label_ppm->setGeometry(QRect(10, 70, 111, 16));
-        lineEdit_ppm = new QLineEdit(tabCrystal);
-        lineEdit_ppm->setObjectName(QStringLiteral("lineEdit_ppm"));
-        lineEdit_ppm->setGeometry(QRect(120, 70, 451, 23));
-        label_AbsCoef = new QLabel(tabCrystal);
-        label_AbsCoef->setObjectName(QStringLiteral("label_AbsCoef"));
-        label_AbsCoef->setGeometry(QRect(10, 100, 81, 16));
-        comboBox_AbsCoef = new QComboBox(tabCrystal);
-        comboBox_AbsCoef->setObjectName(QStringLiteral("comboBox_AbsCoef"));
-        comboBox_AbsCoef->setGeometry(QRect(90, 100, 481, 23));
-        label_UnitCell = new QLabel(tabCrystal);
-        label_UnitCell->setObjectName(QStringLiteral("label_UnitCell"));
-        label_UnitCell->setGeometry(QRect(10, 130, 81, 16));
-        label_Monomers = new QLabel(tabCrystal);
-        label_Monomers->setObjectName(QStringLiteral("label_Monomers"));
-        label_Monomers->setGeometry(QRect(10, 160, 91, 16));
-        label_Residues = new QLabel(tabCrystal);
-        label_Residues->setObjectName(QStringLiteral("label_Residues"));
-        label_Residues->setGeometry(QRect(10, 190, 171, 16));
-#ifndef QT_NO_TOOLTIP
-        label_Residues->setToolTip(QStringLiteral("<html><head/><body><p>The number of amino acid residues per monomer</p></body></html>"));
-#endif // QT_NO_TOOLTIP
-        lineEdit_Monomers = new QLineEdit(tabCrystal);
-        lineEdit_Monomers->setObjectName(QStringLiteral("lineEdit_Monomers"));
-        lineEdit_Monomers->setGeometry(QRect(100, 160, 471, 23));
-        lineEdit_Residues = new QLineEdit(tabCrystal);
-        lineEdit_Residues->setObjectName(QStringLiteral("lineEdit_Residues"));
-        lineEdit_Residues->setGeometry(QRect(180, 190, 391, 23));
-        label_heavyProt = new QLabel(tabCrystal);
-        label_heavyProt->setObjectName(QStringLiteral("label_heavyProt"));
-        label_heavyProt->setGeometry(QRect(10, 250, 171, 16));
-        lineEdit_ElheavyProt = new QLineEdit(tabCrystal);
-        lineEdit_ElheavyProt->setObjectName(QStringLiteral("lineEdit_ElheavyProt"));
-        lineEdit_ElheavyProt->setGeometry(QRect(300, 230, 41, 23));
-        lineEdit_a = new QLineEdit(tabCrystal);
-        lineEdit_a->setObjectName(QStringLiteral("lineEdit_a"));
-        lineEdit_a->setGeometry(QRect(120, 130, 51, 21));
-        lineEdit_b = new QLineEdit(tabCrystal);
-        lineEdit_b->setObjectName(QStringLiteral("lineEdit_b"));
-        lineEdit_b->setGeometry(QRect(200, 130, 51, 23));
-        lineEdit_c = new QLineEdit(tabCrystal);
-        lineEdit_c->setObjectName(QStringLiteral("lineEdit_c"));
-        lineEdit_c->setGeometry(QRect(280, 130, 51, 23));
-        label_c = new QLabel(tabCrystal);
-        label_c->setObjectName(QStringLiteral("label_c"));
-        label_c->setGeometry(QRect(260, 130, 20, 20));
-        label_b = new QLabel(tabCrystal);
-        label_b->setObjectName(QStringLiteral("label_b"));
-        label_b->setGeometry(QRect(180, 130, 20, 20));
-        label_a = new QLabel(tabCrystal);
-        label_a->setObjectName(QStringLiteral("label_a"));
-        label_a->setGeometry(QRect(100, 130, 20, 21));
-        lineEdit_alpha = new QLineEdit(tabCrystal);
-        lineEdit_alpha->setObjectName(QStringLiteral("lineEdit_alpha"));
-        lineEdit_alpha->setGeometry(QRect(360, 130, 51, 23));
-        label_gamma = new QLabel(tabCrystal);
-        label_gamma->setObjectName(QStringLiteral("label_gamma"));
-        label_gamma->setGeometry(QRect(500, 130, 20, 20));
-        label_alpha = new QLabel(tabCrystal);
-        label_alpha->setObjectName(QStringLiteral("label_alpha"));
-        label_alpha->setGeometry(QRect(340, 130, 20, 21));
-        lineEdit_beta = new QLineEdit(tabCrystal);
-        lineEdit_beta->setObjectName(QStringLiteral("lineEdit_beta"));
-        lineEdit_beta->setGeometry(QRect(440, 130, 51, 23));
-        label_beta = new QLabel(tabCrystal);
-        label_beta->setObjectName(QStringLiteral("label_beta"));
-        label_beta->setGeometry(QRect(420, 130, 20, 20));
-        lineEdit_gamma = new QLineEdit(tabCrystal);
-        lineEdit_gamma->setObjectName(QStringLiteral("lineEdit_gamma"));
-        lineEdit_gamma->setGeometry(QRect(520, 130, 51, 23));
-        textEdit_heavyProt = new QTextEdit(tabCrystal);
-        textEdit_heavyProt->setObjectName(QStringLiteral("textEdit_heavyProt"));
-        textEdit_heavyProt->setGeometry(QRect(450, 240, 121, 61));
-        pushButton_heavyProt = new QPushButton(tabCrystal);
-        pushButton_heavyProt->setObjectName(QStringLiteral("pushButton_heavyProt"));
-        pushButton_heavyProt->setGeometry(QRect(350, 230, 91, 71));
+        pushButton_manualEdit->setPalette(palette2);
+
+        gridLayout->addWidget(pushButton_manualEdit, 5, 0, 1, 2);
+
+        pushButton_run = new QPushButton(centralWidget);
+        pushButton_run->setObjectName(QStringLiteral("pushButton_run"));
         QPalette palette3;
         palette3.setBrush(QPalette::Active, QPalette::WindowText, brush6);
         QLinearGradient gradient9(0, 0, 0, 1);
@@ -895,39 +869,128 @@ public:
         palette3.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush23);
         palette3.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush8);
         palette3.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush6);
-        pushButton_heavyProt->setPalette(palette3);
-        label_heavyEl = new QLabel(tabCrystal);
-        label_heavyEl->setObjectName(QStringLiteral("label_heavyEl"));
-        label_heavyEl->setGeometry(QRect(190, 230, 111, 16));
-        label_heavyNum = new QLabel(tabCrystal);
-        label_heavyNum->setObjectName(QStringLiteral("label_heavyNum"));
-        label_heavyNum->setGeometry(QRect(240, 270, 51, 16));
-        lineEdit_ElheavyProt_2 = new QLineEdit(tabCrystal);
-        lineEdit_ElheavyProt_2->setObjectName(QStringLiteral("lineEdit_ElheavyProt_2"));
-        lineEdit_ElheavyProt_2->setGeometry(QRect(300, 270, 41, 23));
-        label_heavyTitle = new QLabel(tabCrystal);
-        label_heavyTitle->setObjectName(QStringLiteral("label_heavyTitle"));
-        label_heavyTitle->setGeometry(QRect(460, 220, 111, 16));
-        textEdit_solventConc = new QTextEdit(tabCrystal);
-        textEdit_solventConc->setObjectName(QStringLiteral("textEdit_solventConc"));
-        textEdit_solventConc->setGeometry(QRect(450, 320, 121, 61));
-        label_solventConc = new QLabel(tabCrystal);
-        label_solventConc->setObjectName(QStringLiteral("label_solventConc"));
-        label_solventConc->setGeometry(QRect(200, 350, 91, 16));
-        lineEdit_Elconc = new QLineEdit(tabCrystal);
-        lineEdit_Elconc->setObjectName(QStringLiteral("lineEdit_Elconc"));
-        lineEdit_Elconc->setGeometry(QRect(300, 350, 41, 23));
-        label_Solvent = new QLabel(tabCrystal);
-        label_Solvent->setObjectName(QStringLiteral("label_Solvent"));
-        label_Solvent->setGeometry(QRect(10, 330, 171, 16));
-        label_solventTitle = new QLabel(tabCrystal);
-        label_solventTitle->setObjectName(QStringLiteral("label_solventTitle"));
-        label_solventTitle->setGeometry(QRect(460, 300, 111, 16));
-        pushButton_solventConc = new QPushButton(tabCrystal);
-        pushButton_solventConc->setObjectName(QStringLiteral("pushButton_solventConc"));
-        pushButton_solventConc->setGeometry(QRect(350, 310, 91, 71));
+        pushButton_run->setPalette(palette3);
+
+        gridLayout->addWidget(pushButton_run, 6, 0, 1, 2);
+
+        tabWidget = new QTabWidget(centralWidget);
+        tabWidget->setObjectName(QStringLiteral("tabWidget"));
+        tabWidget->setStyleSheet(QStringLiteral(""));
+        tabCrystal = new QWidget();
+        tabCrystal->setObjectName(QStringLiteral("tabCrystal"));
+        gridLayout_3 = new QGridLayout(tabCrystal);
+        gridLayout_3->setSpacing(6);
+        gridLayout_3->setContentsMargins(11, 11, 11, 11);
+        gridLayout_3->setObjectName(QStringLiteral("gridLayout_3"));
+        scrollArea = new QScrollArea(tabCrystal);
+        scrollArea->setObjectName(QStringLiteral("scrollArea"));
         QPalette palette4;
-        palette4.setBrush(QPalette::Active, QPalette::WindowText, brush6);
+        palette4.setBrush(QPalette::Active, QPalette::Button, brush9);
+        palette4.setBrush(QPalette::Active, QPalette::Base, brush9);
+        palette4.setBrush(QPalette::Active, QPalette::Window, brush9);
+        palette4.setBrush(QPalette::Inactive, QPalette::Button, brush9);
+        palette4.setBrush(QPalette::Inactive, QPalette::Base, brush9);
+        palette4.setBrush(QPalette::Inactive, QPalette::Window, brush9);
+        palette4.setBrush(QPalette::Disabled, QPalette::Button, brush9);
+        palette4.setBrush(QPalette::Disabled, QPalette::Base, brush9);
+        palette4.setBrush(QPalette::Disabled, QPalette::Window, brush9);
+        scrollArea->setPalette(palette4);
+        scrollArea->setWidgetResizable(true);
+        scrollAreaWidgetContents_2 = new QWidget();
+        scrollAreaWidgetContents_2->setObjectName(QStringLiteral("scrollAreaWidgetContents_2"));
+        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 428, 914));
+        QPalette palette5;
+        palette5.setBrush(QPalette::Active, QPalette::Button, brush9);
+        palette5.setBrush(QPalette::Active, QPalette::Base, brush9);
+        palette5.setBrush(QPalette::Active, QPalette::Window, brush9);
+        palette5.setBrush(QPalette::Inactive, QPalette::Button, brush9);
+        palette5.setBrush(QPalette::Inactive, QPalette::Base, brush9);
+        palette5.setBrush(QPalette::Inactive, QPalette::Window, brush9);
+        palette5.setBrush(QPalette::Disabled, QPalette::Button, brush9);
+        palette5.setBrush(QPalette::Disabled, QPalette::Base, brush9);
+        palette5.setBrush(QPalette::Disabled, QPalette::Window, brush9);
+        scrollAreaWidgetContents_2->setPalette(palette5);
+        verticalLayout = new QVBoxLayout(scrollAreaWidgetContents_2);
+        verticalLayout->setSpacing(6);
+        verticalLayout->setContentsMargins(11, 11, 11, 11);
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        formLayout = new QFormLayout();
+        formLayout->setSpacing(6);
+        formLayout->setObjectName(QStringLiteral("formLayout"));
+        formLayout->setContentsMargins(-1, -1, -1, 0);
+        label_Type = new QLabel(scrollAreaWidgetContents_2);
+        label_Type->setObjectName(QStringLiteral("label_Type"));
+
+        formLayout->setWidget(0, QFormLayout::LabelRole, label_Type);
+
+        comboBox = new QComboBox(scrollAreaWidgetContents_2);
+        comboBox->setObjectName(QStringLiteral("comboBox"));
+
+        formLayout->setWidget(0, QFormLayout::FieldRole, comboBox);
+
+
+        verticalLayout->addLayout(formLayout);
+
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setSpacing(6);
+        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
+        horizontalLayout_2->setContentsMargins(-1, -1, -1, 0);
+        label_Dims = new QLabel(scrollAreaWidgetContents_2);
+        label_Dims->setObjectName(QStringLiteral("label_Dims"));
+
+        horizontalLayout_2->addWidget(label_Dims);
+
+        label_X = new QLabel(scrollAreaWidgetContents_2);
+        label_X->setObjectName(QStringLiteral("label_X"));
+
+        horizontalLayout_2->addWidget(label_X);
+
+        lineEdit_X = new QLineEdit(scrollAreaWidgetContents_2);
+        lineEdit_X->setObjectName(QStringLiteral("lineEdit_X"));
+
+        horizontalLayout_2->addWidget(lineEdit_X);
+
+        label_Y = new QLabel(scrollAreaWidgetContents_2);
+        label_Y->setObjectName(QStringLiteral("label_Y"));
+
+        horizontalLayout_2->addWidget(label_Y);
+
+        lineEdit_Y = new QLineEdit(scrollAreaWidgetContents_2);
+        lineEdit_Y->setObjectName(QStringLiteral("lineEdit_Y"));
+
+        horizontalLayout_2->addWidget(lineEdit_Y);
+
+        label_Z = new QLabel(scrollAreaWidgetContents_2);
+        label_Z->setObjectName(QStringLiteral("label_Z"));
+
+        horizontalLayout_2->addWidget(label_Z);
+
+        lineEdit_Z = new QLineEdit(scrollAreaWidgetContents_2);
+        lineEdit_Z->setObjectName(QStringLiteral("lineEdit_Z"));
+
+        horizontalLayout_2->addWidget(lineEdit_Z);
+
+
+        verticalLayout->addLayout(horizontalLayout_2);
+
+        horizontalLayout_4 = new QHBoxLayout();
+        horizontalLayout_4->setSpacing(6);
+        horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
+        horizontalLayout_4->setContentsMargins(-1, -1, -1, 0);
+        label_Modelfile = new QLabel(scrollAreaWidgetContents_2);
+        label_Modelfile->setObjectName(QStringLiteral("label_Modelfile"));
+
+        horizontalLayout_4->addWidget(label_Modelfile);
+
+        lineEdit_modelfile = new QLineEdit(scrollAreaWidgetContents_2);
+        lineEdit_modelfile->setObjectName(QStringLiteral("lineEdit_modelfile"));
+
+        horizontalLayout_4->addWidget(lineEdit_modelfile);
+
+        pushButton_browsemodel = new QPushButton(scrollAreaWidgetContents_2);
+        pushButton_browsemodel->setObjectName(QStringLiteral("pushButton_browsemodel"));
+        QPalette palette6;
+        palette6.setBrush(QPalette::Active, QPalette::WindowText, brush6);
         QLinearGradient gradient18(0, 0, 0, 1);
         gradient18.setSpread(QGradient::PadSpread);
         gradient18.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -937,14 +1000,14 @@ public:
         gradient18.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient18.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush33(gradient18);
-        palette4.setBrush(QPalette::Active, QPalette::Button, brush33);
-        palette4.setBrush(QPalette::Active, QPalette::Light, brush11);
-        palette4.setBrush(QPalette::Active, QPalette::Midlight, brush12);
-        palette4.setBrush(QPalette::Active, QPalette::Dark, brush13);
-        palette4.setBrush(QPalette::Active, QPalette::Mid, brush14);
-        palette4.setBrush(QPalette::Active, QPalette::Text, brush6);
-        palette4.setBrush(QPalette::Active, QPalette::BrightText, brush);
-        palette4.setBrush(QPalette::Active, QPalette::ButtonText, brush6);
+        palette6.setBrush(QPalette::Active, QPalette::Button, brush33);
+        palette6.setBrush(QPalette::Active, QPalette::Light, brush11);
+        palette6.setBrush(QPalette::Active, QPalette::Midlight, brush12);
+        palette6.setBrush(QPalette::Active, QPalette::Dark, brush13);
+        palette6.setBrush(QPalette::Active, QPalette::Mid, brush14);
+        palette6.setBrush(QPalette::Active, QPalette::Text, brush6);
+        palette6.setBrush(QPalette::Active, QPalette::BrightText, brush);
+        palette6.setBrush(QPalette::Active, QPalette::ButtonText, brush6);
         QLinearGradient gradient19(0, 0, 0, 1);
         gradient19.setSpread(QGradient::PadSpread);
         gradient19.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -954,7 +1017,7 @@ public:
         gradient19.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient19.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush34(gradient19);
-        palette4.setBrush(QPalette::Active, QPalette::Base, brush34);
+        palette6.setBrush(QPalette::Active, QPalette::Base, brush34);
         QLinearGradient gradient20(0, 0, 0, 1);
         gradient20.setSpread(QGradient::PadSpread);
         gradient20.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -964,12 +1027,12 @@ public:
         gradient20.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient20.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush35(gradient20);
-        palette4.setBrush(QPalette::Active, QPalette::Window, brush35);
-        palette4.setBrush(QPalette::Active, QPalette::Shadow, brush6);
-        palette4.setBrush(QPalette::Active, QPalette::AlternateBase, brush11);
-        palette4.setBrush(QPalette::Active, QPalette::ToolTipBase, brush8);
-        palette4.setBrush(QPalette::Active, QPalette::ToolTipText, brush6);
-        palette4.setBrush(QPalette::Inactive, QPalette::WindowText, brush6);
+        palette6.setBrush(QPalette::Active, QPalette::Window, brush35);
+        palette6.setBrush(QPalette::Active, QPalette::Shadow, brush6);
+        palette6.setBrush(QPalette::Active, QPalette::AlternateBase, brush11);
+        palette6.setBrush(QPalette::Active, QPalette::ToolTipBase, brush8);
+        palette6.setBrush(QPalette::Active, QPalette::ToolTipText, brush6);
+        palette6.setBrush(QPalette::Inactive, QPalette::WindowText, brush6);
         QLinearGradient gradient21(0, 0, 0, 1);
         gradient21.setSpread(QGradient::PadSpread);
         gradient21.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -979,14 +1042,14 @@ public:
         gradient21.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient21.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush36(gradient21);
-        palette4.setBrush(QPalette::Inactive, QPalette::Button, brush36);
-        palette4.setBrush(QPalette::Inactive, QPalette::Light, brush11);
-        palette4.setBrush(QPalette::Inactive, QPalette::Midlight, brush12);
-        palette4.setBrush(QPalette::Inactive, QPalette::Dark, brush13);
-        palette4.setBrush(QPalette::Inactive, QPalette::Mid, brush14);
-        palette4.setBrush(QPalette::Inactive, QPalette::Text, brush6);
-        palette4.setBrush(QPalette::Inactive, QPalette::BrightText, brush);
-        palette4.setBrush(QPalette::Inactive, QPalette::ButtonText, brush6);
+        palette6.setBrush(QPalette::Inactive, QPalette::Button, brush36);
+        palette6.setBrush(QPalette::Inactive, QPalette::Light, brush11);
+        palette6.setBrush(QPalette::Inactive, QPalette::Midlight, brush12);
+        palette6.setBrush(QPalette::Inactive, QPalette::Dark, brush13);
+        palette6.setBrush(QPalette::Inactive, QPalette::Mid, brush14);
+        palette6.setBrush(QPalette::Inactive, QPalette::Text, brush6);
+        palette6.setBrush(QPalette::Inactive, QPalette::BrightText, brush);
+        palette6.setBrush(QPalette::Inactive, QPalette::ButtonText, brush6);
         QLinearGradient gradient22(0, 0, 0, 1);
         gradient22.setSpread(QGradient::PadSpread);
         gradient22.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -996,7 +1059,7 @@ public:
         gradient22.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient22.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush37(gradient22);
-        palette4.setBrush(QPalette::Inactive, QPalette::Base, brush37);
+        palette6.setBrush(QPalette::Inactive, QPalette::Base, brush37);
         QLinearGradient gradient23(0, 0, 0, 1);
         gradient23.setSpread(QGradient::PadSpread);
         gradient23.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1006,12 +1069,12 @@ public:
         gradient23.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient23.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush38(gradient23);
-        palette4.setBrush(QPalette::Inactive, QPalette::Window, brush38);
-        palette4.setBrush(QPalette::Inactive, QPalette::Shadow, brush6);
-        palette4.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush11);
-        palette4.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush8);
-        palette4.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush6);
-        palette4.setBrush(QPalette::Disabled, QPalette::WindowText, brush6);
+        palette6.setBrush(QPalette::Inactive, QPalette::Window, brush38);
+        palette6.setBrush(QPalette::Inactive, QPalette::Shadow, brush6);
+        palette6.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush11);
+        palette6.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush8);
+        palette6.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush6);
+        palette6.setBrush(QPalette::Disabled, QPalette::WindowText, brush6);
         QLinearGradient gradient24(0, 0, 0, 1);
         gradient24.setSpread(QGradient::PadSpread);
         gradient24.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1021,14 +1084,14 @@ public:
         gradient24.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient24.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush39(gradient24);
-        palette4.setBrush(QPalette::Disabled, QPalette::Button, brush39);
-        palette4.setBrush(QPalette::Disabled, QPalette::Light, brush11);
-        palette4.setBrush(QPalette::Disabled, QPalette::Midlight, brush12);
-        palette4.setBrush(QPalette::Disabled, QPalette::Dark, brush13);
-        palette4.setBrush(QPalette::Disabled, QPalette::Mid, brush14);
-        palette4.setBrush(QPalette::Disabled, QPalette::Text, brush6);
-        palette4.setBrush(QPalette::Disabled, QPalette::BrightText, brush);
-        palette4.setBrush(QPalette::Disabled, QPalette::ButtonText, brush6);
+        palette6.setBrush(QPalette::Disabled, QPalette::Button, brush39);
+        palette6.setBrush(QPalette::Disabled, QPalette::Light, brush11);
+        palette6.setBrush(QPalette::Disabled, QPalette::Midlight, brush12);
+        palette6.setBrush(QPalette::Disabled, QPalette::Dark, brush13);
+        palette6.setBrush(QPalette::Disabled, QPalette::Mid, brush14);
+        palette6.setBrush(QPalette::Disabled, QPalette::Text, brush6);
+        palette6.setBrush(QPalette::Disabled, QPalette::BrightText, brush);
+        palette6.setBrush(QPalette::Disabled, QPalette::ButtonText, brush6);
         QLinearGradient gradient25(0, 0, 0, 1);
         gradient25.setSpread(QGradient::PadSpread);
         gradient25.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1038,7 +1101,7 @@ public:
         gradient25.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient25.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush40(gradient25);
-        palette4.setBrush(QPalette::Disabled, QPalette::Base, brush40);
+        palette6.setBrush(QPalette::Disabled, QPalette::Base, brush40);
         QLinearGradient gradient26(0, 0, 0, 1);
         gradient26.setSpread(QGradient::PadSpread);
         gradient26.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1048,56 +1111,159 @@ public:
         gradient26.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient26.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush41(gradient26);
-        palette4.setBrush(QPalette::Disabled, QPalette::Window, brush41);
-        palette4.setBrush(QPalette::Disabled, QPalette::Shadow, brush6);
-        palette4.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush23);
-        palette4.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush8);
-        palette4.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush6);
-        pushButton_solventConc->setPalette(palette4);
-        label_solventEl = new QLabel(tabCrystal);
-        label_solventEl->setObjectName(QStringLiteral("label_solventEl"));
-        label_solventEl->setGeometry(QRect(190, 310, 111, 16));
-        lineEdit_Elsolvent = new QLineEdit(tabCrystal);
-        lineEdit_Elsolvent->setObjectName(QStringLiteral("lineEdit_Elsolvent"));
-        lineEdit_Elsolvent->setGeometry(QRect(300, 310, 41, 23));
-        label_SolventFr = new QLabel(tabCrystal);
-        label_SolventFr->setObjectName(QStringLiteral("label_SolventFr"));
-        label_SolventFr->setGeometry(QRect(10, 400, 101, 16));
-        lineEdit_solventFr = new QLineEdit(tabCrystal);
-        lineEdit_solventFr->setObjectName(QStringLiteral("lineEdit_solventFr"));
-        lineEdit_solventFr->setGeometry(QRect(110, 400, 461, 23));
-        label_Nucleotides = new QLabel(tabCrystal);
-        label_Nucleotides->setObjectName(QStringLiteral("label_Nucleotides"));
-        label_Nucleotides->setGeometry(QRect(10, 440, 191, 16));
-        label_DNA = new QLabel(tabCrystal);
-        label_DNA->setObjectName(QStringLiteral("label_DNA"));
-        label_DNA->setGeometry(QRect(190, 440, 59, 15));
-        lineEdit_DNA = new QLineEdit(tabCrystal);
-        lineEdit_DNA->setObjectName(QStringLiteral("lineEdit_DNA"));
-        lineEdit_DNA->setGeometry(QRect(230, 440, 141, 23));
-        label_RNA = new QLabel(tabCrystal);
-        label_RNA->setObjectName(QStringLiteral("label_RNA"));
-        label_RNA->setGeometry(QRect(390, 440, 59, 15));
-        lineEdit_RNA = new QLineEdit(tabCrystal);
-        lineEdit_RNA->setObjectName(QStringLiteral("lineEdit_RNA"));
-        lineEdit_RNA->setGeometry(QRect(430, 440, 141, 23));
-        label_PDB = new QLabel(tabCrystal);
+        palette6.setBrush(QPalette::Disabled, QPalette::Window, brush41);
+        palette6.setBrush(QPalette::Disabled, QPalette::Shadow, brush6);
+        palette6.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush23);
+        palette6.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush8);
+        palette6.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush6);
+        pushButton_browsemodel->setPalette(palette6);
+
+        horizontalLayout_4->addWidget(pushButton_browsemodel);
+
+
+        verticalLayout->addLayout(horizontalLayout_4);
+
+        horizontalLayout_5 = new QHBoxLayout();
+        horizontalLayout_5->setSpacing(6);
+        horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
+        horizontalLayout_5->setContentsMargins(-1, -1, -1, 0);
+        label_ppm = new QLabel(scrollAreaWidgetContents_2);
+        label_ppm->setObjectName(QStringLiteral("label_ppm"));
+
+        horizontalLayout_5->addWidget(label_ppm);
+
+        lineEdit_ppm = new QLineEdit(scrollAreaWidgetContents_2);
+        lineEdit_ppm->setObjectName(QStringLiteral("lineEdit_ppm"));
+
+        horizontalLayout_5->addWidget(lineEdit_ppm);
+
+
+        verticalLayout->addLayout(horizontalLayout_5);
+
+        horizontalLayout_6 = new QHBoxLayout();
+        horizontalLayout_6->setSpacing(6);
+        horizontalLayout_6->setObjectName(QStringLiteral("horizontalLayout_6"));
+        horizontalLayout_6->setContentsMargins(-1, -1, -1, 0);
+        label_AbsCoef = new QLabel(scrollAreaWidgetContents_2);
+        label_AbsCoef->setObjectName(QStringLiteral("label_AbsCoef"));
+
+        horizontalLayout_6->addWidget(label_AbsCoef);
+
+        comboBox_AbsCoef = new QComboBox(scrollAreaWidgetContents_2);
+        comboBox_AbsCoef->setObjectName(QStringLiteral("comboBox_AbsCoef"));
+
+        horizontalLayout_6->addWidget(comboBox_AbsCoef);
+
+
+        verticalLayout->addLayout(horizontalLayout_6);
+
+        horizontalLayout_7 = new QHBoxLayout();
+        horizontalLayout_7->setSpacing(6);
+        horizontalLayout_7->setObjectName(QStringLiteral("horizontalLayout_7"));
+        horizontalLayout_7->setContentsMargins(-1, -1, -1, 0);
+        label_PDB = new QLabel(scrollAreaWidgetContents_2);
         label_PDB->setObjectName(QStringLiteral("label_PDB"));
-        label_PDB->setGeometry(QRect(10, 130, 91, 16));
-        lineEdit_PDB = new QLineEdit(tabCrystal);
+
+        horizontalLayout_7->addWidget(label_PDB);
+
+        lineEdit_PDB = new QLineEdit(scrollAreaWidgetContents_2);
         lineEdit_PDB->setObjectName(QStringLiteral("lineEdit_PDB"));
-        lineEdit_PDB->setGeometry(QRect(100, 130, 471, 23));
-        label_fasta = new QLabel(tabCrystal);
-        label_fasta->setObjectName(QStringLiteral("label_fasta"));
-        label_fasta->setGeometry(QRect(10, 190, 91, 16));
-        lineEdit_fasta = new QLineEdit(tabCrystal);
-        lineEdit_fasta->setObjectName(QStringLiteral("lineEdit_fasta"));
-        lineEdit_fasta->setGeometry(QRect(80, 190, 381, 23));
-        pushButton_browseFasta = new QPushButton(tabCrystal);
-        pushButton_browseFasta->setObjectName(QStringLiteral("pushButton_browseFasta"));
-        pushButton_browseFasta->setGeometry(QRect(490, 190, 80, 23));
-        QPalette palette5;
-        palette5.setBrush(QPalette::Active, QPalette::WindowText, brush6);
+
+        horizontalLayout_7->addWidget(lineEdit_PDB);
+
+
+        verticalLayout->addLayout(horizontalLayout_7);
+
+        horizontalLayout_8 = new QHBoxLayout();
+        horizontalLayout_8->setSpacing(6);
+        horizontalLayout_8->setObjectName(QStringLiteral("horizontalLayout_8"));
+        horizontalLayout_8->setContentsMargins(-1, -1, -1, 0);
+        label_UnitCell = new QLabel(scrollAreaWidgetContents_2);
+        label_UnitCell->setObjectName(QStringLiteral("label_UnitCell"));
+
+        horizontalLayout_8->addWidget(label_UnitCell);
+
+        label_a = new QLabel(scrollAreaWidgetContents_2);
+        label_a->setObjectName(QStringLiteral("label_a"));
+
+        horizontalLayout_8->addWidget(label_a);
+
+        lineEdit_a = new QLineEdit(scrollAreaWidgetContents_2);
+        lineEdit_a->setObjectName(QStringLiteral("lineEdit_a"));
+
+        horizontalLayout_8->addWidget(lineEdit_a);
+
+        label_b = new QLabel(scrollAreaWidgetContents_2);
+        label_b->setObjectName(QStringLiteral("label_b"));
+
+        horizontalLayout_8->addWidget(label_b);
+
+        lineEdit_b = new QLineEdit(scrollAreaWidgetContents_2);
+        lineEdit_b->setObjectName(QStringLiteral("lineEdit_b"));
+
+        horizontalLayout_8->addWidget(lineEdit_b);
+
+        label_c = new QLabel(scrollAreaWidgetContents_2);
+        label_c->setObjectName(QStringLiteral("label_c"));
+
+        horizontalLayout_8->addWidget(label_c);
+
+        lineEdit_c = new QLineEdit(scrollAreaWidgetContents_2);
+        lineEdit_c->setObjectName(QStringLiteral("lineEdit_c"));
+
+        horizontalLayout_8->addWidget(lineEdit_c);
+
+        label_alpha = new QLabel(scrollAreaWidgetContents_2);
+        label_alpha->setObjectName(QStringLiteral("label_alpha"));
+
+        horizontalLayout_8->addWidget(label_alpha);
+
+        lineEdit_alpha = new QLineEdit(scrollAreaWidgetContents_2);
+        lineEdit_alpha->setObjectName(QStringLiteral("lineEdit_alpha"));
+
+        horizontalLayout_8->addWidget(lineEdit_alpha);
+
+        label_beta = new QLabel(scrollAreaWidgetContents_2);
+        label_beta->setObjectName(QStringLiteral("label_beta"));
+
+        horizontalLayout_8->addWidget(label_beta);
+
+        lineEdit_beta = new QLineEdit(scrollAreaWidgetContents_2);
+        lineEdit_beta->setObjectName(QStringLiteral("lineEdit_beta"));
+
+        horizontalLayout_8->addWidget(lineEdit_beta);
+
+        label_gamma = new QLabel(scrollAreaWidgetContents_2);
+        label_gamma->setObjectName(QStringLiteral("label_gamma"));
+
+        horizontalLayout_8->addWidget(label_gamma);
+
+        lineEdit_gamma = new QLineEdit(scrollAreaWidgetContents_2);
+        lineEdit_gamma->setObjectName(QStringLiteral("lineEdit_gamma"));
+
+        horizontalLayout_8->addWidget(lineEdit_gamma);
+
+
+        verticalLayout->addLayout(horizontalLayout_8);
+
+        horizontalLayout_9 = new QHBoxLayout();
+        horizontalLayout_9->setSpacing(6);
+        horizontalLayout_9->setObjectName(QStringLiteral("horizontalLayout_9"));
+        horizontalLayout_9->setContentsMargins(-1, -1, -1, 0);
+        label_CIF = new QLabel(scrollAreaWidgetContents_2);
+        label_CIF->setObjectName(QStringLiteral("label_CIF"));
+
+        horizontalLayout_9->addWidget(label_CIF);
+
+        lineEdit_CIF = new QLineEdit(scrollAreaWidgetContents_2);
+        lineEdit_CIF->setObjectName(QStringLiteral("lineEdit_CIF"));
+
+        horizontalLayout_9->addWidget(lineEdit_CIF);
+
+        pushButton_CIF = new QPushButton(scrollAreaWidgetContents_2);
+        pushButton_CIF->setObjectName(QStringLiteral("pushButton_CIF"));
+        QPalette palette7;
+        palette7.setBrush(QPalette::Active, QPalette::WindowText, brush6);
         QLinearGradient gradient27(0, 0, 0, 1);
         gradient27.setSpread(QGradient::PadSpread);
         gradient27.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1107,14 +1273,14 @@ public:
         gradient27.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient27.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush42(gradient27);
-        palette5.setBrush(QPalette::Active, QPalette::Button, brush42);
-        palette5.setBrush(QPalette::Active, QPalette::Light, brush11);
-        palette5.setBrush(QPalette::Active, QPalette::Midlight, brush12);
-        palette5.setBrush(QPalette::Active, QPalette::Dark, brush13);
-        palette5.setBrush(QPalette::Active, QPalette::Mid, brush14);
-        palette5.setBrush(QPalette::Active, QPalette::Text, brush6);
-        palette5.setBrush(QPalette::Active, QPalette::BrightText, brush);
-        palette5.setBrush(QPalette::Active, QPalette::ButtonText, brush6);
+        palette7.setBrush(QPalette::Active, QPalette::Button, brush42);
+        palette7.setBrush(QPalette::Active, QPalette::Light, brush11);
+        palette7.setBrush(QPalette::Active, QPalette::Midlight, brush12);
+        palette7.setBrush(QPalette::Active, QPalette::Dark, brush13);
+        palette7.setBrush(QPalette::Active, QPalette::Mid, brush14);
+        palette7.setBrush(QPalette::Active, QPalette::Text, brush6);
+        palette7.setBrush(QPalette::Active, QPalette::BrightText, brush);
+        palette7.setBrush(QPalette::Active, QPalette::ButtonText, brush6);
         QLinearGradient gradient28(0, 0, 0, 1);
         gradient28.setSpread(QGradient::PadSpread);
         gradient28.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1124,7 +1290,7 @@ public:
         gradient28.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient28.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush43(gradient28);
-        palette5.setBrush(QPalette::Active, QPalette::Base, brush43);
+        palette7.setBrush(QPalette::Active, QPalette::Base, brush43);
         QLinearGradient gradient29(0, 0, 0, 1);
         gradient29.setSpread(QGradient::PadSpread);
         gradient29.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1134,12 +1300,12 @@ public:
         gradient29.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient29.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush44(gradient29);
-        palette5.setBrush(QPalette::Active, QPalette::Window, brush44);
-        palette5.setBrush(QPalette::Active, QPalette::Shadow, brush6);
-        palette5.setBrush(QPalette::Active, QPalette::AlternateBase, brush11);
-        palette5.setBrush(QPalette::Active, QPalette::ToolTipBase, brush8);
-        palette5.setBrush(QPalette::Active, QPalette::ToolTipText, brush6);
-        palette5.setBrush(QPalette::Inactive, QPalette::WindowText, brush6);
+        palette7.setBrush(QPalette::Active, QPalette::Window, brush44);
+        palette7.setBrush(QPalette::Active, QPalette::Shadow, brush6);
+        palette7.setBrush(QPalette::Active, QPalette::AlternateBase, brush11);
+        palette7.setBrush(QPalette::Active, QPalette::ToolTipBase, brush8);
+        palette7.setBrush(QPalette::Active, QPalette::ToolTipText, brush6);
+        palette7.setBrush(QPalette::Inactive, QPalette::WindowText, brush6);
         QLinearGradient gradient30(0, 0, 0, 1);
         gradient30.setSpread(QGradient::PadSpread);
         gradient30.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1149,14 +1315,14 @@ public:
         gradient30.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient30.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush45(gradient30);
-        palette5.setBrush(QPalette::Inactive, QPalette::Button, brush45);
-        palette5.setBrush(QPalette::Inactive, QPalette::Light, brush11);
-        palette5.setBrush(QPalette::Inactive, QPalette::Midlight, brush12);
-        palette5.setBrush(QPalette::Inactive, QPalette::Dark, brush13);
-        palette5.setBrush(QPalette::Inactive, QPalette::Mid, brush14);
-        palette5.setBrush(QPalette::Inactive, QPalette::Text, brush6);
-        palette5.setBrush(QPalette::Inactive, QPalette::BrightText, brush);
-        palette5.setBrush(QPalette::Inactive, QPalette::ButtonText, brush6);
+        palette7.setBrush(QPalette::Inactive, QPalette::Button, brush45);
+        palette7.setBrush(QPalette::Inactive, QPalette::Light, brush11);
+        palette7.setBrush(QPalette::Inactive, QPalette::Midlight, brush12);
+        palette7.setBrush(QPalette::Inactive, QPalette::Dark, brush13);
+        palette7.setBrush(QPalette::Inactive, QPalette::Mid, brush14);
+        palette7.setBrush(QPalette::Inactive, QPalette::Text, brush6);
+        palette7.setBrush(QPalette::Inactive, QPalette::BrightText, brush);
+        palette7.setBrush(QPalette::Inactive, QPalette::ButtonText, brush6);
         QLinearGradient gradient31(0, 0, 0, 1);
         gradient31.setSpread(QGradient::PadSpread);
         gradient31.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1166,7 +1332,7 @@ public:
         gradient31.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient31.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush46(gradient31);
-        palette5.setBrush(QPalette::Inactive, QPalette::Base, brush46);
+        palette7.setBrush(QPalette::Inactive, QPalette::Base, brush46);
         QLinearGradient gradient32(0, 0, 0, 1);
         gradient32.setSpread(QGradient::PadSpread);
         gradient32.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1176,12 +1342,12 @@ public:
         gradient32.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient32.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush47(gradient32);
-        palette5.setBrush(QPalette::Inactive, QPalette::Window, brush47);
-        palette5.setBrush(QPalette::Inactive, QPalette::Shadow, brush6);
-        palette5.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush11);
-        palette5.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush8);
-        palette5.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush6);
-        palette5.setBrush(QPalette::Disabled, QPalette::WindowText, brush6);
+        palette7.setBrush(QPalette::Inactive, QPalette::Window, brush47);
+        palette7.setBrush(QPalette::Inactive, QPalette::Shadow, brush6);
+        palette7.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush11);
+        palette7.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush8);
+        palette7.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush6);
+        palette7.setBrush(QPalette::Disabled, QPalette::WindowText, brush6);
         QLinearGradient gradient33(0, 0, 0, 1);
         gradient33.setSpread(QGradient::PadSpread);
         gradient33.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1191,14 +1357,14 @@ public:
         gradient33.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient33.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush48(gradient33);
-        palette5.setBrush(QPalette::Disabled, QPalette::Button, brush48);
-        palette5.setBrush(QPalette::Disabled, QPalette::Light, brush11);
-        palette5.setBrush(QPalette::Disabled, QPalette::Midlight, brush12);
-        palette5.setBrush(QPalette::Disabled, QPalette::Dark, brush13);
-        palette5.setBrush(QPalette::Disabled, QPalette::Mid, brush14);
-        palette5.setBrush(QPalette::Disabled, QPalette::Text, brush6);
-        palette5.setBrush(QPalette::Disabled, QPalette::BrightText, brush);
-        palette5.setBrush(QPalette::Disabled, QPalette::ButtonText, brush6);
+        palette7.setBrush(QPalette::Disabled, QPalette::Button, brush48);
+        palette7.setBrush(QPalette::Disabled, QPalette::Light, brush11);
+        palette7.setBrush(QPalette::Disabled, QPalette::Midlight, brush12);
+        palette7.setBrush(QPalette::Disabled, QPalette::Dark, brush13);
+        palette7.setBrush(QPalette::Disabled, QPalette::Mid, brush14);
+        palette7.setBrush(QPalette::Disabled, QPalette::Text, brush6);
+        palette7.setBrush(QPalette::Disabled, QPalette::BrightText, brush);
+        palette7.setBrush(QPalette::Disabled, QPalette::ButtonText, brush6);
         QLinearGradient gradient34(0, 0, 0, 1);
         gradient34.setSpread(QGradient::PadSpread);
         gradient34.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1208,7 +1374,7 @@ public:
         gradient34.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient34.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush49(gradient34);
-        palette5.setBrush(QPalette::Disabled, QPalette::Base, brush49);
+        palette7.setBrush(QPalette::Disabled, QPalette::Base, brush49);
         QLinearGradient gradient35(0, 0, 0, 1);
         gradient35.setSpread(QGradient::PadSpread);
         gradient35.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1218,41 +1384,90 @@ public:
         gradient35.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient35.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush50(gradient35);
-        palette5.setBrush(QPalette::Disabled, QPalette::Window, brush50);
-        palette5.setBrush(QPalette::Disabled, QPalette::Shadow, brush6);
-        palette5.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush23);
-        palette5.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush8);
-        palette5.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush6);
-        pushButton_browseFasta->setPalette(palette5);
-        label_carb = new QLabel(tabCrystal);
-        label_carb->setObjectName(QStringLiteral("label_carb"));
-        label_carb->setGeometry(QRect(10, 470, 211, 16));
-        lineEdit_carb = new QLineEdit(tabCrystal);
-        lineEdit_carb->setObjectName(QStringLiteral("lineEdit_carb"));
-        lineEdit_carb->setGeometry(QRect(230, 470, 341, 23));
-        label_pConc = new QLabel(tabCrystal);
+        palette7.setBrush(QPalette::Disabled, QPalette::Window, brush50);
+        palette7.setBrush(QPalette::Disabled, QPalette::Shadow, brush6);
+        palette7.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush23);
+        palette7.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush8);
+        palette7.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush6);
+        pushButton_CIF->setPalette(palette7);
+
+        horizontalLayout_9->addWidget(pushButton_CIF);
+
+
+        verticalLayout->addLayout(horizontalLayout_9);
+
+        horizontalLayout_10 = new QHBoxLayout();
+        horizontalLayout_10->setSpacing(6);
+        horizontalLayout_10->setObjectName(QStringLiteral("horizontalLayout_10"));
+        horizontalLayout_10->setContentsMargins(-1, -1, -1, 0);
+        label_pConc = new QLabel(scrollAreaWidgetContents_2);
         label_pConc->setObjectName(QStringLiteral("label_pConc"));
-        label_pConc->setGeometry(QRect(10, 160, 91, 16));
-        lineEdit_pConc = new QLineEdit(tabCrystal);
+
+        horizontalLayout_10->addWidget(label_pConc);
+
+        lineEdit_pConc = new QLineEdit(scrollAreaWidgetContents_2);
         lineEdit_pConc->setObjectName(QStringLiteral("lineEdit_pConc"));
-        lineEdit_pConc->setGeometry(QRect(100, 160, 471, 23));
-        label_SmallMole = new QLabel(tabCrystal);
-        label_SmallMole->setObjectName(QStringLiteral("label_SmallMole"));
-        label_SmallMole->setGeometry(QRect(10, 250, 171, 16));
-        label_atomList = new QLabel(tabCrystal);
-        label_atomList->setObjectName(QStringLiteral("label_atomList"));
-        label_atomList->setGeometry(QRect(460, 220, 111, 16));
-        label_CIF = new QLabel(tabCrystal);
-        label_CIF->setObjectName(QStringLiteral("label_CIF"));
-        label_CIF->setGeometry(QRect(10, 130, 91, 16));
-        lineEdit_CIF = new QLineEdit(tabCrystal);
-        lineEdit_CIF->setObjectName(QStringLiteral("lineEdit_CIF"));
-        lineEdit_CIF->setGeometry(QRect(100, 130, 381, 23));
-        pushButton_CIF = new QPushButton(tabCrystal);
-        pushButton_CIF->setObjectName(QStringLiteral("pushButton_CIF"));
-        pushButton_CIF->setGeometry(QRect(490, 130, 80, 23));
-        QPalette palette6;
-        palette6.setBrush(QPalette::Active, QPalette::WindowText, brush6);
+
+        horizontalLayout_10->addWidget(lineEdit_pConc);
+
+
+        verticalLayout->addLayout(horizontalLayout_10);
+
+        horizontalLayout_11 = new QHBoxLayout();
+        horizontalLayout_11->setSpacing(6);
+        horizontalLayout_11->setObjectName(QStringLiteral("horizontalLayout_11"));
+        horizontalLayout_11->setContentsMargins(-1, -1, -1, 0);
+        label_Monomers = new QLabel(scrollAreaWidgetContents_2);
+        label_Monomers->setObjectName(QStringLiteral("label_Monomers"));
+
+        horizontalLayout_11->addWidget(label_Monomers);
+
+        lineEdit_Monomers = new QLineEdit(scrollAreaWidgetContents_2);
+        lineEdit_Monomers->setObjectName(QStringLiteral("lineEdit_Monomers"));
+
+        horizontalLayout_11->addWidget(lineEdit_Monomers);
+
+
+        verticalLayout->addLayout(horizontalLayout_11);
+
+        horizontalLayout_12 = new QHBoxLayout();
+        horizontalLayout_12->setSpacing(6);
+        horizontalLayout_12->setObjectName(QStringLiteral("horizontalLayout_12"));
+        horizontalLayout_12->setContentsMargins(-1, -1, -1, 0);
+        label_Residues = new QLabel(scrollAreaWidgetContents_2);
+        label_Residues->setObjectName(QStringLiteral("label_Residues"));
+#ifndef QT_NO_TOOLTIP
+        label_Residues->setToolTip(QStringLiteral("<html><head/><body><p>The number of amino acid residues per monomer</p></body></html>"));
+#endif // QT_NO_TOOLTIP
+
+        horizontalLayout_12->addWidget(label_Residues);
+
+        lineEdit_Residues = new QLineEdit(scrollAreaWidgetContents_2);
+        lineEdit_Residues->setObjectName(QStringLiteral("lineEdit_Residues"));
+
+        horizontalLayout_12->addWidget(lineEdit_Residues);
+
+
+        verticalLayout->addLayout(horizontalLayout_12);
+
+        horizontalLayout_13 = new QHBoxLayout();
+        horizontalLayout_13->setSpacing(6);
+        horizontalLayout_13->setObjectName(QStringLiteral("horizontalLayout_13"));
+        horizontalLayout_13->setContentsMargins(-1, -1, -1, 10);
+        label_fasta = new QLabel(scrollAreaWidgetContents_2);
+        label_fasta->setObjectName(QStringLiteral("label_fasta"));
+
+        horizontalLayout_13->addWidget(label_fasta);
+
+        lineEdit_fasta = new QLineEdit(scrollAreaWidgetContents_2);
+        lineEdit_fasta->setObjectName(QStringLiteral("lineEdit_fasta"));
+
+        horizontalLayout_13->addWidget(lineEdit_fasta);
+
+        pushButton_browseFasta = new QPushButton(scrollAreaWidgetContents_2);
+        pushButton_browseFasta->setObjectName(QStringLiteral("pushButton_browseFasta"));
+        QPalette palette8;
+        palette8.setBrush(QPalette::Active, QPalette::WindowText, brush6);
         QLinearGradient gradient36(0, 0, 0, 1);
         gradient36.setSpread(QGradient::PadSpread);
         gradient36.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1262,14 +1477,14 @@ public:
         gradient36.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient36.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush51(gradient36);
-        palette6.setBrush(QPalette::Active, QPalette::Button, brush51);
-        palette6.setBrush(QPalette::Active, QPalette::Light, brush11);
-        palette6.setBrush(QPalette::Active, QPalette::Midlight, brush12);
-        palette6.setBrush(QPalette::Active, QPalette::Dark, brush13);
-        palette6.setBrush(QPalette::Active, QPalette::Mid, brush14);
-        palette6.setBrush(QPalette::Active, QPalette::Text, brush6);
-        palette6.setBrush(QPalette::Active, QPalette::BrightText, brush);
-        palette6.setBrush(QPalette::Active, QPalette::ButtonText, brush6);
+        palette8.setBrush(QPalette::Active, QPalette::Button, brush51);
+        palette8.setBrush(QPalette::Active, QPalette::Light, brush11);
+        palette8.setBrush(QPalette::Active, QPalette::Midlight, brush12);
+        palette8.setBrush(QPalette::Active, QPalette::Dark, brush13);
+        palette8.setBrush(QPalette::Active, QPalette::Mid, brush14);
+        palette8.setBrush(QPalette::Active, QPalette::Text, brush6);
+        palette8.setBrush(QPalette::Active, QPalette::BrightText, brush);
+        palette8.setBrush(QPalette::Active, QPalette::ButtonText, brush6);
         QLinearGradient gradient37(0, 0, 0, 1);
         gradient37.setSpread(QGradient::PadSpread);
         gradient37.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1279,7 +1494,7 @@ public:
         gradient37.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient37.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush52(gradient37);
-        palette6.setBrush(QPalette::Active, QPalette::Base, brush52);
+        palette8.setBrush(QPalette::Active, QPalette::Base, brush52);
         QLinearGradient gradient38(0, 0, 0, 1);
         gradient38.setSpread(QGradient::PadSpread);
         gradient38.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1289,12 +1504,12 @@ public:
         gradient38.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient38.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush53(gradient38);
-        palette6.setBrush(QPalette::Active, QPalette::Window, brush53);
-        palette6.setBrush(QPalette::Active, QPalette::Shadow, brush6);
-        palette6.setBrush(QPalette::Active, QPalette::AlternateBase, brush11);
-        palette6.setBrush(QPalette::Active, QPalette::ToolTipBase, brush8);
-        palette6.setBrush(QPalette::Active, QPalette::ToolTipText, brush6);
-        palette6.setBrush(QPalette::Inactive, QPalette::WindowText, brush6);
+        palette8.setBrush(QPalette::Active, QPalette::Window, brush53);
+        palette8.setBrush(QPalette::Active, QPalette::Shadow, brush6);
+        palette8.setBrush(QPalette::Active, QPalette::AlternateBase, brush11);
+        palette8.setBrush(QPalette::Active, QPalette::ToolTipBase, brush8);
+        palette8.setBrush(QPalette::Active, QPalette::ToolTipText, brush6);
+        palette8.setBrush(QPalette::Inactive, QPalette::WindowText, brush6);
         QLinearGradient gradient39(0, 0, 0, 1);
         gradient39.setSpread(QGradient::PadSpread);
         gradient39.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1304,14 +1519,14 @@ public:
         gradient39.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient39.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush54(gradient39);
-        palette6.setBrush(QPalette::Inactive, QPalette::Button, brush54);
-        palette6.setBrush(QPalette::Inactive, QPalette::Light, brush11);
-        palette6.setBrush(QPalette::Inactive, QPalette::Midlight, brush12);
-        palette6.setBrush(QPalette::Inactive, QPalette::Dark, brush13);
-        palette6.setBrush(QPalette::Inactive, QPalette::Mid, brush14);
-        palette6.setBrush(QPalette::Inactive, QPalette::Text, brush6);
-        palette6.setBrush(QPalette::Inactive, QPalette::BrightText, brush);
-        palette6.setBrush(QPalette::Inactive, QPalette::ButtonText, brush6);
+        palette8.setBrush(QPalette::Inactive, QPalette::Button, brush54);
+        palette8.setBrush(QPalette::Inactive, QPalette::Light, brush11);
+        palette8.setBrush(QPalette::Inactive, QPalette::Midlight, brush12);
+        palette8.setBrush(QPalette::Inactive, QPalette::Dark, brush13);
+        palette8.setBrush(QPalette::Inactive, QPalette::Mid, brush14);
+        palette8.setBrush(QPalette::Inactive, QPalette::Text, brush6);
+        palette8.setBrush(QPalette::Inactive, QPalette::BrightText, brush);
+        palette8.setBrush(QPalette::Inactive, QPalette::ButtonText, brush6);
         QLinearGradient gradient40(0, 0, 0, 1);
         gradient40.setSpread(QGradient::PadSpread);
         gradient40.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1321,7 +1536,7 @@ public:
         gradient40.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient40.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush55(gradient40);
-        palette6.setBrush(QPalette::Inactive, QPalette::Base, brush55);
+        palette8.setBrush(QPalette::Inactive, QPalette::Base, brush55);
         QLinearGradient gradient41(0, 0, 0, 1);
         gradient41.setSpread(QGradient::PadSpread);
         gradient41.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1331,12 +1546,12 @@ public:
         gradient41.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient41.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush56(gradient41);
-        palette6.setBrush(QPalette::Inactive, QPalette::Window, brush56);
-        palette6.setBrush(QPalette::Inactive, QPalette::Shadow, brush6);
-        palette6.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush11);
-        palette6.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush8);
-        palette6.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush6);
-        palette6.setBrush(QPalette::Disabled, QPalette::WindowText, brush6);
+        palette8.setBrush(QPalette::Inactive, QPalette::Window, brush56);
+        palette8.setBrush(QPalette::Inactive, QPalette::Shadow, brush6);
+        palette8.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush11);
+        palette8.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush8);
+        palette8.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush6);
+        palette8.setBrush(QPalette::Disabled, QPalette::WindowText, brush6);
         QLinearGradient gradient42(0, 0, 0, 1);
         gradient42.setSpread(QGradient::PadSpread);
         gradient42.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1346,14 +1561,14 @@ public:
         gradient42.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient42.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush57(gradient42);
-        palette6.setBrush(QPalette::Disabled, QPalette::Button, brush57);
-        palette6.setBrush(QPalette::Disabled, QPalette::Light, brush11);
-        palette6.setBrush(QPalette::Disabled, QPalette::Midlight, brush12);
-        palette6.setBrush(QPalette::Disabled, QPalette::Dark, brush13);
-        palette6.setBrush(QPalette::Disabled, QPalette::Mid, brush14);
-        palette6.setBrush(QPalette::Disabled, QPalette::Text, brush6);
-        palette6.setBrush(QPalette::Disabled, QPalette::BrightText, brush);
-        palette6.setBrush(QPalette::Disabled, QPalette::ButtonText, brush6);
+        palette8.setBrush(QPalette::Disabled, QPalette::Button, brush57);
+        palette8.setBrush(QPalette::Disabled, QPalette::Light, brush11);
+        palette8.setBrush(QPalette::Disabled, QPalette::Midlight, brush12);
+        palette8.setBrush(QPalette::Disabled, QPalette::Dark, brush13);
+        palette8.setBrush(QPalette::Disabled, QPalette::Mid, brush14);
+        palette8.setBrush(QPalette::Disabled, QPalette::Text, brush6);
+        palette8.setBrush(QPalette::Disabled, QPalette::BrightText, brush);
+        palette8.setBrush(QPalette::Disabled, QPalette::ButtonText, brush6);
         QLinearGradient gradient43(0, 0, 0, 1);
         gradient43.setSpread(QGradient::PadSpread);
         gradient43.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1363,7 +1578,7 @@ public:
         gradient43.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient43.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush58(gradient43);
-        palette6.setBrush(QPalette::Disabled, QPalette::Base, brush58);
+        palette8.setBrush(QPalette::Disabled, QPalette::Base, brush58);
         QLinearGradient gradient44(0, 0, 0, 1);
         gradient44.setSpread(QGradient::PadSpread);
         gradient44.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1373,17 +1588,61 @@ public:
         gradient44.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient44.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush59(gradient44);
-        palette6.setBrush(QPalette::Disabled, QPalette::Window, brush59);
-        palette6.setBrush(QPalette::Disabled, QPalette::Shadow, brush6);
-        palette6.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush23);
-        palette6.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush8);
-        palette6.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush6);
-        pushButton_CIF->setPalette(palette6);
-        pushButton_crystalAdvanced = new QPushButton(tabCrystal);
-        pushButton_crystalAdvanced->setObjectName(QStringLiteral("pushButton_crystalAdvanced"));
-        pushButton_crystalAdvanced->setGeometry(QRect(200, 500, 161, 23));
-        QPalette palette7;
-        palette7.setBrush(QPalette::Active, QPalette::WindowText, brush6);
+        palette8.setBrush(QPalette::Disabled, QPalette::Window, brush59);
+        palette8.setBrush(QPalette::Disabled, QPalette::Shadow, brush6);
+        palette8.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush23);
+        palette8.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush8);
+        palette8.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush6);
+        pushButton_browseFasta->setPalette(palette8);
+
+        horizontalLayout_13->addWidget(pushButton_browseFasta);
+
+
+        verticalLayout->addLayout(horizontalLayout_13);
+
+        horizontalLayout_14 = new QHBoxLayout();
+        horizontalLayout_14->setSpacing(6);
+        horizontalLayout_14->setObjectName(QStringLiteral("horizontalLayout_14"));
+        horizontalLayout_14->setContentsMargins(-1, -1, -1, 10);
+        label_heavyProt = new QLabel(scrollAreaWidgetContents_2);
+        label_heavyProt->setObjectName(QStringLiteral("label_heavyProt"));
+
+        horizontalLayout_14->addWidget(label_heavyProt);
+
+        verticalLayout_3 = new QVBoxLayout();
+        verticalLayout_3->setSpacing(6);
+        verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
+        verticalLayout_3->setContentsMargins(-1, -1, 0, -1);
+        formLayout_3 = new QFormLayout();
+        formLayout_3->setSpacing(6);
+        formLayout_3->setObjectName(QStringLiteral("formLayout_3"));
+        lineEdit_ElheavyProt = new QLineEdit(scrollAreaWidgetContents_2);
+        lineEdit_ElheavyProt->setObjectName(QStringLiteral("lineEdit_ElheavyProt"));
+
+        formLayout_3->setWidget(0, QFormLayout::FieldRole, lineEdit_ElheavyProt);
+
+        label_heavyEl = new QLabel(scrollAreaWidgetContents_2);
+        label_heavyEl->setObjectName(QStringLiteral("label_heavyEl"));
+
+        formLayout_3->setWidget(0, QFormLayout::LabelRole, label_heavyEl);
+
+        lineEdit_ElheavyProt_2 = new QLineEdit(scrollAreaWidgetContents_2);
+        lineEdit_ElheavyProt_2->setObjectName(QStringLiteral("lineEdit_ElheavyProt_2"));
+
+        formLayout_3->setWidget(1, QFormLayout::FieldRole, lineEdit_ElheavyProt_2);
+
+        label_heavyNum = new QLabel(scrollAreaWidgetContents_2);
+        label_heavyNum->setObjectName(QStringLiteral("label_heavyNum"));
+
+        formLayout_3->setWidget(1, QFormLayout::LabelRole, label_heavyNum);
+
+
+        verticalLayout_3->addLayout(formLayout_3);
+
+        pushButton_heavyProt = new QPushButton(scrollAreaWidgetContents_2);
+        pushButton_heavyProt->setObjectName(QStringLiteral("pushButton_heavyProt"));
+        QPalette palette9;
+        palette9.setBrush(QPalette::Active, QPalette::WindowText, brush6);
         QLinearGradient gradient45(0, 0, 0, 1);
         gradient45.setSpread(QGradient::PadSpread);
         gradient45.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1393,14 +1652,14 @@ public:
         gradient45.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient45.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush60(gradient45);
-        palette7.setBrush(QPalette::Active, QPalette::Button, brush60);
-        palette7.setBrush(QPalette::Active, QPalette::Light, brush11);
-        palette7.setBrush(QPalette::Active, QPalette::Midlight, brush12);
-        palette7.setBrush(QPalette::Active, QPalette::Dark, brush13);
-        palette7.setBrush(QPalette::Active, QPalette::Mid, brush14);
-        palette7.setBrush(QPalette::Active, QPalette::Text, brush6);
-        palette7.setBrush(QPalette::Active, QPalette::BrightText, brush);
-        palette7.setBrush(QPalette::Active, QPalette::ButtonText, brush6);
+        palette9.setBrush(QPalette::Active, QPalette::Button, brush60);
+        palette9.setBrush(QPalette::Active, QPalette::Light, brush11);
+        palette9.setBrush(QPalette::Active, QPalette::Midlight, brush12);
+        palette9.setBrush(QPalette::Active, QPalette::Dark, brush13);
+        palette9.setBrush(QPalette::Active, QPalette::Mid, brush14);
+        palette9.setBrush(QPalette::Active, QPalette::Text, brush6);
+        palette9.setBrush(QPalette::Active, QPalette::BrightText, brush);
+        palette9.setBrush(QPalette::Active, QPalette::ButtonText, brush6);
         QLinearGradient gradient46(0, 0, 0, 1);
         gradient46.setSpread(QGradient::PadSpread);
         gradient46.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1410,7 +1669,7 @@ public:
         gradient46.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient46.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush61(gradient46);
-        palette7.setBrush(QPalette::Active, QPalette::Base, brush61);
+        palette9.setBrush(QPalette::Active, QPalette::Base, brush61);
         QLinearGradient gradient47(0, 0, 0, 1);
         gradient47.setSpread(QGradient::PadSpread);
         gradient47.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1420,12 +1679,12 @@ public:
         gradient47.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient47.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush62(gradient47);
-        palette7.setBrush(QPalette::Active, QPalette::Window, brush62);
-        palette7.setBrush(QPalette::Active, QPalette::Shadow, brush6);
-        palette7.setBrush(QPalette::Active, QPalette::AlternateBase, brush11);
-        palette7.setBrush(QPalette::Active, QPalette::ToolTipBase, brush8);
-        palette7.setBrush(QPalette::Active, QPalette::ToolTipText, brush6);
-        palette7.setBrush(QPalette::Inactive, QPalette::WindowText, brush6);
+        palette9.setBrush(QPalette::Active, QPalette::Window, brush62);
+        palette9.setBrush(QPalette::Active, QPalette::Shadow, brush6);
+        palette9.setBrush(QPalette::Active, QPalette::AlternateBase, brush11);
+        palette9.setBrush(QPalette::Active, QPalette::ToolTipBase, brush8);
+        palette9.setBrush(QPalette::Active, QPalette::ToolTipText, brush6);
+        palette9.setBrush(QPalette::Inactive, QPalette::WindowText, brush6);
         QLinearGradient gradient48(0, 0, 0, 1);
         gradient48.setSpread(QGradient::PadSpread);
         gradient48.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1435,14 +1694,14 @@ public:
         gradient48.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient48.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush63(gradient48);
-        palette7.setBrush(QPalette::Inactive, QPalette::Button, brush63);
-        palette7.setBrush(QPalette::Inactive, QPalette::Light, brush11);
-        palette7.setBrush(QPalette::Inactive, QPalette::Midlight, brush12);
-        palette7.setBrush(QPalette::Inactive, QPalette::Dark, brush13);
-        palette7.setBrush(QPalette::Inactive, QPalette::Mid, brush14);
-        palette7.setBrush(QPalette::Inactive, QPalette::Text, brush6);
-        palette7.setBrush(QPalette::Inactive, QPalette::BrightText, brush);
-        palette7.setBrush(QPalette::Inactive, QPalette::ButtonText, brush6);
+        palette9.setBrush(QPalette::Inactive, QPalette::Button, brush63);
+        palette9.setBrush(QPalette::Inactive, QPalette::Light, brush11);
+        palette9.setBrush(QPalette::Inactive, QPalette::Midlight, brush12);
+        palette9.setBrush(QPalette::Inactive, QPalette::Dark, brush13);
+        palette9.setBrush(QPalette::Inactive, QPalette::Mid, brush14);
+        palette9.setBrush(QPalette::Inactive, QPalette::Text, brush6);
+        palette9.setBrush(QPalette::Inactive, QPalette::BrightText, brush);
+        palette9.setBrush(QPalette::Inactive, QPalette::ButtonText, brush6);
         QLinearGradient gradient49(0, 0, 0, 1);
         gradient49.setSpread(QGradient::PadSpread);
         gradient49.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1452,7 +1711,7 @@ public:
         gradient49.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient49.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush64(gradient49);
-        palette7.setBrush(QPalette::Inactive, QPalette::Base, brush64);
+        palette9.setBrush(QPalette::Inactive, QPalette::Base, brush64);
         QLinearGradient gradient50(0, 0, 0, 1);
         gradient50.setSpread(QGradient::PadSpread);
         gradient50.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1462,12 +1721,12 @@ public:
         gradient50.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient50.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush65(gradient50);
-        palette7.setBrush(QPalette::Inactive, QPalette::Window, brush65);
-        palette7.setBrush(QPalette::Inactive, QPalette::Shadow, brush6);
-        palette7.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush11);
-        palette7.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush8);
-        palette7.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush6);
-        palette7.setBrush(QPalette::Disabled, QPalette::WindowText, brush6);
+        palette9.setBrush(QPalette::Inactive, QPalette::Window, brush65);
+        palette9.setBrush(QPalette::Inactive, QPalette::Shadow, brush6);
+        palette9.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush11);
+        palette9.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush8);
+        palette9.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush6);
+        palette9.setBrush(QPalette::Disabled, QPalette::WindowText, brush6);
         QLinearGradient gradient51(0, 0, 0, 1);
         gradient51.setSpread(QGradient::PadSpread);
         gradient51.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1477,14 +1736,14 @@ public:
         gradient51.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient51.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush66(gradient51);
-        palette7.setBrush(QPalette::Disabled, QPalette::Button, brush66);
-        palette7.setBrush(QPalette::Disabled, QPalette::Light, brush11);
-        palette7.setBrush(QPalette::Disabled, QPalette::Midlight, brush12);
-        palette7.setBrush(QPalette::Disabled, QPalette::Dark, brush13);
-        palette7.setBrush(QPalette::Disabled, QPalette::Mid, brush14);
-        palette7.setBrush(QPalette::Disabled, QPalette::Text, brush6);
-        palette7.setBrush(QPalette::Disabled, QPalette::BrightText, brush);
-        palette7.setBrush(QPalette::Disabled, QPalette::ButtonText, brush6);
+        palette9.setBrush(QPalette::Disabled, QPalette::Button, brush66);
+        palette9.setBrush(QPalette::Disabled, QPalette::Light, brush11);
+        palette9.setBrush(QPalette::Disabled, QPalette::Midlight, brush12);
+        palette9.setBrush(QPalette::Disabled, QPalette::Dark, brush13);
+        palette9.setBrush(QPalette::Disabled, QPalette::Mid, brush14);
+        palette9.setBrush(QPalette::Disabled, QPalette::Text, brush6);
+        palette9.setBrush(QPalette::Disabled, QPalette::BrightText, brush);
+        palette9.setBrush(QPalette::Disabled, QPalette::ButtonText, brush6);
         QLinearGradient gradient52(0, 0, 0, 1);
         gradient52.setSpread(QGradient::PadSpread);
         gradient52.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1494,7 +1753,7 @@ public:
         gradient52.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient52.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush67(gradient52);
-        palette7.setBrush(QPalette::Disabled, QPalette::Base, brush67);
+        palette9.setBrush(QPalette::Disabled, QPalette::Base, brush67);
         QLinearGradient gradient53(0, 0, 0, 1);
         gradient53.setSpread(QGradient::PadSpread);
         gradient53.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1504,59 +1763,74 @@ public:
         gradient53.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient53.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush68(gradient53);
-        palette7.setBrush(QPalette::Disabled, QPalette::Window, brush68);
-        palette7.setBrush(QPalette::Disabled, QPalette::Shadow, brush6);
-        palette7.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush23);
-        palette7.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush8);
-        palette7.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush6);
-        pushButton_crystalAdvanced->setPalette(palette7);
-        tabWidget->addTab(tabCrystal, QString());
-        tabBeam = new QWidget();
-        tabBeam->setObjectName(QStringLiteral("tabBeam"));
-        label_beamType = new QLabel(tabBeam);
-        label_beamType->setObjectName(QStringLiteral("label_beamType"));
-        label_beamType->setGeometry(QRect(10, 10, 76, 23));
-        comboBox_beamType = new QComboBox(tabBeam);
-        comboBox_beamType->setObjectName(QStringLiteral("comboBox_beamType"));
-        comboBox_beamType->setGeometry(QRect(98, 10, 471, 23));
-        label_FWHM = new QLabel(tabBeam);
-        label_FWHM->setObjectName(QStringLiteral("label_FWHM"));
-        label_FWHM->setGeometry(QRect(10, 40, 76, 23));
-        label_Collimation = new QLabel(tabBeam);
-        label_Collimation->setObjectName(QStringLiteral("label_Collimation"));
-        label_Collimation->setGeometry(QRect(10, 90, 76, 23));
-        label_collType = new QLabel(tabBeam);
-        label_collType->setObjectName(QStringLiteral("label_collType"));
-        label_collType->setGeometry(QRect(90, 70, 76, 23));
-        label_collDims = new QLabel(tabBeam);
-        label_collDims->setObjectName(QStringLiteral("label_collDims"));
-        label_collDims->setGeometry(QRect(90, 100, 76, 23));
-        comboBox_collType = new QComboBox(tabBeam);
-        comboBox_collType->setObjectName(QStringLiteral("comboBox_collType"));
-        comboBox_collType->setGeometry(QRect(180, 70, 391, 23));
-        label_collX = new QLabel(tabBeam);
-        label_collX->setObjectName(QStringLiteral("label_collX"));
-        label_collX->setGeometry(QRect(180, 100, 16, 23));
-        label_collY = new QLabel(tabBeam);
-        label_collY->setObjectName(QStringLiteral("label_collY"));
-        label_collY->setGeometry(QRect(380, 100, 16, 23));
-        lineEdit_collX = new QLineEdit(tabBeam);
-        lineEdit_collX->setObjectName(QStringLiteral("lineEdit_collX"));
-        lineEdit_collX->setGeometry(QRect(200, 100, 151, 23));
-        lineEdit_collY = new QLineEdit(tabBeam);
-        lineEdit_collY->setObjectName(QStringLiteral("lineEdit_collY"));
-        lineEdit_collY->setGeometry(QRect(410, 100, 151, 23));
-        label_beamFile = new QLabel(tabBeam);
-        label_beamFile->setObjectName(QStringLiteral("label_beamFile"));
-        label_beamFile->setGeometry(QRect(10, 40, 76, 23));
-        lineEdit_beamFile = new QLineEdit(tabBeam);
-        lineEdit_beamFile->setObjectName(QStringLiteral("lineEdit_beamFile"));
-        lineEdit_beamFile->setGeometry(QRect(100, 40, 381, 23));
-        pushButton_beamFile = new QPushButton(tabBeam);
-        pushButton_beamFile->setObjectName(QStringLiteral("pushButton_beamFile"));
-        pushButton_beamFile->setGeometry(QRect(490, 40, 80, 23));
-        QPalette palette8;
-        palette8.setBrush(QPalette::Active, QPalette::WindowText, brush6);
+        palette9.setBrush(QPalette::Disabled, QPalette::Window, brush68);
+        palette9.setBrush(QPalette::Disabled, QPalette::Shadow, brush6);
+        palette9.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush23);
+        palette9.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush8);
+        palette9.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush6);
+        pushButton_heavyProt->setPalette(palette9);
+
+        verticalLayout_3->addWidget(pushButton_heavyProt);
+
+        label_heavyTitle = new QLabel(scrollAreaWidgetContents_2);
+        label_heavyTitle->setObjectName(QStringLiteral("label_heavyTitle"));
+
+        verticalLayout_3->addWidget(label_heavyTitle);
+
+        textEdit_heavyProt = new QTextEdit(scrollAreaWidgetContents_2);
+        textEdit_heavyProt->setObjectName(QStringLiteral("textEdit_heavyProt"));
+
+        verticalLayout_3->addWidget(textEdit_heavyProt);
+
+
+        horizontalLayout_14->addLayout(verticalLayout_3);
+
+
+        verticalLayout->addLayout(horizontalLayout_14);
+
+        horizontalLayout_16 = new QHBoxLayout();
+        horizontalLayout_16->setSpacing(6);
+        horizontalLayout_16->setObjectName(QStringLiteral("horizontalLayout_16"));
+        horizontalLayout_16->setContentsMargins(-1, -1, -1, 10);
+        label_Solvent = new QLabel(scrollAreaWidgetContents_2);
+        label_Solvent->setObjectName(QStringLiteral("label_Solvent"));
+
+        horizontalLayout_16->addWidget(label_Solvent);
+
+        verticalLayout_4 = new QVBoxLayout();
+        verticalLayout_4->setSpacing(6);
+        verticalLayout_4->setObjectName(QStringLiteral("verticalLayout_4"));
+        verticalLayout_4->setContentsMargins(-1, -1, -1, 0);
+        formLayout_4 = new QFormLayout();
+        formLayout_4->setSpacing(6);
+        formLayout_4->setObjectName(QStringLiteral("formLayout_4"));
+        label_solventEl = new QLabel(scrollAreaWidgetContents_2);
+        label_solventEl->setObjectName(QStringLiteral("label_solventEl"));
+
+        formLayout_4->setWidget(0, QFormLayout::LabelRole, label_solventEl);
+
+        lineEdit_Elsolvent = new QLineEdit(scrollAreaWidgetContents_2);
+        lineEdit_Elsolvent->setObjectName(QStringLiteral("lineEdit_Elsolvent"));
+
+        formLayout_4->setWidget(0, QFormLayout::FieldRole, lineEdit_Elsolvent);
+
+        label_solventConc = new QLabel(scrollAreaWidgetContents_2);
+        label_solventConc->setObjectName(QStringLiteral("label_solventConc"));
+
+        formLayout_4->setWidget(1, QFormLayout::LabelRole, label_solventConc);
+
+        lineEdit_Elconc = new QLineEdit(scrollAreaWidgetContents_2);
+        lineEdit_Elconc->setObjectName(QStringLiteral("lineEdit_Elconc"));
+
+        formLayout_4->setWidget(1, QFormLayout::FieldRole, lineEdit_Elconc);
+
+
+        verticalLayout_4->addLayout(formLayout_4);
+
+        pushButton_solventConc = new QPushButton(scrollAreaWidgetContents_2);
+        pushButton_solventConc->setObjectName(QStringLiteral("pushButton_solventConc"));
+        QPalette palette10;
+        palette10.setBrush(QPalette::Active, QPalette::WindowText, brush6);
         QLinearGradient gradient54(0, 0, 0, 1);
         gradient54.setSpread(QGradient::PadSpread);
         gradient54.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1566,14 +1840,14 @@ public:
         gradient54.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient54.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush69(gradient54);
-        palette8.setBrush(QPalette::Active, QPalette::Button, brush69);
-        palette8.setBrush(QPalette::Active, QPalette::Light, brush11);
-        palette8.setBrush(QPalette::Active, QPalette::Midlight, brush12);
-        palette8.setBrush(QPalette::Active, QPalette::Dark, brush13);
-        palette8.setBrush(QPalette::Active, QPalette::Mid, brush14);
-        palette8.setBrush(QPalette::Active, QPalette::Text, brush6);
-        palette8.setBrush(QPalette::Active, QPalette::BrightText, brush);
-        palette8.setBrush(QPalette::Active, QPalette::ButtonText, brush6);
+        palette10.setBrush(QPalette::Active, QPalette::Button, brush69);
+        palette10.setBrush(QPalette::Active, QPalette::Light, brush11);
+        palette10.setBrush(QPalette::Active, QPalette::Midlight, brush12);
+        palette10.setBrush(QPalette::Active, QPalette::Dark, brush13);
+        palette10.setBrush(QPalette::Active, QPalette::Mid, brush14);
+        palette10.setBrush(QPalette::Active, QPalette::Text, brush6);
+        palette10.setBrush(QPalette::Active, QPalette::BrightText, brush);
+        palette10.setBrush(QPalette::Active, QPalette::ButtonText, brush6);
         QLinearGradient gradient55(0, 0, 0, 1);
         gradient55.setSpread(QGradient::PadSpread);
         gradient55.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1583,7 +1857,7 @@ public:
         gradient55.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient55.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush70(gradient55);
-        palette8.setBrush(QPalette::Active, QPalette::Base, brush70);
+        palette10.setBrush(QPalette::Active, QPalette::Base, brush70);
         QLinearGradient gradient56(0, 0, 0, 1);
         gradient56.setSpread(QGradient::PadSpread);
         gradient56.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1593,12 +1867,12 @@ public:
         gradient56.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient56.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush71(gradient56);
-        palette8.setBrush(QPalette::Active, QPalette::Window, brush71);
-        palette8.setBrush(QPalette::Active, QPalette::Shadow, brush6);
-        palette8.setBrush(QPalette::Active, QPalette::AlternateBase, brush11);
-        palette8.setBrush(QPalette::Active, QPalette::ToolTipBase, brush8);
-        palette8.setBrush(QPalette::Active, QPalette::ToolTipText, brush6);
-        palette8.setBrush(QPalette::Inactive, QPalette::WindowText, brush6);
+        palette10.setBrush(QPalette::Active, QPalette::Window, brush71);
+        palette10.setBrush(QPalette::Active, QPalette::Shadow, brush6);
+        palette10.setBrush(QPalette::Active, QPalette::AlternateBase, brush11);
+        palette10.setBrush(QPalette::Active, QPalette::ToolTipBase, brush8);
+        palette10.setBrush(QPalette::Active, QPalette::ToolTipText, brush6);
+        palette10.setBrush(QPalette::Inactive, QPalette::WindowText, brush6);
         QLinearGradient gradient57(0, 0, 0, 1);
         gradient57.setSpread(QGradient::PadSpread);
         gradient57.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1608,14 +1882,14 @@ public:
         gradient57.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient57.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush72(gradient57);
-        palette8.setBrush(QPalette::Inactive, QPalette::Button, brush72);
-        palette8.setBrush(QPalette::Inactive, QPalette::Light, brush11);
-        palette8.setBrush(QPalette::Inactive, QPalette::Midlight, brush12);
-        palette8.setBrush(QPalette::Inactive, QPalette::Dark, brush13);
-        palette8.setBrush(QPalette::Inactive, QPalette::Mid, brush14);
-        palette8.setBrush(QPalette::Inactive, QPalette::Text, brush6);
-        palette8.setBrush(QPalette::Inactive, QPalette::BrightText, brush);
-        palette8.setBrush(QPalette::Inactive, QPalette::ButtonText, brush6);
+        palette10.setBrush(QPalette::Inactive, QPalette::Button, brush72);
+        palette10.setBrush(QPalette::Inactive, QPalette::Light, brush11);
+        palette10.setBrush(QPalette::Inactive, QPalette::Midlight, brush12);
+        palette10.setBrush(QPalette::Inactive, QPalette::Dark, brush13);
+        palette10.setBrush(QPalette::Inactive, QPalette::Mid, brush14);
+        palette10.setBrush(QPalette::Inactive, QPalette::Text, brush6);
+        palette10.setBrush(QPalette::Inactive, QPalette::BrightText, brush);
+        palette10.setBrush(QPalette::Inactive, QPalette::ButtonText, brush6);
         QLinearGradient gradient58(0, 0, 0, 1);
         gradient58.setSpread(QGradient::PadSpread);
         gradient58.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1625,7 +1899,7 @@ public:
         gradient58.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient58.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush73(gradient58);
-        palette8.setBrush(QPalette::Inactive, QPalette::Base, brush73);
+        palette10.setBrush(QPalette::Inactive, QPalette::Base, brush73);
         QLinearGradient gradient59(0, 0, 0, 1);
         gradient59.setSpread(QGradient::PadSpread);
         gradient59.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1635,12 +1909,12 @@ public:
         gradient59.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient59.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush74(gradient59);
-        palette8.setBrush(QPalette::Inactive, QPalette::Window, brush74);
-        palette8.setBrush(QPalette::Inactive, QPalette::Shadow, brush6);
-        palette8.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush11);
-        palette8.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush8);
-        palette8.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush6);
-        palette8.setBrush(QPalette::Disabled, QPalette::WindowText, brush6);
+        palette10.setBrush(QPalette::Inactive, QPalette::Window, brush74);
+        palette10.setBrush(QPalette::Inactive, QPalette::Shadow, brush6);
+        palette10.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush11);
+        palette10.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush8);
+        palette10.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush6);
+        palette10.setBrush(QPalette::Disabled, QPalette::WindowText, brush6);
         QLinearGradient gradient60(0, 0, 0, 1);
         gradient60.setSpread(QGradient::PadSpread);
         gradient60.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1650,14 +1924,14 @@ public:
         gradient60.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient60.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush75(gradient60);
-        palette8.setBrush(QPalette::Disabled, QPalette::Button, brush75);
-        palette8.setBrush(QPalette::Disabled, QPalette::Light, brush11);
-        palette8.setBrush(QPalette::Disabled, QPalette::Midlight, brush12);
-        palette8.setBrush(QPalette::Disabled, QPalette::Dark, brush13);
-        palette8.setBrush(QPalette::Disabled, QPalette::Mid, brush14);
-        palette8.setBrush(QPalette::Disabled, QPalette::Text, brush6);
-        palette8.setBrush(QPalette::Disabled, QPalette::BrightText, brush);
-        palette8.setBrush(QPalette::Disabled, QPalette::ButtonText, brush6);
+        palette10.setBrush(QPalette::Disabled, QPalette::Button, brush75);
+        palette10.setBrush(QPalette::Disabled, QPalette::Light, brush11);
+        palette10.setBrush(QPalette::Disabled, QPalette::Midlight, brush12);
+        palette10.setBrush(QPalette::Disabled, QPalette::Dark, brush13);
+        palette10.setBrush(QPalette::Disabled, QPalette::Mid, brush14);
+        palette10.setBrush(QPalette::Disabled, QPalette::Text, brush6);
+        palette10.setBrush(QPalette::Disabled, QPalette::BrightText, brush);
+        palette10.setBrush(QPalette::Disabled, QPalette::ButtonText, brush6);
         QLinearGradient gradient61(0, 0, 0, 1);
         gradient61.setSpread(QGradient::PadSpread);
         gradient61.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1667,7 +1941,7 @@ public:
         gradient61.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient61.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush76(gradient61);
-        palette8.setBrush(QPalette::Disabled, QPalette::Base, brush76);
+        palette10.setBrush(QPalette::Disabled, QPalette::Base, brush76);
         QLinearGradient gradient62(0, 0, 0, 1);
         gradient62.setSpread(QGradient::PadSpread);
         gradient62.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1677,157 +1951,101 @@ public:
         gradient62.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient62.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush77(gradient62);
-        palette8.setBrush(QPalette::Disabled, QPalette::Window, brush77);
-        palette8.setBrush(QPalette::Disabled, QPalette::Shadow, brush6);
-        palette8.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush23);
-        palette8.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush8);
-        palette8.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush6);
-        pushButton_beamFile->setPalette(palette8);
-        lineEdit_pxSizeX = new QLineEdit(tabBeam);
-        lineEdit_pxSizeX->setObjectName(QStringLiteral("lineEdit_pxSizeX"));
-        lineEdit_pxSizeX->setGeometry(QRect(120, 80, 201, 23));
-        label_pxSize = new QLabel(tabBeam);
-        label_pxSize->setObjectName(QStringLiteral("label_pxSize"));
-        label_pxSize->setGeometry(QRect(10, 80, 76, 23));
-        label_flux = new QLabel(tabBeam);
-        label_flux->setObjectName(QStringLiteral("label_flux"));
-        label_flux->setGeometry(QRect(10, 140, 76, 23));
-        lineEdit_flux = new QLineEdit(tabBeam);
-        lineEdit_flux->setObjectName(QStringLiteral("lineEdit_flux"));
-        lineEdit_flux->setGeometry(QRect(100, 140, 471, 23));
-        label_pulseEn = new QLabel(tabBeam);
-        label_pulseEn->setObjectName(QStringLiteral("label_pulseEn"));
-        label_pulseEn->setGeometry(QRect(10, 140, 81, 23));
-        lineEdit_pulseEn = new QLineEdit(tabBeam);
-        lineEdit_pulseEn->setObjectName(QStringLiteral("lineEdit_pulseEn"));
-        lineEdit_pulseEn->setGeometry(QRect(100, 140, 471, 23));
-        label_beamEn = new QLabel(tabBeam);
-        label_beamEn->setObjectName(QStringLiteral("label_beamEn"));
-        label_beamEn->setGeometry(QRect(10, 180, 81, 23));
-        lineEdit_beamEn = new QLineEdit(tabBeam);
-        lineEdit_beamEn->setObjectName(QStringLiteral("lineEdit_beamEn"));
-        lineEdit_beamEn->setGeometry(QRect(100, 180, 471, 23));
-        label_beamEnFWHM = new QLabel(tabBeam);
-        label_beamEnFWHM->setObjectName(QStringLiteral("label_beamEnFWHM"));
-        label_beamEnFWHM->setGeometry(QRect(10, 240, 91, 23));
-        lineEdit_beamEnFWHM = new QLineEdit(tabBeam);
-        lineEdit_beamEnFWHM->setObjectName(QStringLiteral("lineEdit_beamEnFWHM"));
-        lineEdit_beamEnFWHM->setGeometry(QRect(100, 240, 471, 23));
-        label_monochrome = new QLabel(tabBeam);
-        label_monochrome->setObjectName(QStringLiteral("label_monochrome"));
-        label_monochrome->setGeometry(QRect(10, 210, 141, 23));
-        comboBox_monochrome = new QComboBox(tabBeam);
-        comboBox_monochrome->setObjectName(QStringLiteral("comboBox_monochrome"));
-        comboBox_monochrome->setGeometry(QRect(150, 210, 421, 23));
-        lineEdit_pxSizeY = new QLineEdit(tabBeam);
-        lineEdit_pxSizeY->setObjectName(QStringLiteral("lineEdit_pxSizeY"));
-        lineEdit_pxSizeY->setGeometry(QRect(370, 80, 201, 23));
-        label_pxX = new QLabel(tabBeam);
-        label_pxX->setObjectName(QStringLiteral("label_pxX"));
-        label_pxX->setGeometry(QRect(100, 80, 16, 23));
-        label_pxY = new QLabel(tabBeam);
-        label_pxY->setObjectName(QStringLiteral("label_pxY"));
-        label_pxY->setGeometry(QRect(350, 80, 16, 23));
-        lineEdit_FWHMY = new QLineEdit(tabBeam);
-        lineEdit_FWHMY->setObjectName(QStringLiteral("lineEdit_FWHMY"));
-        lineEdit_FWHMY->setGeometry(QRect(370, 40, 201, 23));
-        label_FWHMX = new QLabel(tabBeam);
-        label_FWHMX->setObjectName(QStringLiteral("label_FWHMX"));
-        label_FWHMX->setGeometry(QRect(100, 40, 16, 23));
-        lineEdit_FWHMX = new QLineEdit(tabBeam);
-        lineEdit_FWHMX->setObjectName(QStringLiteral("lineEdit_FWHMX"));
-        lineEdit_FWHMX->setGeometry(QRect(120, 40, 201, 23));
-        label_FWHMY = new QLabel(tabBeam);
-        label_FWHMY->setObjectName(QStringLiteral("label_FWHMY"));
-        label_FWHMY->setGeometry(QRect(350, 40, 16, 23));
-        tabWidget->addTab(tabBeam, QString());
-        tabWedge = new QWidget();
-        tabWedge->setObjectName(QStringLiteral("tabWedge"));
-        label_startAngle = new QLabel(tabWedge);
-        label_startAngle->setObjectName(QStringLiteral("label_startAngle"));
-        label_startAngle->setGeometry(QRect(10, 20, 71, 16));
-        lineEdit_startAngle = new QLineEdit(tabWedge);
-        lineEdit_startAngle->setObjectName(QStringLiteral("lineEdit_startAngle"));
-        lineEdit_startAngle->setGeometry(QRect(160, 20, 161, 23));
-        label_endAngle = new QLabel(tabWedge);
-        label_endAngle->setObjectName(QStringLiteral("label_endAngle"));
-        label_endAngle->setGeometry(QRect(330, 20, 71, 16));
-        lineEdit_endAngle = new QLineEdit(tabWedge);
-        lineEdit_endAngle->setObjectName(QStringLiteral("lineEdit_endAngle"));
-        lineEdit_endAngle->setGeometry(QRect(410, 20, 161, 23));
-        label_expTime = new QLabel(tabWedge);
-        label_expTime->setObjectName(QStringLiteral("label_expTime"));
-        label_expTime->setGeometry(QRect(10, 60, 91, 16));
-        label_pulseLength = new QLabel(tabWedge);
-        label_pulseLength->setObjectName(QStringLiteral("label_pulseLength"));
-        label_pulseLength->setGeometry(QRect(10, 60, 91, 16));
-        lineEdit_exposureTime = new QLineEdit(tabWedge);
-        lineEdit_exposureTime->setObjectName(QStringLiteral("lineEdit_exposureTime"));
-        lineEdit_exposureTime->setGeometry(QRect(160, 60, 411, 23));
-        label_angleRes = new QLabel(tabWedge);
-        label_angleRes->setObjectName(QStringLiteral("label_angleRes"));
-        label_angleRes->setGeometry(QRect(10, 100, 121, 16));
-        lineEdit_angleRes = new QLineEdit(tabWedge);
-        lineEdit_angleRes->setObjectName(QStringLiteral("lineEdit_angleRes"));
-        lineEdit_angleRes->setGeometry(QRect(160, 100, 411, 23));
-        label_startOffset = new QLabel(tabWedge);
-        label_startOffset->setObjectName(QStringLiteral("label_startOffset"));
-        label_startOffset->setGeometry(QRect(10, 140, 121, 16));
-        lineEdit_offsetX = new QLineEdit(tabWedge);
-        lineEdit_offsetX->setObjectName(QStringLiteral("lineEdit_offsetX"));
-        lineEdit_offsetX->setGeometry(QRect(190, 140, 71, 23));
-        label_offsetX = new QLabel(tabWedge);
-        label_offsetX->setObjectName(QStringLiteral("label_offsetX"));
-        label_offsetX->setGeometry(QRect(160, 140, 20, 21));
-        label_offsetY = new QLabel(tabWedge);
-        label_offsetY->setObjectName(QStringLiteral("label_offsetY"));
-        label_offsetY->setGeometry(QRect(310, 140, 20, 21));
-        lineEdit_offsetY = new QLineEdit(tabWedge);
-        lineEdit_offsetY->setObjectName(QStringLiteral("lineEdit_offsetY"));
-        lineEdit_offsetY->setGeometry(QRect(330, 140, 71, 23));
-        label_offsetZ = new QLabel(tabWedge);
-        label_offsetZ->setObjectName(QStringLiteral("label_offsetZ"));
-        label_offsetZ->setGeometry(QRect(460, 140, 20, 21));
-        lineEdit_offsetZ = new QLineEdit(tabWedge);
-        lineEdit_offsetZ->setObjectName(QStringLiteral("lineEdit_offsetZ"));
-        lineEdit_offsetZ->setGeometry(QRect(480, 140, 71, 23));
-        label_tns = new QLabel(tabWedge);
-        label_tns->setObjectName(QStringLiteral("label_tns"));
-        label_tns->setGeometry(QRect(10, 180, 151, 16));
-        label_rotOffset = new QLabel(tabWedge);
-        label_rotOffset->setObjectName(QStringLiteral("label_rotOffset"));
-        label_rotOffset->setGeometry(QRect(10, 220, 151, 16));
-        lineEdit_rotOffset = new QLineEdit(tabWedge);
-        lineEdit_rotOffset->setObjectName(QStringLiteral("lineEdit_rotOffset"));
-        lineEdit_rotOffset->setGeometry(QRect(160, 210, 411, 23));
-        lineEdit_tnsX = new QLineEdit(tabWedge);
-        lineEdit_tnsX->setObjectName(QStringLiteral("lineEdit_tnsX"));
-        lineEdit_tnsX->setGeometry(QRect(190, 180, 71, 23));
-        lineEdit_tnsY = new QLineEdit(tabWedge);
-        lineEdit_tnsY->setObjectName(QStringLiteral("lineEdit_tnsY"));
-        lineEdit_tnsY->setGeometry(QRect(330, 180, 71, 23));
-        label_tnsZ = new QLabel(tabWedge);
-        label_tnsZ->setObjectName(QStringLiteral("label_tnsZ"));
-        label_tnsZ->setGeometry(QRect(460, 180, 20, 21));
-        label_tnsX = new QLabel(tabWedge);
-        label_tnsX->setObjectName(QStringLiteral("label_tnsX"));
-        label_tnsX->setGeometry(QRect(160, 180, 20, 21));
-        label_tnsY = new QLabel(tabWedge);
-        label_tnsY->setObjectName(QStringLiteral("label_tnsY"));
-        label_tnsY->setGeometry(QRect(310, 180, 20, 21));
-        lineEdit_tnsZ = new QLineEdit(tabWedge);
-        lineEdit_tnsZ->setObjectName(QStringLiteral("lineEdit_tnsZ"));
-        lineEdit_tnsZ->setGeometry(QRect(480, 180, 71, 23));
-        tabWidget->addTab(tabWedge, QString());
-        label_logo = new QLabel(centralWidget);
-        label_logo->setObjectName(QStringLiteral("label_logo"));
-        label_logo->setGeometry(QRect(70, -10, 461, 161));
-        label_logo->setPixmap(QPixmap(QString::fromUtf8(":/new/prefix1/raddoseLogo.png")));
-        pushButton_run = new QPushButton(centralWidget);
-        pushButton_run->setObjectName(QStringLiteral("pushButton_run"));
-        pushButton_run->setGeometry(QRect(30, 850, 541, 23));
-        QPalette palette9;
-        palette9.setBrush(QPalette::Active, QPalette::WindowText, brush6);
+        palette10.setBrush(QPalette::Disabled, QPalette::Window, brush77);
+        palette10.setBrush(QPalette::Disabled, QPalette::Shadow, brush6);
+        palette10.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush23);
+        palette10.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush8);
+        palette10.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush6);
+        pushButton_solventConc->setPalette(palette10);
+
+        verticalLayout_4->addWidget(pushButton_solventConc);
+
+        label_solventTitle = new QLabel(scrollAreaWidgetContents_2);
+        label_solventTitle->setObjectName(QStringLiteral("label_solventTitle"));
+
+        verticalLayout_4->addWidget(label_solventTitle);
+
+        textEdit_solventConc = new QTextEdit(scrollAreaWidgetContents_2);
+        textEdit_solventConc->setObjectName(QStringLiteral("textEdit_solventConc"));
+
+        verticalLayout_4->addWidget(textEdit_solventConc);
+
+
+        horizontalLayout_16->addLayout(verticalLayout_4);
+
+
+        verticalLayout->addLayout(horizontalLayout_16);
+
+        horizontalLayout_17 = new QHBoxLayout();
+        horizontalLayout_17->setSpacing(6);
+        horizontalLayout_17->setObjectName(QStringLiteral("horizontalLayout_17"));
+        horizontalLayout_17->setContentsMargins(-1, -1, -1, 0);
+        label_SolventFr = new QLabel(scrollAreaWidgetContents_2);
+        label_SolventFr->setObjectName(QStringLiteral("label_SolventFr"));
+
+        horizontalLayout_17->addWidget(label_SolventFr);
+
+        lineEdit_solventFr = new QLineEdit(scrollAreaWidgetContents_2);
+        lineEdit_solventFr->setObjectName(QStringLiteral("lineEdit_solventFr"));
+
+        horizontalLayout_17->addWidget(lineEdit_solventFr);
+
+
+        verticalLayout->addLayout(horizontalLayout_17);
+
+        horizontalLayout_18 = new QHBoxLayout();
+        horizontalLayout_18->setSpacing(6);
+        horizontalLayout_18->setObjectName(QStringLiteral("horizontalLayout_18"));
+        horizontalLayout_18->setContentsMargins(-1, -1, -1, 0);
+        label_Nucleotides = new QLabel(scrollAreaWidgetContents_2);
+        label_Nucleotides->setObjectName(QStringLiteral("label_Nucleotides"));
+
+        horizontalLayout_18->addWidget(label_Nucleotides);
+
+        label_DNA = new QLabel(scrollAreaWidgetContents_2);
+        label_DNA->setObjectName(QStringLiteral("label_DNA"));
+
+        horizontalLayout_18->addWidget(label_DNA);
+
+        lineEdit_DNA = new QLineEdit(scrollAreaWidgetContents_2);
+        lineEdit_DNA->setObjectName(QStringLiteral("lineEdit_DNA"));
+
+        horizontalLayout_18->addWidget(lineEdit_DNA);
+
+        label_RNA = new QLabel(scrollAreaWidgetContents_2);
+        label_RNA->setObjectName(QStringLiteral("label_RNA"));
+
+        horizontalLayout_18->addWidget(label_RNA);
+
+        lineEdit_RNA = new QLineEdit(scrollAreaWidgetContents_2);
+        lineEdit_RNA->setObjectName(QStringLiteral("lineEdit_RNA"));
+
+        horizontalLayout_18->addWidget(lineEdit_RNA);
+
+
+        verticalLayout->addLayout(horizontalLayout_18);
+
+        horizontalLayout_19 = new QHBoxLayout();
+        horizontalLayout_19->setSpacing(6);
+        horizontalLayout_19->setObjectName(QStringLiteral("horizontalLayout_19"));
+        horizontalLayout_19->setContentsMargins(-1, -1, -1, 10);
+        label_carb = new QLabel(scrollAreaWidgetContents_2);
+        label_carb->setObjectName(QStringLiteral("label_carb"));
+
+        horizontalLayout_19->addWidget(label_carb);
+
+        lineEdit_carb = new QLineEdit(scrollAreaWidgetContents_2);
+        lineEdit_carb->setObjectName(QStringLiteral("lineEdit_carb"));
+
+        horizontalLayout_19->addWidget(lineEdit_carb);
+
+
+        verticalLayout->addLayout(horizontalLayout_19);
+
+        pushButton_crystalAdvanced = new QPushButton(scrollAreaWidgetContents_2);
+        pushButton_crystalAdvanced->setObjectName(QStringLiteral("pushButton_crystalAdvanced"));
+        QPalette palette11;
+        palette11.setBrush(QPalette::Active, QPalette::WindowText, brush6);
         QLinearGradient gradient63(0, 0, 0, 1);
         gradient63.setSpread(QGradient::PadSpread);
         gradient63.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1837,14 +2055,14 @@ public:
         gradient63.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient63.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush78(gradient63);
-        palette9.setBrush(QPalette::Active, QPalette::Button, brush78);
-        palette9.setBrush(QPalette::Active, QPalette::Light, brush11);
-        palette9.setBrush(QPalette::Active, QPalette::Midlight, brush12);
-        palette9.setBrush(QPalette::Active, QPalette::Dark, brush13);
-        palette9.setBrush(QPalette::Active, QPalette::Mid, brush14);
-        palette9.setBrush(QPalette::Active, QPalette::Text, brush6);
-        palette9.setBrush(QPalette::Active, QPalette::BrightText, brush);
-        palette9.setBrush(QPalette::Active, QPalette::ButtonText, brush6);
+        palette11.setBrush(QPalette::Active, QPalette::Button, brush78);
+        palette11.setBrush(QPalette::Active, QPalette::Light, brush11);
+        palette11.setBrush(QPalette::Active, QPalette::Midlight, brush12);
+        palette11.setBrush(QPalette::Active, QPalette::Dark, brush13);
+        palette11.setBrush(QPalette::Active, QPalette::Mid, brush14);
+        palette11.setBrush(QPalette::Active, QPalette::Text, brush6);
+        palette11.setBrush(QPalette::Active, QPalette::BrightText, brush);
+        palette11.setBrush(QPalette::Active, QPalette::ButtonText, brush6);
         QLinearGradient gradient64(0, 0, 0, 1);
         gradient64.setSpread(QGradient::PadSpread);
         gradient64.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1854,7 +2072,7 @@ public:
         gradient64.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient64.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush79(gradient64);
-        palette9.setBrush(QPalette::Active, QPalette::Base, brush79);
+        palette11.setBrush(QPalette::Active, QPalette::Base, brush79);
         QLinearGradient gradient65(0, 0, 0, 1);
         gradient65.setSpread(QGradient::PadSpread);
         gradient65.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1864,12 +2082,12 @@ public:
         gradient65.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient65.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush80(gradient65);
-        palette9.setBrush(QPalette::Active, QPalette::Window, brush80);
-        palette9.setBrush(QPalette::Active, QPalette::Shadow, brush6);
-        palette9.setBrush(QPalette::Active, QPalette::AlternateBase, brush11);
-        palette9.setBrush(QPalette::Active, QPalette::ToolTipBase, brush8);
-        palette9.setBrush(QPalette::Active, QPalette::ToolTipText, brush6);
-        palette9.setBrush(QPalette::Inactive, QPalette::WindowText, brush6);
+        palette11.setBrush(QPalette::Active, QPalette::Window, brush80);
+        palette11.setBrush(QPalette::Active, QPalette::Shadow, brush6);
+        palette11.setBrush(QPalette::Active, QPalette::AlternateBase, brush11);
+        palette11.setBrush(QPalette::Active, QPalette::ToolTipBase, brush8);
+        palette11.setBrush(QPalette::Active, QPalette::ToolTipText, brush6);
+        palette11.setBrush(QPalette::Inactive, QPalette::WindowText, brush6);
         QLinearGradient gradient66(0, 0, 0, 1);
         gradient66.setSpread(QGradient::PadSpread);
         gradient66.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1879,14 +2097,14 @@ public:
         gradient66.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient66.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush81(gradient66);
-        palette9.setBrush(QPalette::Inactive, QPalette::Button, brush81);
-        palette9.setBrush(QPalette::Inactive, QPalette::Light, brush11);
-        palette9.setBrush(QPalette::Inactive, QPalette::Midlight, brush12);
-        palette9.setBrush(QPalette::Inactive, QPalette::Dark, brush13);
-        palette9.setBrush(QPalette::Inactive, QPalette::Mid, brush14);
-        palette9.setBrush(QPalette::Inactive, QPalette::Text, brush6);
-        palette9.setBrush(QPalette::Inactive, QPalette::BrightText, brush);
-        palette9.setBrush(QPalette::Inactive, QPalette::ButtonText, brush6);
+        palette11.setBrush(QPalette::Inactive, QPalette::Button, brush81);
+        palette11.setBrush(QPalette::Inactive, QPalette::Light, brush11);
+        palette11.setBrush(QPalette::Inactive, QPalette::Midlight, brush12);
+        palette11.setBrush(QPalette::Inactive, QPalette::Dark, brush13);
+        palette11.setBrush(QPalette::Inactive, QPalette::Mid, brush14);
+        palette11.setBrush(QPalette::Inactive, QPalette::Text, brush6);
+        palette11.setBrush(QPalette::Inactive, QPalette::BrightText, brush);
+        palette11.setBrush(QPalette::Inactive, QPalette::ButtonText, brush6);
         QLinearGradient gradient67(0, 0, 0, 1);
         gradient67.setSpread(QGradient::PadSpread);
         gradient67.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1896,7 +2114,7 @@ public:
         gradient67.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient67.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush82(gradient67);
-        palette9.setBrush(QPalette::Inactive, QPalette::Base, brush82);
+        palette11.setBrush(QPalette::Inactive, QPalette::Base, brush82);
         QLinearGradient gradient68(0, 0, 0, 1);
         gradient68.setSpread(QGradient::PadSpread);
         gradient68.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1906,12 +2124,12 @@ public:
         gradient68.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient68.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush83(gradient68);
-        palette9.setBrush(QPalette::Inactive, QPalette::Window, brush83);
-        palette9.setBrush(QPalette::Inactive, QPalette::Shadow, brush6);
-        palette9.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush11);
-        palette9.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush8);
-        palette9.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush6);
-        palette9.setBrush(QPalette::Disabled, QPalette::WindowText, brush6);
+        palette11.setBrush(QPalette::Inactive, QPalette::Window, brush83);
+        palette11.setBrush(QPalette::Inactive, QPalette::Shadow, brush6);
+        palette11.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush11);
+        palette11.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush8);
+        palette11.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush6);
+        palette11.setBrush(QPalette::Disabled, QPalette::WindowText, brush6);
         QLinearGradient gradient69(0, 0, 0, 1);
         gradient69.setSpread(QGradient::PadSpread);
         gradient69.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1921,14 +2139,14 @@ public:
         gradient69.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient69.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush84(gradient69);
-        palette9.setBrush(QPalette::Disabled, QPalette::Button, brush84);
-        palette9.setBrush(QPalette::Disabled, QPalette::Light, brush11);
-        palette9.setBrush(QPalette::Disabled, QPalette::Midlight, brush12);
-        palette9.setBrush(QPalette::Disabled, QPalette::Dark, brush13);
-        palette9.setBrush(QPalette::Disabled, QPalette::Mid, brush14);
-        palette9.setBrush(QPalette::Disabled, QPalette::Text, brush6);
-        palette9.setBrush(QPalette::Disabled, QPalette::BrightText, brush);
-        palette9.setBrush(QPalette::Disabled, QPalette::ButtonText, brush6);
+        palette11.setBrush(QPalette::Disabled, QPalette::Button, brush84);
+        palette11.setBrush(QPalette::Disabled, QPalette::Light, brush11);
+        palette11.setBrush(QPalette::Disabled, QPalette::Midlight, brush12);
+        palette11.setBrush(QPalette::Disabled, QPalette::Dark, brush13);
+        palette11.setBrush(QPalette::Disabled, QPalette::Mid, brush14);
+        palette11.setBrush(QPalette::Disabled, QPalette::Text, brush6);
+        palette11.setBrush(QPalette::Disabled, QPalette::BrightText, brush);
+        palette11.setBrush(QPalette::Disabled, QPalette::ButtonText, brush6);
         QLinearGradient gradient70(0, 0, 0, 1);
         gradient70.setSpread(QGradient::PadSpread);
         gradient70.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1938,7 +2156,7 @@ public:
         gradient70.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient70.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush85(gradient70);
-        palette9.setBrush(QPalette::Disabled, QPalette::Base, brush85);
+        palette11.setBrush(QPalette::Disabled, QPalette::Base, brush85);
         QLinearGradient gradient71(0, 0, 0, 1);
         gradient71.setSpread(QGradient::PadSpread);
         gradient71.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1948,35 +2166,71 @@ public:
         gradient71.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient71.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush86(gradient71);
-        palette9.setBrush(QPalette::Disabled, QPalette::Window, brush86);
-        palette9.setBrush(QPalette::Disabled, QPalette::Shadow, brush6);
-        palette9.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush23);
-        palette9.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush8);
-        palette9.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush6);
-        pushButton_run->setPalette(palette9);
-        label_SubProgram = new QLabel(centralWidget);
-        label_SubProgram->setObjectName(QStringLiteral("label_SubProgram"));
-        label_SubProgram->setGeometry(QRect(30, 150, 76, 23));
-        comboBox_subprogram = new QComboBox(centralWidget);
-        comboBox_subprogram->setObjectName(QStringLiteral("comboBox_subprogram"));
-        comboBox_subprogram->setGeometry(QRect(120, 150, 477, 23));
-        label_photons = new QLabel(centralWidget);
-        label_photons->setObjectName(QStringLiteral("label_photons"));
-        label_photons->setGeometry(QRect(30, 190, 76, 23));
-        lineEdit_photons = new QLineEdit(centralWidget);
-        lineEdit_photons->setObjectName(QStringLiteral("lineEdit_photons"));
-        lineEdit_photons->setGeometry(QRect(120, 190, 481, 23));
-        label_runs = new QLabel(centralWidget);
-        label_runs->setObjectName(QStringLiteral("label_runs"));
-        label_runs->setGeometry(QRect(30, 220, 76, 23));
-        lineEdit_runs = new QLineEdit(centralWidget);
-        lineEdit_runs->setObjectName(QStringLiteral("lineEdit_runs"));
-        lineEdit_runs->setGeometry(QRect(120, 220, 481, 23));
-        pushButton_manualEdit = new QPushButton(centralWidget);
-        pushButton_manualEdit->setObjectName(QStringLiteral("pushButton_manualEdit"));
-        pushButton_manualEdit->setGeometry(QRect(30, 820, 541, 23));
-        QPalette palette10;
-        palette10.setBrush(QPalette::Active, QPalette::WindowText, brush6);
+        palette11.setBrush(QPalette::Disabled, QPalette::Window, brush86);
+        palette11.setBrush(QPalette::Disabled, QPalette::Shadow, brush6);
+        palette11.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush23);
+        palette11.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush8);
+        palette11.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush6);
+        pushButton_crystalAdvanced->setPalette(palette11);
+
+        verticalLayout->addWidget(pushButton_crystalAdvanced);
+
+        scrollArea->setWidget(scrollAreaWidgetContents_2);
+
+        gridLayout_3->addWidget(scrollArea, 0, 0, 1, 1);
+
+        tabWidget->addTab(tabCrystal, QString());
+        tabBeam = new QWidget();
+        tabBeam->setObjectName(QStringLiteral("tabBeam"));
+        gridLayout_2 = new QGridLayout(tabBeam);
+        gridLayout_2->setSpacing(6);
+        gridLayout_2->setContentsMargins(11, 11, 11, 11);
+        gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
+        scrollArea_2 = new QScrollArea(tabBeam);
+        scrollArea_2->setObjectName(QStringLiteral("scrollArea_2"));
+        scrollArea_2->setWidgetResizable(true);
+        scrollAreaWidgetContents = new QWidget();
+        scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 428, 343));
+        verticalLayout_2 = new QVBoxLayout(scrollAreaWidgetContents);
+        verticalLayout_2->setSpacing(6);
+        verticalLayout_2->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setSpacing(6);
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        horizontalLayout->setContentsMargins(-1, -1, -1, 0);
+        label_beamType = new QLabel(scrollAreaWidgetContents);
+        label_beamType->setObjectName(QStringLiteral("label_beamType"));
+
+        horizontalLayout->addWidget(label_beamType);
+
+        comboBox_beamType = new QComboBox(scrollAreaWidgetContents);
+        comboBox_beamType->setObjectName(QStringLiteral("comboBox_beamType"));
+
+        horizontalLayout->addWidget(comboBox_beamType);
+
+
+        verticalLayout_2->addLayout(horizontalLayout);
+
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setSpacing(6);
+        horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
+        horizontalLayout_3->setContentsMargins(-1, -1, -1, 0);
+        label_beamFile = new QLabel(scrollAreaWidgetContents);
+        label_beamFile->setObjectName(QStringLiteral("label_beamFile"));
+
+        horizontalLayout_3->addWidget(label_beamFile);
+
+        lineEdit_beamFile = new QLineEdit(scrollAreaWidgetContents);
+        lineEdit_beamFile->setObjectName(QStringLiteral("lineEdit_beamFile"));
+
+        horizontalLayout_3->addWidget(lineEdit_beamFile);
+
+        pushButton_beamFile = new QPushButton(scrollAreaWidgetContents);
+        pushButton_beamFile->setObjectName(QStringLiteral("pushButton_beamFile"));
+        QPalette palette12;
+        palette12.setBrush(QPalette::Active, QPalette::WindowText, brush6);
         QLinearGradient gradient72(0, 0, 0, 1);
         gradient72.setSpread(QGradient::PadSpread);
         gradient72.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1986,14 +2240,14 @@ public:
         gradient72.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient72.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush87(gradient72);
-        palette10.setBrush(QPalette::Active, QPalette::Button, brush87);
-        palette10.setBrush(QPalette::Active, QPalette::Light, brush11);
-        palette10.setBrush(QPalette::Active, QPalette::Midlight, brush12);
-        palette10.setBrush(QPalette::Active, QPalette::Dark, brush13);
-        palette10.setBrush(QPalette::Active, QPalette::Mid, brush14);
-        palette10.setBrush(QPalette::Active, QPalette::Text, brush6);
-        palette10.setBrush(QPalette::Active, QPalette::BrightText, brush);
-        palette10.setBrush(QPalette::Active, QPalette::ButtonText, brush6);
+        palette12.setBrush(QPalette::Active, QPalette::Button, brush87);
+        palette12.setBrush(QPalette::Active, QPalette::Light, brush11);
+        palette12.setBrush(QPalette::Active, QPalette::Midlight, brush12);
+        palette12.setBrush(QPalette::Active, QPalette::Dark, brush13);
+        palette12.setBrush(QPalette::Active, QPalette::Mid, brush14);
+        palette12.setBrush(QPalette::Active, QPalette::Text, brush6);
+        palette12.setBrush(QPalette::Active, QPalette::BrightText, brush);
+        palette12.setBrush(QPalette::Active, QPalette::ButtonText, brush6);
         QLinearGradient gradient73(0, 0, 0, 1);
         gradient73.setSpread(QGradient::PadSpread);
         gradient73.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -2003,7 +2257,7 @@ public:
         gradient73.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient73.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush88(gradient73);
-        palette10.setBrush(QPalette::Active, QPalette::Base, brush88);
+        palette12.setBrush(QPalette::Active, QPalette::Base, brush88);
         QLinearGradient gradient74(0, 0, 0, 1);
         gradient74.setSpread(QGradient::PadSpread);
         gradient74.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -2013,12 +2267,12 @@ public:
         gradient74.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient74.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush89(gradient74);
-        palette10.setBrush(QPalette::Active, QPalette::Window, brush89);
-        palette10.setBrush(QPalette::Active, QPalette::Shadow, brush6);
-        palette10.setBrush(QPalette::Active, QPalette::AlternateBase, brush11);
-        palette10.setBrush(QPalette::Active, QPalette::ToolTipBase, brush8);
-        palette10.setBrush(QPalette::Active, QPalette::ToolTipText, brush6);
-        palette10.setBrush(QPalette::Inactive, QPalette::WindowText, brush6);
+        palette12.setBrush(QPalette::Active, QPalette::Window, brush89);
+        palette12.setBrush(QPalette::Active, QPalette::Shadow, brush6);
+        palette12.setBrush(QPalette::Active, QPalette::AlternateBase, brush11);
+        palette12.setBrush(QPalette::Active, QPalette::ToolTipBase, brush8);
+        palette12.setBrush(QPalette::Active, QPalette::ToolTipText, brush6);
+        palette12.setBrush(QPalette::Inactive, QPalette::WindowText, brush6);
         QLinearGradient gradient75(0, 0, 0, 1);
         gradient75.setSpread(QGradient::PadSpread);
         gradient75.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -2028,14 +2282,14 @@ public:
         gradient75.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient75.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush90(gradient75);
-        palette10.setBrush(QPalette::Inactive, QPalette::Button, brush90);
-        palette10.setBrush(QPalette::Inactive, QPalette::Light, brush11);
-        palette10.setBrush(QPalette::Inactive, QPalette::Midlight, brush12);
-        palette10.setBrush(QPalette::Inactive, QPalette::Dark, brush13);
-        palette10.setBrush(QPalette::Inactive, QPalette::Mid, brush14);
-        palette10.setBrush(QPalette::Inactive, QPalette::Text, brush6);
-        palette10.setBrush(QPalette::Inactive, QPalette::BrightText, brush);
-        palette10.setBrush(QPalette::Inactive, QPalette::ButtonText, brush6);
+        palette12.setBrush(QPalette::Inactive, QPalette::Button, brush90);
+        palette12.setBrush(QPalette::Inactive, QPalette::Light, brush11);
+        palette12.setBrush(QPalette::Inactive, QPalette::Midlight, brush12);
+        palette12.setBrush(QPalette::Inactive, QPalette::Dark, brush13);
+        palette12.setBrush(QPalette::Inactive, QPalette::Mid, brush14);
+        palette12.setBrush(QPalette::Inactive, QPalette::Text, brush6);
+        palette12.setBrush(QPalette::Inactive, QPalette::BrightText, brush);
+        palette12.setBrush(QPalette::Inactive, QPalette::ButtonText, brush6);
         QLinearGradient gradient76(0, 0, 0, 1);
         gradient76.setSpread(QGradient::PadSpread);
         gradient76.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -2045,7 +2299,7 @@ public:
         gradient76.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient76.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush91(gradient76);
-        palette10.setBrush(QPalette::Inactive, QPalette::Base, brush91);
+        palette12.setBrush(QPalette::Inactive, QPalette::Base, brush91);
         QLinearGradient gradient77(0, 0, 0, 1);
         gradient77.setSpread(QGradient::PadSpread);
         gradient77.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -2055,12 +2309,12 @@ public:
         gradient77.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient77.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush92(gradient77);
-        palette10.setBrush(QPalette::Inactive, QPalette::Window, brush92);
-        palette10.setBrush(QPalette::Inactive, QPalette::Shadow, brush6);
-        palette10.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush11);
-        palette10.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush8);
-        palette10.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush6);
-        palette10.setBrush(QPalette::Disabled, QPalette::WindowText, brush6);
+        palette12.setBrush(QPalette::Inactive, QPalette::Window, brush92);
+        palette12.setBrush(QPalette::Inactive, QPalette::Shadow, brush6);
+        palette12.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush11);
+        palette12.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush8);
+        palette12.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush6);
+        palette12.setBrush(QPalette::Disabled, QPalette::WindowText, brush6);
         QLinearGradient gradient78(0, 0, 0, 1);
         gradient78.setSpread(QGradient::PadSpread);
         gradient78.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -2070,14 +2324,14 @@ public:
         gradient78.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient78.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush93(gradient78);
-        palette10.setBrush(QPalette::Disabled, QPalette::Button, brush93);
-        palette10.setBrush(QPalette::Disabled, QPalette::Light, brush11);
-        palette10.setBrush(QPalette::Disabled, QPalette::Midlight, brush12);
-        palette10.setBrush(QPalette::Disabled, QPalette::Dark, brush13);
-        palette10.setBrush(QPalette::Disabled, QPalette::Mid, brush14);
-        palette10.setBrush(QPalette::Disabled, QPalette::Text, brush6);
-        palette10.setBrush(QPalette::Disabled, QPalette::BrightText, brush);
-        palette10.setBrush(QPalette::Disabled, QPalette::ButtonText, brush6);
+        palette12.setBrush(QPalette::Disabled, QPalette::Button, brush93);
+        palette12.setBrush(QPalette::Disabled, QPalette::Light, brush11);
+        palette12.setBrush(QPalette::Disabled, QPalette::Midlight, brush12);
+        palette12.setBrush(QPalette::Disabled, QPalette::Dark, brush13);
+        palette12.setBrush(QPalette::Disabled, QPalette::Mid, brush14);
+        palette12.setBrush(QPalette::Disabled, QPalette::Text, brush6);
+        palette12.setBrush(QPalette::Disabled, QPalette::BrightText, brush);
+        palette12.setBrush(QPalette::Disabled, QPalette::ButtonText, brush6);
         QLinearGradient gradient79(0, 0, 0, 1);
         gradient79.setSpread(QGradient::PadSpread);
         gradient79.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -2087,7 +2341,7 @@ public:
         gradient79.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient79.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush94(gradient79);
-        palette10.setBrush(QPalette::Disabled, QPalette::Base, brush94);
+        palette12.setBrush(QPalette::Disabled, QPalette::Base, brush94);
         QLinearGradient gradient80(0, 0, 0, 1);
         gradient80.setSpread(QGradient::PadSpread);
         gradient80.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -2097,16 +2351,420 @@ public:
         gradient80.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient80.setColorAt(1, QColor(119, 119, 204, 255));
         QBrush brush95(gradient80);
-        palette10.setBrush(QPalette::Disabled, QPalette::Window, brush95);
-        palette10.setBrush(QPalette::Disabled, QPalette::Shadow, brush6);
-        palette10.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush23);
-        palette10.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush8);
-        palette10.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush6);
-        pushButton_manualEdit->setPalette(palette10);
+        palette12.setBrush(QPalette::Disabled, QPalette::Window, brush95);
+        palette12.setBrush(QPalette::Disabled, QPalette::Shadow, brush6);
+        palette12.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush23);
+        palette12.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush8);
+        palette12.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush6);
+        pushButton_beamFile->setPalette(palette12);
+
+        horizontalLayout_3->addWidget(pushButton_beamFile);
+
+
+        verticalLayout_2->addLayout(horizontalLayout_3);
+
+        horizontalLayout_15 = new QHBoxLayout();
+        horizontalLayout_15->setSpacing(6);
+        horizontalLayout_15->setObjectName(QStringLiteral("horizontalLayout_15"));
+        horizontalLayout_15->setContentsMargins(-1, -1, -1, 0);
+        label_FWHM = new QLabel(scrollAreaWidgetContents);
+        label_FWHM->setObjectName(QStringLiteral("label_FWHM"));
+
+        horizontalLayout_15->addWidget(label_FWHM);
+
+        label_FWHMX = new QLabel(scrollAreaWidgetContents);
+        label_FWHMX->setObjectName(QStringLiteral("label_FWHMX"));
+
+        horizontalLayout_15->addWidget(label_FWHMX);
+
+        lineEdit_FWHMX = new QLineEdit(scrollAreaWidgetContents);
+        lineEdit_FWHMX->setObjectName(QStringLiteral("lineEdit_FWHMX"));
+
+        horizontalLayout_15->addWidget(lineEdit_FWHMX);
+
+        label_FWHMY = new QLabel(scrollAreaWidgetContents);
+        label_FWHMY->setObjectName(QStringLiteral("label_FWHMY"));
+
+        horizontalLayout_15->addWidget(label_FWHMY);
+
+        lineEdit_FWHMY = new QLineEdit(scrollAreaWidgetContents);
+        lineEdit_FWHMY->setObjectName(QStringLiteral("lineEdit_FWHMY"));
+
+        horizontalLayout_15->addWidget(lineEdit_FWHMY);
+
+
+        verticalLayout_2->addLayout(horizontalLayout_15);
+
+        horizontalLayout_24 = new QHBoxLayout();
+        horizontalLayout_24->setSpacing(6);
+        horizontalLayout_24->setObjectName(QStringLiteral("horizontalLayout_24"));
+        horizontalLayout_24->setContentsMargins(-1, -1, -1, 0);
+        label_pxSize = new QLabel(scrollAreaWidgetContents);
+        label_pxSize->setObjectName(QStringLiteral("label_pxSize"));
+
+        horizontalLayout_24->addWidget(label_pxSize);
+
+        label_pxX = new QLabel(scrollAreaWidgetContents);
+        label_pxX->setObjectName(QStringLiteral("label_pxX"));
+
+        horizontalLayout_24->addWidget(label_pxX);
+
+        lineEdit_pxSizeX = new QLineEdit(scrollAreaWidgetContents);
+        lineEdit_pxSizeX->setObjectName(QStringLiteral("lineEdit_pxSizeX"));
+
+        horizontalLayout_24->addWidget(lineEdit_pxSizeX);
+
+        label_pxY = new QLabel(scrollAreaWidgetContents);
+        label_pxY->setObjectName(QStringLiteral("label_pxY"));
+
+        horizontalLayout_24->addWidget(label_pxY);
+
+        lineEdit_pxSizeY = new QLineEdit(scrollAreaWidgetContents);
+        lineEdit_pxSizeY->setObjectName(QStringLiteral("lineEdit_pxSizeY"));
+
+        horizontalLayout_24->addWidget(lineEdit_pxSizeY);
+
+
+        verticalLayout_2->addLayout(horizontalLayout_24);
+
+        horizontalLayout_20 = new QHBoxLayout();
+        horizontalLayout_20->setSpacing(6);
+        horizontalLayout_20->setObjectName(QStringLiteral("horizontalLayout_20"));
+        horizontalLayout_20->setContentsMargins(-1, -1, -1, 0);
+        label_Collimation = new QLabel(scrollAreaWidgetContents);
+        label_Collimation->setObjectName(QStringLiteral("label_Collimation"));
+
+        horizontalLayout_20->addWidget(label_Collimation);
+
+        verticalLayout_5 = new QVBoxLayout();
+        verticalLayout_5->setSpacing(6);
+        verticalLayout_5->setObjectName(QStringLiteral("verticalLayout_5"));
+        verticalLayout_5->setContentsMargins(-1, -1, -1, 0);
+        horizontalLayout_22 = new QHBoxLayout();
+        horizontalLayout_22->setSpacing(6);
+        horizontalLayout_22->setObjectName(QStringLiteral("horizontalLayout_22"));
+        horizontalLayout_22->setContentsMargins(-1, -1, -1, 0);
+        label_collType = new QLabel(scrollAreaWidgetContents);
+        label_collType->setObjectName(QStringLiteral("label_collType"));
+
+        horizontalLayout_22->addWidget(label_collType);
+
+        comboBox_collType = new QComboBox(scrollAreaWidgetContents);
+        comboBox_collType->setObjectName(QStringLiteral("comboBox_collType"));
+
+        horizontalLayout_22->addWidget(comboBox_collType);
+
+
+        verticalLayout_5->addLayout(horizontalLayout_22);
+
+        horizontalLayout_23 = new QHBoxLayout();
+        horizontalLayout_23->setSpacing(6);
+        horizontalLayout_23->setObjectName(QStringLiteral("horizontalLayout_23"));
+        horizontalLayout_23->setContentsMargins(-1, -1, -1, 0);
+        label_collDims = new QLabel(scrollAreaWidgetContents);
+        label_collDims->setObjectName(QStringLiteral("label_collDims"));
+
+        horizontalLayout_23->addWidget(label_collDims);
+
+        label_collX = new QLabel(scrollAreaWidgetContents);
+        label_collX->setObjectName(QStringLiteral("label_collX"));
+
+        horizontalLayout_23->addWidget(label_collX);
+
+        lineEdit_collX = new QLineEdit(scrollAreaWidgetContents);
+        lineEdit_collX->setObjectName(QStringLiteral("lineEdit_collX"));
+
+        horizontalLayout_23->addWidget(lineEdit_collX);
+
+        label_collY = new QLabel(scrollAreaWidgetContents);
+        label_collY->setObjectName(QStringLiteral("label_collY"));
+
+        horizontalLayout_23->addWidget(label_collY);
+
+        lineEdit_collY = new QLineEdit(scrollAreaWidgetContents);
+        lineEdit_collY->setObjectName(QStringLiteral("lineEdit_collY"));
+
+        horizontalLayout_23->addWidget(lineEdit_collY);
+
+
+        verticalLayout_5->addLayout(horizontalLayout_23);
+
+
+        horizontalLayout_20->addLayout(verticalLayout_5);
+
+
+        verticalLayout_2->addLayout(horizontalLayout_20);
+
+        horizontalLayout_25 = new QHBoxLayout();
+        horizontalLayout_25->setSpacing(6);
+        horizontalLayout_25->setObjectName(QStringLiteral("horizontalLayout_25"));
+        horizontalLayout_25->setContentsMargins(-1, -1, -1, 0);
+        label_pulseEn = new QLabel(scrollAreaWidgetContents);
+        label_pulseEn->setObjectName(QStringLiteral("label_pulseEn"));
+
+        horizontalLayout_25->addWidget(label_pulseEn);
+
+        lineEdit_pulseEn = new QLineEdit(scrollAreaWidgetContents);
+        lineEdit_pulseEn->setObjectName(QStringLiteral("lineEdit_pulseEn"));
+
+        horizontalLayout_25->addWidget(lineEdit_pulseEn);
+
+
+        verticalLayout_2->addLayout(horizontalLayout_25);
+
+        horizontalLayout_26 = new QHBoxLayout();
+        horizontalLayout_26->setSpacing(6);
+        horizontalLayout_26->setObjectName(QStringLiteral("horizontalLayout_26"));
+        horizontalLayout_26->setContentsMargins(-1, -1, -1, 0);
+        label_flux = new QLabel(scrollAreaWidgetContents);
+        label_flux->setObjectName(QStringLiteral("label_flux"));
+
+        horizontalLayout_26->addWidget(label_flux);
+
+        lineEdit_flux = new QLineEdit(scrollAreaWidgetContents);
+        lineEdit_flux->setObjectName(QStringLiteral("lineEdit_flux"));
+
+        horizontalLayout_26->addWidget(lineEdit_flux);
+
+
+        verticalLayout_2->addLayout(horizontalLayout_26);
+
+        horizontalLayout_27 = new QHBoxLayout();
+        horizontalLayout_27->setSpacing(6);
+        horizontalLayout_27->setObjectName(QStringLiteral("horizontalLayout_27"));
+        horizontalLayout_27->setContentsMargins(-1, -1, -1, 0);
+        label_beamEn = new QLabel(scrollAreaWidgetContents);
+        label_beamEn->setObjectName(QStringLiteral("label_beamEn"));
+
+        horizontalLayout_27->addWidget(label_beamEn);
+
+        lineEdit_beamEn = new QLineEdit(scrollAreaWidgetContents);
+        lineEdit_beamEn->setObjectName(QStringLiteral("lineEdit_beamEn"));
+
+        horizontalLayout_27->addWidget(lineEdit_beamEn);
+
+
+        verticalLayout_2->addLayout(horizontalLayout_27);
+
+        formLayout_6 = new QFormLayout();
+        formLayout_6->setSpacing(6);
+        formLayout_6->setObjectName(QStringLiteral("formLayout_6"));
+        formLayout_6->setContentsMargins(-1, -1, -1, 0);
+        label_monochrome = new QLabel(scrollAreaWidgetContents);
+        label_monochrome->setObjectName(QStringLiteral("label_monochrome"));
+
+        formLayout_6->setWidget(0, QFormLayout::LabelRole, label_monochrome);
+
+        comboBox_monochrome = new QComboBox(scrollAreaWidgetContents);
+        comboBox_monochrome->setObjectName(QStringLiteral("comboBox_monochrome"));
+
+        formLayout_6->setWidget(0, QFormLayout::FieldRole, comboBox_monochrome);
+
+        label_beamEnFWHM = new QLabel(scrollAreaWidgetContents);
+        label_beamEnFWHM->setObjectName(QStringLiteral("label_beamEnFWHM"));
+
+        formLayout_6->setWidget(1, QFormLayout::LabelRole, label_beamEnFWHM);
+
+        lineEdit_beamEnFWHM = new QLineEdit(scrollAreaWidgetContents);
+        lineEdit_beamEnFWHM->setObjectName(QStringLiteral("lineEdit_beamEnFWHM"));
+
+        formLayout_6->setWidget(1, QFormLayout::FieldRole, lineEdit_beamEnFWHM);
+
+
+        verticalLayout_2->addLayout(formLayout_6);
+
+        scrollArea_2->setWidget(scrollAreaWidgetContents);
+
+        gridLayout_2->addWidget(scrollArea_2, 0, 0, 1, 1);
+
+        tabWidget->addTab(tabBeam, QString());
+        tabWedge = new QWidget();
+        tabWedge->setObjectName(QStringLiteral("tabWedge"));
+        gridLayout_4 = new QGridLayout(tabWedge);
+        gridLayout_4->setSpacing(6);
+        gridLayout_4->setContentsMargins(11, 11, 11, 11);
+        gridLayout_4->setObjectName(QStringLiteral("gridLayout_4"));
+        scrollArea_3 = new QScrollArea(tabWedge);
+        scrollArea_3->setObjectName(QStringLiteral("scrollArea_3"));
+        scrollArea_3->setWidgetResizable(true);
+        scrollAreaWidgetContents_3 = new QWidget();
+        scrollAreaWidgetContents_3->setObjectName(QStringLiteral("scrollAreaWidgetContents_3"));
+        scrollAreaWidgetContents_3->setGeometry(QRect(0, 0, 442, 322));
+        verticalLayout_6 = new QVBoxLayout(scrollAreaWidgetContents_3);
+        verticalLayout_6->setSpacing(6);
+        verticalLayout_6->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_6->setObjectName(QStringLiteral("verticalLayout_6"));
+        horizontalLayout_28 = new QHBoxLayout();
+        horizontalLayout_28->setSpacing(6);
+        horizontalLayout_28->setObjectName(QStringLiteral("horizontalLayout_28"));
+        horizontalLayout_28->setContentsMargins(-1, -1, -1, 0);
+        label_startAngle = new QLabel(scrollAreaWidgetContents_3);
+        label_startAngle->setObjectName(QStringLiteral("label_startAngle"));
+
+        horizontalLayout_28->addWidget(label_startAngle);
+
+        lineEdit_startAngle = new QLineEdit(scrollAreaWidgetContents_3);
+        lineEdit_startAngle->setObjectName(QStringLiteral("lineEdit_startAngle"));
+
+        horizontalLayout_28->addWidget(lineEdit_startAngle);
+
+        label_endAngle = new QLabel(scrollAreaWidgetContents_3);
+        label_endAngle->setObjectName(QStringLiteral("label_endAngle"));
+
+        horizontalLayout_28->addWidget(label_endAngle);
+
+        lineEdit_endAngle = new QLineEdit(scrollAreaWidgetContents_3);
+        lineEdit_endAngle->setObjectName(QStringLiteral("lineEdit_endAngle"));
+
+        horizontalLayout_28->addWidget(lineEdit_endAngle);
+
+
+        verticalLayout_6->addLayout(horizontalLayout_28);
+
+        formLayout_7 = new QFormLayout();
+        formLayout_7->setSpacing(6);
+        formLayout_7->setObjectName(QStringLiteral("formLayout_7"));
+        formLayout_7->setContentsMargins(-1, -1, -1, 0);
+        label_expTime = new QLabel(scrollAreaWidgetContents_3);
+        label_expTime->setObjectName(QStringLiteral("label_expTime"));
+
+        formLayout_7->setWidget(0, QFormLayout::LabelRole, label_expTime);
+
+        lineEdit_exposureTime = new QLineEdit(scrollAreaWidgetContents_3);
+        lineEdit_exposureTime->setObjectName(QStringLiteral("lineEdit_exposureTime"));
+
+        formLayout_7->setWidget(0, QFormLayout::FieldRole, lineEdit_exposureTime);
+
+        label_angleRes = new QLabel(scrollAreaWidgetContents_3);
+        label_angleRes->setObjectName(QStringLiteral("label_angleRes"));
+
+        formLayout_7->setWidget(1, QFormLayout::LabelRole, label_angleRes);
+
+        lineEdit_angleRes = new QLineEdit(scrollAreaWidgetContents_3);
+        lineEdit_angleRes->setObjectName(QStringLiteral("lineEdit_angleRes"));
+
+        formLayout_7->setWidget(1, QFormLayout::FieldRole, lineEdit_angleRes);
+
+
+        verticalLayout_6->addLayout(formLayout_7);
+
+        horizontalLayout_29 = new QHBoxLayout();
+        horizontalLayout_29->setSpacing(6);
+        horizontalLayout_29->setObjectName(QStringLiteral("horizontalLayout_29"));
+        horizontalLayout_29->setContentsMargins(-1, -1, -1, 0);
+        label_startOffset = new QLabel(scrollAreaWidgetContents_3);
+        label_startOffset->setObjectName(QStringLiteral("label_startOffset"));
+
+        horizontalLayout_29->addWidget(label_startOffset);
+
+        label_offsetX = new QLabel(scrollAreaWidgetContents_3);
+        label_offsetX->setObjectName(QStringLiteral("label_offsetX"));
+
+        horizontalLayout_29->addWidget(label_offsetX);
+
+        lineEdit_offsetX = new QLineEdit(scrollAreaWidgetContents_3);
+        lineEdit_offsetX->setObjectName(QStringLiteral("lineEdit_offsetX"));
+
+        horizontalLayout_29->addWidget(lineEdit_offsetX);
+
+        label_offsetY = new QLabel(scrollAreaWidgetContents_3);
+        label_offsetY->setObjectName(QStringLiteral("label_offsetY"));
+
+        horizontalLayout_29->addWidget(label_offsetY);
+
+        lineEdit_offsetY = new QLineEdit(scrollAreaWidgetContents_3);
+        lineEdit_offsetY->setObjectName(QStringLiteral("lineEdit_offsetY"));
+
+        horizontalLayout_29->addWidget(lineEdit_offsetY);
+
+        label_offsetZ = new QLabel(scrollAreaWidgetContents_3);
+        label_offsetZ->setObjectName(QStringLiteral("label_offsetZ"));
+
+        horizontalLayout_29->addWidget(label_offsetZ);
+
+        lineEdit_offsetZ = new QLineEdit(scrollAreaWidgetContents_3);
+        lineEdit_offsetZ->setObjectName(QStringLiteral("lineEdit_offsetZ"));
+
+        horizontalLayout_29->addWidget(lineEdit_offsetZ);
+
+
+        verticalLayout_6->addLayout(horizontalLayout_29);
+
+        horizontalLayout_30 = new QHBoxLayout();
+        horizontalLayout_30->setSpacing(6);
+        horizontalLayout_30->setObjectName(QStringLiteral("horizontalLayout_30"));
+        horizontalLayout_30->setContentsMargins(-1, -1, -1, 0);
+        label_tns = new QLabel(scrollAreaWidgetContents_3);
+        label_tns->setObjectName(QStringLiteral("label_tns"));
+
+        horizontalLayout_30->addWidget(label_tns);
+
+        label_tnsX = new QLabel(scrollAreaWidgetContents_3);
+        label_tnsX->setObjectName(QStringLiteral("label_tnsX"));
+
+        horizontalLayout_30->addWidget(label_tnsX);
+
+        lineEdit_tnsX = new QLineEdit(scrollAreaWidgetContents_3);
+        lineEdit_tnsX->setObjectName(QStringLiteral("lineEdit_tnsX"));
+
+        horizontalLayout_30->addWidget(lineEdit_tnsX);
+
+        label_tnsY = new QLabel(scrollAreaWidgetContents_3);
+        label_tnsY->setObjectName(QStringLiteral("label_tnsY"));
+
+        horizontalLayout_30->addWidget(label_tnsY);
+
+        lineEdit_tnsY = new QLineEdit(scrollAreaWidgetContents_3);
+        lineEdit_tnsY->setObjectName(QStringLiteral("lineEdit_tnsY"));
+
+        horizontalLayout_30->addWidget(lineEdit_tnsY);
+
+        label_tnsZ = new QLabel(scrollAreaWidgetContents_3);
+        label_tnsZ->setObjectName(QStringLiteral("label_tnsZ"));
+
+        horizontalLayout_30->addWidget(label_tnsZ);
+
+        lineEdit_tnsZ = new QLineEdit(scrollAreaWidgetContents_3);
+        lineEdit_tnsZ->setObjectName(QStringLiteral("lineEdit_tnsZ"));
+
+        horizontalLayout_30->addWidget(lineEdit_tnsZ);
+
+
+        verticalLayout_6->addLayout(horizontalLayout_30);
+
+        horizontalLayout_32 = new QHBoxLayout();
+        horizontalLayout_32->setSpacing(6);
+        horizontalLayout_32->setObjectName(QStringLiteral("horizontalLayout_32"));
+        label_rotOffset = new QLabel(scrollAreaWidgetContents_3);
+        label_rotOffset->setObjectName(QStringLiteral("label_rotOffset"));
+
+        horizontalLayout_32->addWidget(label_rotOffset);
+
+        lineEdit_rotOffset = new QLineEdit(scrollAreaWidgetContents_3);
+        lineEdit_rotOffset->setObjectName(QStringLiteral("lineEdit_rotOffset"));
+
+        horizontalLayout_32->addWidget(lineEdit_rotOffset);
+
+
+        verticalLayout_6->addLayout(horizontalLayout_32);
+
+        label_pulseLength = new QLabel(scrollAreaWidgetContents_3);
+        label_pulseLength->setObjectName(QStringLiteral("label_pulseLength"));
+
+        verticalLayout_6->addWidget(label_pulseLength);
+
+        scrollArea_3->setWidget(scrollAreaWidgetContents_3);
+
+        gridLayout_4->addWidget(scrollArea_3, 1, 1, 1, 1);
+
+        tabWidget->addTab(tabWedge, QString());
+
+        gridLayout->addWidget(tabWidget, 4, 0, 1, 2);
+
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 620, 17));
+        menuBar->setGeometry(QRect(0, 0, 480, 17));
         menuFile = new QMenu(menuBar);
         menuFile->setObjectName(QStringLiteral("menuFile"));
         MainWindow->setMenuBar(menuBar);
@@ -2125,7 +2783,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -2140,6 +2798,27 @@ public:
         actionClose->setText(QApplication::translate("MainWindow", "Exit", Q_NULLPTR));
         actionUser_guide->setText(QApplication::translate("MainWindow", "User guide", Q_NULLPTR));
         actionOpen_2->setText(QApplication::translate("MainWindow", "Open", Q_NULLPTR));
+        label_logo->setText(QString());
+#ifndef QT_NO_TOOLTIP
+        label_SubProgram->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>Choose to run standard RADDOSE-3D or run the XFEL or Monte Carlo subprograms</p></body></html>", Q_NULLPTR));
+#endif // QT_NO_TOOLTIP
+        label_SubProgram->setText(QApplication::translate("MainWindow", "Subprogram", Q_NULLPTR));
+        comboBox_subprogram->clear();
+        comboBox_subprogram->insertItems(0, QStringList()
+         << QApplication::translate("MainWindow", "Standard RADDOSE-3D", Q_NULLPTR)
+         << QApplication::translate("MainWindow", "XFEL", Q_NULLPTR)
+         << QApplication::translate("MainWindow", "MonteCarlo", Q_NULLPTR)
+        );
+#ifndef QT_NO_TOOLTIP
+        label_photons->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>The number of photons to simulate</p></body></html>", Q_NULLPTR));
+#endif // QT_NO_TOOLTIP
+        label_photons->setText(QApplication::translate("MainWindow", "Sim photons", Q_NULLPTR));
+#ifndef QT_NO_TOOLTIP
+        label_runs->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>The number of times to run the simulation</p></body></html>", Q_NULLPTR));
+#endif // QT_NO_TOOLTIP
+        label_runs->setText(QApplication::translate("MainWindow", "Runs", Q_NULLPTR));
+        pushButton_manualEdit->setText(QApplication::translate("MainWindow", "Manually edit input", Q_NULLPTR));
+        pushButton_run->setText(QApplication::translate("MainWindow", "Run", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
         label_Type->setToolTip(QApplication::translate("MainWindow", "The shape of the crystal", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
@@ -2161,8 +2840,6 @@ public:
         lineEdit_Y->setText(QApplication::translate("MainWindow", "100", Q_NULLPTR));
         label_Z->setText(QApplication::translate("MainWindow", "Z", Q_NULLPTR));
         lineEdit_Z->setText(QApplication::translate("MainWindow", "100", Q_NULLPTR));
-        label_X_2->setText(QApplication::translate("MainWindow", "D", Q_NULLPTR));
-        label_Y_2->setText(QApplication::translate("MainWindow", "H", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
         label_Modelfile->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>The file containing the .obj wireframe model of a polyhedron crystal</p></body></html>", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
@@ -2188,57 +2865,75 @@ public:
          << QApplication::translate("MainWindow", "CIF", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
+        label_PDB->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>The PDB code of the protein. Note, this requires an internet connection.</p></body></html>", Q_NULLPTR));
+#endif // QT_NO_TOOLTIP
+        label_PDB->setText(QApplication::translate("MainWindow", "PDB", Q_NULLPTR));
+#ifndef QT_NO_TOOLTIP
         label_UnitCell->setToolTip(QApplication::translate("MainWindow", "The dimensions of the unit cell", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         label_UnitCell->setText(QApplication::translate("MainWindow", "Unit Cell", Q_NULLPTR));
+        label_a->setText(QApplication::translate("MainWindow", "a", Q_NULLPTR));
+        lineEdit_a->setText(QApplication::translate("MainWindow", "78.02", Q_NULLPTR));
+        label_b->setText(QApplication::translate("MainWindow", "b", Q_NULLPTR));
+        lineEdit_b->setText(QApplication::translate("MainWindow", "78.02", Q_NULLPTR));
+        label_c->setText(QApplication::translate("MainWindow", "c", Q_NULLPTR));
+        lineEdit_c->setText(QApplication::translate("MainWindow", "78.02", Q_NULLPTR));
+        label_alpha->setText(QApplication::translate("MainWindow", "\316\261", Q_NULLPTR));
+        lineEdit_alpha->setText(QApplication::translate("MainWindow", "90", Q_NULLPTR));
+        label_beta->setText(QApplication::translate("MainWindow", "\316\262", Q_NULLPTR));
+        lineEdit_beta->setText(QApplication::translate("MainWindow", "90", Q_NULLPTR));
+        label_gamma->setText(QApplication::translate("MainWindow", "\316\263", Q_NULLPTR));
+        lineEdit_gamma->setText(QApplication::translate("MainWindow", "90", Q_NULLPTR));
+#ifndef QT_NO_TOOLTIP
+        label_CIF->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>The file path to the cif file</p></body></html>", Q_NULLPTR));
+#endif // QT_NO_TOOLTIP
+        label_CIF->setText(QApplication::translate("MainWindow", "CIF", Q_NULLPTR));
+        pushButton_CIF->setText(QApplication::translate("MainWindow", "Browse", Q_NULLPTR));
+#ifndef QT_NO_TOOLTIP
+        label_pConc->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>In SAXS, this is the concentration of protein in grams per litre</p></body></html>", Q_NULLPTR));
+#endif // QT_NO_TOOLTIP
+        label_pConc->setText(QApplication::translate("MainWindow", "Protein Conc", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
         label_Monomers->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>The number of monomers in the unit cell</p></body></html>", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         label_Monomers->setText(QApplication::translate("MainWindow", "No. Monomers", Q_NULLPTR));
-        label_Residues->setText(QApplication::translate("MainWindow", "No. Residues per monomer", Q_NULLPTR));
         lineEdit_Monomers->setText(QApplication::translate("MainWindow", "24", Q_NULLPTR));
+        label_Residues->setText(QApplication::translate("MainWindow", "No. Residues per monomer", Q_NULLPTR));
         lineEdit_Residues->setText(QApplication::translate("MainWindow", "51", Q_NULLPTR));
+#ifndef QT_NO_TOOLTIP
+        label_fasta->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>The path to the FASTA file specifying the sample sequence</p></body></html>", Q_NULLPTR));
+#endif // QT_NO_TOOLTIP
+        label_fasta->setText(QApplication::translate("MainWindow", "FASTA file", Q_NULLPTR));
+        pushButton_browseFasta->setText(QApplication::translate("MainWindow", "Browse", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
         label_heavyProt->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>The elemental symbol and number present per monomer of heavy atoms (above oxygen) present in the sample</p></body></html>", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         label_heavyProt->setText(QApplication::translate("MainWindow", "Heavy atoms per monomer", Q_NULLPTR));
-        lineEdit_a->setText(QApplication::translate("MainWindow", "78.02", Q_NULLPTR));
-        lineEdit_b->setText(QApplication::translate("MainWindow", "78.02", Q_NULLPTR));
-        lineEdit_c->setText(QApplication::translate("MainWindow", "78.02", Q_NULLPTR));
-        label_c->setText(QApplication::translate("MainWindow", "c", Q_NULLPTR));
-        label_b->setText(QApplication::translate("MainWindow", "b", Q_NULLPTR));
-        label_a->setText(QApplication::translate("MainWindow", "a", Q_NULLPTR));
-        lineEdit_alpha->setText(QApplication::translate("MainWindow", "90", Q_NULLPTR));
-        label_gamma->setText(QApplication::translate("MainWindow", "\316\263", Q_NULLPTR));
-        label_alpha->setText(QApplication::translate("MainWindow", "\316\261", Q_NULLPTR));
-        lineEdit_beta->setText(QApplication::translate("MainWindow", "90", Q_NULLPTR));
-        label_beta->setText(QApplication::translate("MainWindow", "\316\262", Q_NULLPTR));
-        lineEdit_gamma->setText(QApplication::translate("MainWindow", "90", Q_NULLPTR));
+        label_heavyEl->setText(QApplication::translate("MainWindow", "Element Symbol", Q_NULLPTR));
+        label_heavyNum->setText(QApplication::translate("MainWindow", "Number", Q_NULLPTR));
+        pushButton_heavyProt->setText(QApplication::translate("MainWindow", "Add Element", Q_NULLPTR));
+        label_heavyTitle->setText(QApplication::translate("MainWindow", "Heavy atom list", Q_NULLPTR));
         textEdit_heavyProt->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Zn 0.333</p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">S 6</p></body></html>", Q_NULLPTR));
-        pushButton_heavyProt->setText(QApplication::translate("MainWindow", "Add Element", Q_NULLPTR));
-        label_heavyEl->setText(QApplication::translate("MainWindow", "Element Symbol", Q_NULLPTR));
-        label_heavyNum->setText(QApplication::translate("MainWindow", "Number", Q_NULLPTR));
-        label_heavyTitle->setText(QApplication::translate("MainWindow", "Heavy atom list", Q_NULLPTR));
+#ifndef QT_NO_TOOLTIP
+        label_Solvent->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>The concentration in mM of heavy atoms (above oxygen) present in the sample</p></body></html>", Q_NULLPTR));
+#endif // QT_NO_TOOLTIP
+        label_Solvent->setText(QApplication::translate("MainWindow", "Solvent atom concentration", Q_NULLPTR));
+        label_solventEl->setText(QApplication::translate("MainWindow", "Element Symbol", Q_NULLPTR));
+        lineEdit_Elsolvent->setText(QString());
+        label_solventConc->setText(QApplication::translate("MainWindow", "Concentration", Q_NULLPTR));
+        lineEdit_Elconc->setText(QString());
+        pushButton_solventConc->setText(QApplication::translate("MainWindow", "Add Element", Q_NULLPTR));
+        label_solventTitle->setText(QApplication::translate("MainWindow", "Solvent atom list", Q_NULLPTR));
         textEdit_solventConc->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">P 425</p></body></html>", Q_NULLPTR));
-        label_solventConc->setText(QApplication::translate("MainWindow", "Concentration", Q_NULLPTR));
-        lineEdit_Elconc->setText(QString());
-#ifndef QT_NO_TOOLTIP
-        label_Solvent->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>The concentration in mM of heavy atoms (above oxygen) present in the sample</p></body></html>", Q_NULLPTR));
-#endif // QT_NO_TOOLTIP
-        label_Solvent->setText(QApplication::translate("MainWindow", "Solvent atom concentration", Q_NULLPTR));
-        label_solventTitle->setText(QApplication::translate("MainWindow", "Solvent atom list", Q_NULLPTR));
-        pushButton_solventConc->setText(QApplication::translate("MainWindow", "Add Element", Q_NULLPTR));
-        label_solventEl->setText(QApplication::translate("MainWindow", "Element Symbol", Q_NULLPTR));
-        lineEdit_Elsolvent->setText(QString());
 #ifndef QT_NO_TOOLTIP
         label_SolventFr->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>The fraction of unit cell occupied by solvent</p></body></html>", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
@@ -2254,32 +2949,9 @@ public:
 #endif // QT_NO_TOOLTIP
         label_RNA->setText(QApplication::translate("MainWindow", "RNA", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        label_PDB->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>The PDB code of the protein. Note, this requires an internet connection.</p></body></html>", Q_NULLPTR));
-#endif // QT_NO_TOOLTIP
-        label_PDB->setText(QApplication::translate("MainWindow", "PDB", Q_NULLPTR));
-#ifndef QT_NO_TOOLTIP
-        label_fasta->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>The path to the FASTA file specifying the sample sequence</p></body></html>", Q_NULLPTR));
-#endif // QT_NO_TOOLTIP
-        label_fasta->setText(QApplication::translate("MainWindow", "FASTA file", Q_NULLPTR));
-        pushButton_browseFasta->setText(QApplication::translate("MainWindow", "Browse", Q_NULLPTR));
-#ifndef QT_NO_TOOLTIP
         label_carb->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>The number of carbohydrate residues per monomer</p></body></html>", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         label_carb->setText(QApplication::translate("MainWindow", "Carbohydrate units per monomer", Q_NULLPTR));
-#ifndef QT_NO_TOOLTIP
-        label_pConc->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>In SAXS, this is the concentration of protein in grams per litre</p></body></html>", Q_NULLPTR));
-#endif // QT_NO_TOOLTIP
-        label_pConc->setText(QApplication::translate("MainWindow", "Protein Conc", Q_NULLPTR));
-#ifndef QT_NO_TOOLTIP
-        label_SmallMole->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>Defines the list of atoms present in the unit cell per monomer for a small molecule crystal</p></body></html>", Q_NULLPTR));
-#endif // QT_NO_TOOLTIP
-        label_SmallMole->setText(QApplication::translate("MainWindow", "Small molecule atoms", Q_NULLPTR));
-        label_atomList->setText(QApplication::translate("MainWindow", "Atom list", Q_NULLPTR));
-#ifndef QT_NO_TOOLTIP
-        label_CIF->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>The file path to the cif file</p></body></html>", Q_NULLPTR));
-#endif // QT_NO_TOOLTIP
-        label_CIF->setText(QApplication::translate("MainWindow", "CIF", Q_NULLPTR));
-        pushButton_CIF->setText(QApplication::translate("MainWindow", "Browse", Q_NULLPTR));
         pushButton_crystalAdvanced->setText(QApplication::translate("MainWindow", "Advanced Inputs", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tabCrystal), QApplication::translate("MainWindow", "Crystal", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
@@ -2293,52 +2965,54 @@ public:
          << QApplication::translate("MainWindow", "Experimental", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
+        label_beamFile->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>The file path to the .pgm file with the beam profile</p></body></html>", Q_NULLPTR));
+#endif // QT_NO_TOOLTIP
+        label_beamFile->setText(QApplication::translate("MainWindow", "Beam file", Q_NULLPTR));
+        pushButton_beamFile->setText(QApplication::translate("MainWindow", "Browse", Q_NULLPTR));
+#ifndef QT_NO_TOOLTIP
         label_FWHM->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>The X and Y of the FWHM of a Gaussian beam</p></body></html>", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         label_FWHM->setText(QApplication::translate("MainWindow", "FWHM", Q_NULLPTR));
+        label_FWHMX->setText(QApplication::translate("MainWindow", "X", Q_NULLPTR));
+        lineEdit_FWHMX->setText(QApplication::translate("MainWindow", "20", Q_NULLPTR));
+        label_FWHMY->setText(QApplication::translate("MainWindow", "Y", Q_NULLPTR));
+        lineEdit_FWHMY->setText(QApplication::translate("MainWindow", "70", Q_NULLPTR));
+#ifndef QT_NO_TOOLTIP
+        label_pxSize->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>X and Y specify the horizontal and vertical size of the pixels in micrometers in the .pgm file respectively.</p></body></html>", Q_NULLPTR));
+#endif // QT_NO_TOOLTIP
+        label_pxSize->setText(QApplication::translate("MainWindow", "Pixel size", Q_NULLPTR));
+        label_pxX->setText(QApplication::translate("MainWindow", "X", Q_NULLPTR));
+        label_pxY->setText(QApplication::translate("MainWindow", "Y", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
         label_Collimation->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>The X and Y collimation of the beam</p></body></html>", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         label_Collimation->setText(QApplication::translate("MainWindow", "Collimation", Q_NULLPTR));
         label_collType->setText(QApplication::translate("MainWindow", "Type", Q_NULLPTR));
-        label_collDims->setText(QApplication::translate("MainWindow", "Dimensions", Q_NULLPTR));
         comboBox_collType->clear();
         comboBox_collType->insertItems(0, QStringList()
          << QApplication::translate("MainWindow", "Rectangular", Q_NULLPTR)
          << QApplication::translate("MainWindow", "Circular", Q_NULLPTR)
          << QApplication::translate("MainWindow", "None", Q_NULLPTR)
         );
+        label_collDims->setText(QApplication::translate("MainWindow", "Dimensions", Q_NULLPTR));
         label_collX->setText(QApplication::translate("MainWindow", "X", Q_NULLPTR));
-        label_collY->setText(QApplication::translate("MainWindow", "Y", Q_NULLPTR));
         lineEdit_collX->setText(QApplication::translate("MainWindow", "100", Q_NULLPTR));
+        label_collY->setText(QApplication::translate("MainWindow", "Y", Q_NULLPTR));
         lineEdit_collY->setText(QApplication::translate("MainWindow", "100", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        label_beamFile->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>The file path to the .pgm file with the beam profile</p></body></html>", Q_NULLPTR));
+        label_pulseEn->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>The energy of an XFEL pulse in mJ</p></body></html>", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        label_beamFile->setText(QApplication::translate("MainWindow", "Beam file", Q_NULLPTR));
-        pushButton_beamFile->setText(QApplication::translate("MainWindow", "Browse", Q_NULLPTR));
-#ifndef QT_NO_TOOLTIP
-        label_pxSize->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>X and Y specify the horizontal and vertical size of the pixels in micrometers in the .pgm file respectively.</p></body></html>", Q_NULLPTR));
-#endif // QT_NO_TOOLTIP
-        label_pxSize->setText(QApplication::translate("MainWindow", "Pixel size", Q_NULLPTR));
+        label_pulseEn->setText(QApplication::translate("MainWindow", "Pulse Energy", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
         label_flux->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>The flux of the beam in photons per second</p></body></html>", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         label_flux->setText(QApplication::translate("MainWindow", "Flux", Q_NULLPTR));
         lineEdit_flux->setText(QApplication::translate("MainWindow", "2e12", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        label_pulseEn->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>The energy of an XFEL pulse in mJ</p></body></html>", Q_NULLPTR));
-#endif // QT_NO_TOOLTIP
-        label_pulseEn->setText(QApplication::translate("MainWindow", "Pulse Energy", Q_NULLPTR));
-#ifndef QT_NO_TOOLTIP
         label_beamEn->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>The energy of the X-ray beam in keV</p></body></html>", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         label_beamEn->setText(QApplication::translate("MainWindow", "Beam Energy", Q_NULLPTR));
         lineEdit_beamEn->setText(QApplication::translate("MainWindow", "12.1", Q_NULLPTR));
-#ifndef QT_NO_TOOLTIP
-        label_beamEnFWHM->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>Teh energy spread of the beam</p></body></html>", Q_NULLPTR));
-#endif // QT_NO_TOOLTIP
-        label_beamEnFWHM->setText(QApplication::translate("MainWindow", "Energy FWHM", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
         label_monochrome->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>Whether the beam is monochramtic or pink/white</p></body></html>", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
@@ -2348,12 +3022,10 @@ public:
          << QApplication::translate("MainWindow", "Yes", Q_NULLPTR)
          << QApplication::translate("MainWindow", "No", Q_NULLPTR)
         );
-        label_pxX->setText(QApplication::translate("MainWindow", "X", Q_NULLPTR));
-        label_pxY->setText(QApplication::translate("MainWindow", "Y", Q_NULLPTR));
-        lineEdit_FWHMY->setText(QApplication::translate("MainWindow", "70", Q_NULLPTR));
-        label_FWHMX->setText(QApplication::translate("MainWindow", "X", Q_NULLPTR));
-        lineEdit_FWHMX->setText(QApplication::translate("MainWindow", "20", Q_NULLPTR));
-        label_FWHMY->setText(QApplication::translate("MainWindow", "Y", Q_NULLPTR));
+#ifndef QT_NO_TOOLTIP
+        label_beamEnFWHM->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>Teh energy spread of the beam</p></body></html>", Q_NULLPTR));
+#endif // QT_NO_TOOLTIP
+        label_beamEnFWHM->setText(QApplication::translate("MainWindow", "Energy FWHM", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tabBeam), QApplication::translate("MainWindow", "Beam", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
         label_startAngle->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>Start rotation angle in degrees</p></body></html>", Q_NULLPTR));
@@ -2369,10 +3041,6 @@ public:
         label_expTime->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>The exposure time in seconds</p></body></html>", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         label_expTime->setText(QApplication::translate("MainWindow", "Exposure time", Q_NULLPTR));
-#ifndef QT_NO_TOOLTIP
-        label_pulseLength->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>The length of the XFEL pulse in femtoseconds</p></body></html>", Q_NULLPTR));
-#endif // QT_NO_TOOLTIP
-        label_pulseLength->setText(QApplication::translate("MainWindow", "Pulse length", Q_NULLPTR));
         lineEdit_exposureTime->setText(QApplication::translate("MainWindow", "50", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
         label_angleRes->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>Specifies the angular step size used for wedge iterations in degrees</p></body></html>", Q_NULLPTR));
@@ -2383,8 +3051,8 @@ public:
         label_startOffset->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>Offset translation in \316\274m applied to the crystal relative to the origin</p></body></html>", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         label_startOffset->setText(QApplication::translate("MainWindow", "Starting offset", Q_NULLPTR));
-        lineEdit_offsetX->setText(QApplication::translate("MainWindow", "0", Q_NULLPTR));
         label_offsetX->setText(QApplication::translate("MainWindow", "X", Q_NULLPTR));
+        lineEdit_offsetX->setText(QApplication::translate("MainWindow", "0", Q_NULLPTR));
         label_offsetY->setText(QApplication::translate("MainWindow", "Y", Q_NULLPTR));
         lineEdit_offsetY->setText(QApplication::translate("MainWindow", "0", Q_NULLPTR));
         label_offsetZ->setText(QApplication::translate("MainWindow", "Z", Q_NULLPTR));
@@ -2393,39 +3061,22 @@ public:
         label_tns->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>translation of the goniometer during exposure in \316\274m/ \342\227\246 for helical scanning</p></body></html>", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         label_tns->setText(QApplication::translate("MainWindow", "Translation per degree", Q_NULLPTR));
+        label_tnsX->setText(QApplication::translate("MainWindow", "X", Q_NULLPTR));
+        lineEdit_tnsX->setText(QApplication::translate("MainWindow", "0", Q_NULLPTR));
+        label_tnsY->setText(QApplication::translate("MainWindow", "Y", Q_NULLPTR));
+        lineEdit_tnsY->setText(QApplication::translate("MainWindow", "0", Q_NULLPTR));
+        label_tnsZ->setText(QApplication::translate("MainWindow", "Z", Q_NULLPTR));
+        lineEdit_tnsZ->setText(QApplication::translate("MainWindow", "0", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
         label_rotOffset->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>The offset in \316\274m along X (vertical in most set-ups) between the beam axis and the rotation axis</p></body></html>", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         label_rotOffset->setText(QApplication::translate("MainWindow", "Rotation offset", Q_NULLPTR));
         lineEdit_rotOffset->setText(QApplication::translate("MainWindow", "0", Q_NULLPTR));
-        lineEdit_tnsX->setText(QApplication::translate("MainWindow", "0", Q_NULLPTR));
-        lineEdit_tnsY->setText(QApplication::translate("MainWindow", "0", Q_NULLPTR));
-        label_tnsZ->setText(QApplication::translate("MainWindow", "Z", Q_NULLPTR));
-        label_tnsX->setText(QApplication::translate("MainWindow", "X", Q_NULLPTR));
-        label_tnsY->setText(QApplication::translate("MainWindow", "Y", Q_NULLPTR));
-        lineEdit_tnsZ->setText(QApplication::translate("MainWindow", "0", Q_NULLPTR));
+#ifndef QT_NO_TOOLTIP
+        label_pulseLength->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>The length of the XFEL pulse in femtoseconds</p></body></html>", Q_NULLPTR));
+#endif // QT_NO_TOOLTIP
+        label_pulseLength->setText(QApplication::translate("MainWindow", "Pulse length", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tabWedge), QApplication::translate("MainWindow", "Wedge", Q_NULLPTR));
-        label_logo->setText(QString());
-        pushButton_run->setText(QApplication::translate("MainWindow", "Run", Q_NULLPTR));
-#ifndef QT_NO_TOOLTIP
-        label_SubProgram->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>Choose to run standard RADDOSE-3D or run the XFEL or Monte Carlo subprograms</p></body></html>", Q_NULLPTR));
-#endif // QT_NO_TOOLTIP
-        label_SubProgram->setText(QApplication::translate("MainWindow", "Subprogram", Q_NULLPTR));
-        comboBox_subprogram->clear();
-        comboBox_subprogram->insertItems(0, QStringList()
-         << QApplication::translate("MainWindow", "Standard RADDOSE-3D", Q_NULLPTR)
-         << QApplication::translate("MainWindow", "XFEL", Q_NULLPTR)
-         << QApplication::translate("MainWindow", "MonteCarlo", Q_NULLPTR)
-        );
-#ifndef QT_NO_TOOLTIP
-        label_photons->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>The number of photons to simulate</p></body></html>", Q_NULLPTR));
-#endif // QT_NO_TOOLTIP
-        label_photons->setText(QApplication::translate("MainWindow", "Sim photons", Q_NULLPTR));
-#ifndef QT_NO_TOOLTIP
-        label_runs->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>The number of times to run the simulation</p></body></html>", Q_NULLPTR));
-#endif // QT_NO_TOOLTIP
-        label_runs->setText(QApplication::translate("MainWindow", "Runs", Q_NULLPTR));
-        pushButton_manualEdit->setText(QApplication::translate("MainWindow", "Manually edit input", Q_NULLPTR));
         menuFile->setTitle(QApplication::translate("MainWindow", "File", Q_NULLPTR));
     } // retranslateUi
 

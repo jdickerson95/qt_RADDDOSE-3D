@@ -31,9 +31,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QPalette *palette = new QPalette();
     palette->setColor(QPalette::Base,Qt::gray);
     ui->setupUi(this);
-    this->setFixedSize(this->size().width(), this->size().height());
-    ui->label_X_2->setVisible(false);
-    ui->label_Y_2->setVisible(false);
+    //this->setFixedSize(this->size().width(), this->size().height());
     ui->label_Modelfile->setVisible(false);
     ui->lineEdit_modelfile->setVisible(false);
     ui->pushButton_browsemodel->setVisible(false);
@@ -44,8 +42,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->pushButton_browseFasta->setVisible(false);
     ui->label_pConc->setVisible(false);
     ui->lineEdit_pConc->setVisible(false);
-    ui->label_SmallMole->setVisible(false);
-    ui->label_atomList->setVisible(false);
     ui->label_CIF->setVisible(false);
     ui->lineEdit_CIF->setVisible(false);
     ui->pushButton_CIF->setVisible(false);
@@ -69,7 +65,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->lineEdit_beamEnFWHM->setPalette(*palette);
 
     //wedge stuff
-    ui->label_pulseLength->setVisible(false);
+    //ui->label_pulseLength->setVisible(false);
 }
 
 MainWindow::~MainWindow()
@@ -85,14 +81,16 @@ void MainWindow::on_comboBox_activated(const QString &arg1)
     if (arg1_upper == "Spherical" || arg1_upper=="SPHERICAL"){
         ui->comboBox->setCurrentText("Spherical");
         ui->label_Dims->setVisible(true);
-        ui->label_X->setVisible(false);
+        ui->label_X->setText("D");
+        ui->label_X->setVisible(true);
         ui->label_Y->setVisible(false);
         ui->label_Z->setVisible(false);
-        ui->label_X_2->setVisible(true);
-        ui->label_Y_2->setVisible(false);
         ui->lineEdit_X->setVisible(true);
         ui->lineEdit_Y->setVisible(false);
         ui->lineEdit_Z->setVisible(false);
+
+
+
         ui->label_Modelfile->setVisible(false);
         ui->lineEdit_modelfile->setVisible(false);
         ui->pushButton_browsemodel->setVisible(false);
@@ -101,13 +99,15 @@ void MainWindow::on_comboBox_activated(const QString &arg1)
         ui->comboBox->setCurrentText("Cuboid");
         ui->label_Dims->setVisible(true);
         ui->label_X->setVisible(true);
+        ui->label_X->setText("X");
         ui->label_Y->setVisible(true);
+        ui->label_Y->setText("Y");
         ui->label_Z->setVisible(true);
-        ui->label_X_2->setVisible(false);
-        ui->label_Y_2->setVisible(false);
+        ui->label_Z->setText("Z");
         ui->lineEdit_X->setVisible(true);
         ui->lineEdit_Y->setVisible(true);
         ui->lineEdit_Z->setVisible(true);
+
         ui->label_Modelfile->setVisible(false);
         ui->lineEdit_modelfile->setVisible(false);
         ui->pushButton_browsemodel->setVisible(false);
@@ -115,14 +115,16 @@ void MainWindow::on_comboBox_activated(const QString &arg1)
     else if (arg1_upper == "Cylinder" || arg1_upper=="CYLINDER"){
         ui->comboBox->setCurrentText("Cylinder");
         ui->label_Dims->setVisible(true);
-        ui->label_X->setVisible(false);
-        ui->label_Y->setVisible(false);
+        ui->label_X->setVisible(true);
+        ui->label_X->setText("D");
+        ui->label_Y->setVisible(true);
+        ui->label_Y->setText("H");
         ui->label_Z->setVisible(false);
-        ui->label_X_2->setVisible(true);
-        ui->label_Y_2->setVisible(true);
         ui->lineEdit_X->setVisible(true);
         ui->lineEdit_Y->setVisible(true);
         ui->lineEdit_Z->setVisible(false);
+
+
         ui->label_Modelfile->setVisible(false);
         ui->lineEdit_modelfile->setVisible(false);
         ui->pushButton_browsemodel->setVisible(false);
@@ -133,11 +135,10 @@ void MainWindow::on_comboBox_activated(const QString &arg1)
         ui->label_X->setVisible(false);
         ui->label_Y->setVisible(false);
         ui->label_Z->setVisible(false);
-        ui->label_X_2->setVisible(false);
-        ui->label_Y_2->setVisible(false);
         ui->lineEdit_X->setVisible(false);
         ui->lineEdit_Y->setVisible(false);
         ui->lineEdit_Z->setVisible(false);
+
         ui->label_Modelfile->setVisible(true);
         ui->lineEdit_modelfile->setVisible(true);
         ui->pushButton_browsemodel->setVisible(true);
@@ -182,9 +183,11 @@ void MainWindow::on_comboBox_AbsCoef_activated(const QString &arg1)
         ui->label_Residues->setVisible(true);
         ui->lineEdit_Residues->setVisible(true);
         ui->label_heavyProt->setVisible(true);
+        ui->label_heavyProt->setText("Heavy atoms per monomer");
         ui->label_heavyEl->setVisible(true);
         ui->label_heavyNum->setVisible(true);
         ui->label_heavyTitle->setVisible(true);
+        ui->label_heavyTitle->setText("Heavy Atom List");
         ui->lineEdit_ElheavyProt->setVisible(true);
         ui->lineEdit_ElheavyProt_2->setVisible(true);
         ui->pushButton_heavyProt->setVisible(true);
@@ -213,8 +216,6 @@ void MainWindow::on_comboBox_AbsCoef_activated(const QString &arg1)
         ui->pushButton_browseFasta->setVisible(false);
         ui->label_pConc->setVisible(false);
         ui->lineEdit_pConc->setVisible(false);
-        ui->label_SmallMole->setVisible(false);
-        ui->label_atomList->setVisible(false);
         ui->label_CIF->setVisible(false);
         ui->lineEdit_CIF->setVisible(false);
         ui->pushButton_CIF->setVisible(false);
@@ -271,8 +272,6 @@ void MainWindow::on_comboBox_AbsCoef_activated(const QString &arg1)
         ui->pushButton_browseFasta->setVisible(false);
         ui->label_pConc->setVisible(false);
         ui->lineEdit_pConc->setVisible(false);
-        ui->label_SmallMole->setVisible(false);
-        ui->label_atomList->setVisible(false);
         ui->label_CIF->setVisible(false);
         ui->lineEdit_CIF->setVisible(false);
         ui->pushButton_CIF->setVisible(false);
@@ -330,8 +329,6 @@ void MainWindow::on_comboBox_AbsCoef_activated(const QString &arg1)
         ui->pushButton_browseFasta->move(490,190);
         ui->label_pConc->setVisible(false);
         ui->lineEdit_pConc->setVisible(false);
-        ui->label_SmallMole->setVisible(false);
-        ui->label_atomList->setVisible(false);
         ui->label_CIF->setVisible(false);
         ui->lineEdit_CIF->setVisible(false);
         ui->pushButton_CIF->setVisible(false);
@@ -355,9 +352,11 @@ void MainWindow::on_comboBox_AbsCoef_activated(const QString &arg1)
         ui->label_Residues->setVisible(true);
         ui->lineEdit_Residues->setVisible(true);
         ui->label_heavyProt->setVisible(true);
+        ui->label_heavyProt->setText("Heavy atoms per monomer");
         ui->label_heavyEl->setVisible(true);
         ui->label_heavyNum->setVisible(true);
         ui->label_heavyTitle->setVisible(true);
+        ui->label_heavyTitle->setText("Heavy Atom List");
         ui->lineEdit_ElheavyProt->setVisible(true);
         ui->lineEdit_ElheavyProt_2->setVisible(true);
         ui->pushButton_heavyProt->setVisible(true);
@@ -386,8 +385,6 @@ void MainWindow::on_comboBox_AbsCoef_activated(const QString &arg1)
         ui->pushButton_browseFasta->setVisible(false);
         ui->label_pConc->setVisible(true);
         ui->lineEdit_pConc->setVisible(true);
-        ui->label_SmallMole->setVisible(false);
-        ui->label_atomList->setVisible(false);
         ui->label_CIF->setVisible(false);
         ui->lineEdit_CIF->setVisible(false);
         ui->pushButton_CIF->setVisible(false);
@@ -445,8 +442,6 @@ void MainWindow::on_comboBox_AbsCoef_activated(const QString &arg1)
         ui->pushButton_browseFasta->move(490,190);
         ui->label_pConc->setVisible(true);
         ui->lineEdit_pConc->setVisible(true);
-        ui->label_SmallMole->setVisible(false);
-        ui->label_atomList->setVisible(false);
         ui->label_CIF->setVisible(false);
         ui->lineEdit_CIF->setVisible(false);
         ui->pushButton_CIF->setVisible(false);
@@ -469,10 +464,12 @@ void MainWindow::on_comboBox_AbsCoef_activated(const QString &arg1)
         ui->lineEdit_Monomers->setVisible(true);
         ui->label_Residues->setVisible(false);
         ui->lineEdit_Residues->setVisible(false);
-        ui->label_heavyProt->setVisible(false);
+        ui->label_heavyProt->setVisible(true);
+        ui->label_heavyProt->setText("Heavy atoms per monomer");
         ui->label_heavyEl->setVisible(true);
         ui->label_heavyNum->setVisible(true);
-        ui->label_heavyTitle->setVisible(false);
+        ui->label_heavyTitle->setVisible(true);
+        ui->label_heavyTitle->setText("Atom List");
         ui->lineEdit_ElheavyProt->setVisible(true);
         ui->lineEdit_ElheavyProt_2->setVisible(true);
         ui->pushButton_heavyProt->setVisible(true);
@@ -501,8 +498,6 @@ void MainWindow::on_comboBox_AbsCoef_activated(const QString &arg1)
         ui->pushButton_browseFasta->setVisible(false);
         ui->label_pConc->setVisible(false);
         ui->lineEdit_pConc->setVisible(false);
-        ui->label_SmallMole->setVisible(true);
-        ui->label_atomList->setVisible(true);
         ui->label_CIF->setVisible(false);
         ui->lineEdit_CIF->setVisible(false);
         ui->pushButton_CIF->setVisible(false);
@@ -557,8 +552,6 @@ void MainWindow::on_comboBox_AbsCoef_activated(const QString &arg1)
         ui->pushButton_browseFasta->setVisible(false);
         ui->label_pConc->setVisible(false);
         ui->lineEdit_pConc->setVisible(false);
-        ui->label_SmallMole->setVisible(false);
-        ui->label_atomList->setVisible(false);
         ui->label_CIF->setVisible(true);
         ui->lineEdit_CIF->setVisible(true);
         ui->pushButton_CIF->setVisible(true);
@@ -1205,8 +1198,9 @@ void MainWindow::on_comboBox_subprogram_activated(const QString &arg1)
         ui->label_flux->setVisible(true);
         ui->lineEdit_flux->setVisible(true);
 
-        ui->label_pulseLength->setVisible(false);
+       // ui->label_pulseLength->setVisible(false);
         ui->label_expTime->setVisible(true);
+        ui->label_expTime->setText("Exposure time");
     }
     else if (arg1_upper == "XFEL"){
         ui->label_photons->setVisible(true);
@@ -1219,8 +1213,9 @@ void MainWindow::on_comboBox_subprogram_activated(const QString &arg1)
         ui->label_flux->setVisible(false);
         ui->lineEdit_flux->setVisible(false);
 
-        ui->label_pulseLength->setVisible(true);
-        ui->label_expTime->setVisible(false);
+       // ui->label_pulseLength->setVisible(true);
+        ui->label_expTime->setVisible(true);
+        ui->label_expTime->setText("Pulse Length");
     }
     else if (arg1_upper == "MonteCarlo" || arg1_upper == "MONTECARLO"){
         ui->comboBox_subprogram->setCurrentText("MonteCarlo");
@@ -1233,9 +1228,10 @@ void MainWindow::on_comboBox_subprogram_activated(const QString &arg1)
         ui->lineEdit_pulseEn->setVisible(false);
         ui->label_flux->setVisible(true);
         ui->lineEdit_flux->setVisible(true);
-
-        ui->label_pulseLength->setVisible(false);
+        ui->label_flux->setText("Flux");
+        //ui->label_pulseLength->setVisible(false);
         ui->label_expTime->setVisible(true);
+        ui->label_expTime->setText("Exposure time");
     }
 }
 
