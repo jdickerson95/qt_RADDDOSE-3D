@@ -517,8 +517,8 @@
        <brush brushstyle="SolidPattern">
         <color alpha="255">
          <red>0</red>
-         <green>0</green>
-         <blue>0</blue>
+         <green>33</green>
+         <blue>71</blue>
         </color>
        </brush>
       </colorrole>
@@ -654,8 +654,8 @@
        <brush brushstyle="SolidPattern">
         <color alpha="255">
          <red>0</red>
-         <green>0</green>
-         <blue>0</blue>
+         <green>33</green>
+         <blue>71</blue>
         </color>
        </brush>
       </colorrole>
@@ -844,6 +844,143 @@
      </disabled>
     </palette>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+color: black;
+background-color: #5500ff;
+}
+
+QLabel{
+color: white;
+}
+
+QComboBox{
+color: white;
+background-color: #002147;;
+}
+
+QLineEdit{
+color: white;
+background-color: black;
+}
+
+QTextEdit{
+color: white;
+background-color: black;
+}
+/*
+#tabCrystal {
+background: #002147;
+}
+#tabBeam {
+background: #002147;
+}
+#tabWedge {
+background: #002147;
+}
+*/
+#centralWidget{
+background: #002147;
+}
+
+QComboBox QAbstractItemView {
+background: #002147;
+}
+
+QTabWidget::pane {
+    border: 1px #002147;
+    background: #002147;
+}
+
+QTabWidget::tab-bar:top {
+    top: 1px;
+}
+
+QTabWidget::tab-bar:bottom {
+    bottom: 1px;
+}
+
+QTabWidget::tab-bar:left {
+    right: 1px;
+}
+
+QTabWidget::tab-bar:right {
+    left: 1px;
+}
+
+QTabBar::tab {
+    border: 1px solid black;
+}
+
+QTabBar::tab:selected {
+    background: #002147;
+    color: white;
+}
+
+QTabBar::tab:!selected {
+    background: #002147;
+    color: white;
+}
+
+QTabBar::tab:!selected:hover {
+    background: #999;
+}
+
+QTabBar::tab:top:!selected {
+    margin-top: 3px;
+}
+
+QTabBar::tab:bottom:!selected {
+    margin-bottom: 3px;
+}
+
+QTabBar::tab:top, QTabBar::tab:bottom {
+    min-width: 8ex;
+    margin-right: -1px;
+    padding: 5px 10px 5px 10px;
+}
+
+QTabBar::tab:top:selected {
+    border-bottom-color: none;
+}
+
+QTabBar::tab:bottom:selected {
+    border-top-color: none;
+}
+
+QTabBar::tab:top:last, QTabBar::tab:bottom:last,
+QTabBar::tab:top:only-one, QTabBar::tab:bottom:only-one {
+    margin-right: 0;
+}
+
+QTabBar::tab:left:!selected {
+    margin-right: 3px;
+}
+
+QTabBar::tab:right:!selected {
+    margin-left: 3px;
+}
+
+QTabBar::tab:left, QTabBar::tab:right {
+    min-height: 8ex;
+    margin-bottom: -1px;
+    padding: 10px 5px 10px 5px;
+}
+
+QTabBar::tab:left:selected {
+    border-left-color: none;
+}
+
+QTabBar::tab:right:selected {
+    border-right-color: none;
+}
+
+QTabBar::tab:left:last, QTabBar::tab:right:last,
+QTabBar::tab:left:only-one, QTabBar::tab:right:only-one {
+    margin-bottom: 0;
+}
+</string>
+   </property>
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
@@ -852,6 +989,9 @@
       <width>581</width>
       <height>561</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
     </property>
     <property name="currentIndex">
      <number>0</number>
@@ -1148,8 +1288,8 @@
          <colorrole role="Base">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>255</red>
-            <green>255</green>
+            <red>85</red>
+            <green>0</green>
             <blue>255</blue>
            </color>
           </brush>
@@ -1285,8 +1425,8 @@
          <colorrole role="Base">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>255</red>
-            <green>255</green>
+            <red>85</red>
+            <green>0</green>
             <blue>255</blue>
            </color>
           </brush>
@@ -1341,9 +1481,9 @@
          <colorrole role="WindowText">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>42</red>
+            <red>0</red>
             <green>0</green>
-            <blue>127</blue>
+            <blue>0</blue>
            </color>
           </brush>
          </colorrole>
@@ -1395,9 +1535,9 @@
          <colorrole role="Text">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>42</red>
+            <red>0</red>
             <green>0</green>
-            <blue>127</blue>
+            <blue>0</blue>
            </color>
           </brush>
          </colorrole>
@@ -1413,9 +1553,9 @@
          <colorrole role="ButtonText">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>42</red>
+            <red>0</red>
             <green>0</green>
-            <blue>127</blue>
+            <blue>0</blue>
            </color>
           </brush>
          </colorrole>
@@ -1940,8 +2080,8 @@ p, li { white-space: pre-wrap; }
          <colorrole role="Base">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>255</red>
-            <green>255</green>
+            <red>85</red>
+            <green>0</green>
             <blue>255</blue>
            </color>
           </brush>
@@ -2077,8 +2217,8 @@ p, li { white-space: pre-wrap; }
          <colorrole role="Base">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>255</red>
-            <green>255</green>
+            <red>85</red>
+            <green>0</green>
             <blue>255</blue>
            </color>
           </brush>
@@ -2133,9 +2273,9 @@ p, li { white-space: pre-wrap; }
          <colorrole role="WindowText">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>42</red>
+            <red>0</red>
             <green>0</green>
-            <blue>127</blue>
+            <blue>0</blue>
            </color>
           </brush>
          </colorrole>
@@ -2187,9 +2327,9 @@ p, li { white-space: pre-wrap; }
          <colorrole role="Text">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>42</red>
+            <red>0</red>
             <green>0</green>
-            <blue>127</blue>
+            <blue>0</blue>
            </color>
           </brush>
          </colorrole>
@@ -2205,9 +2345,9 @@ p, li { white-space: pre-wrap; }
          <colorrole role="ButtonText">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>42</red>
+            <red>0</red>
             <green>0</green>
-            <blue>127</blue>
+            <blue>0</blue>
            </color>
           </brush>
          </colorrole>
@@ -2489,8 +2629,8 @@ p, li { white-space: pre-wrap; }
          <colorrole role="Base">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>255</red>
-            <green>255</green>
+            <red>85</red>
+            <green>0</green>
             <blue>255</blue>
            </color>
           </brush>
@@ -2626,8 +2766,8 @@ p, li { white-space: pre-wrap; }
          <colorrole role="Base">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>255</red>
-            <green>255</green>
+            <red>85</red>
+            <green>0</green>
             <blue>255</blue>
            </color>
           </brush>
@@ -2682,9 +2822,9 @@ p, li { white-space: pre-wrap; }
          <colorrole role="WindowText">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>42</red>
+            <red>0</red>
             <green>0</green>
-            <blue>127</blue>
+            <blue>0</blue>
            </color>
           </brush>
          </colorrole>
@@ -2736,9 +2876,9 @@ p, li { white-space: pre-wrap; }
          <colorrole role="Text">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>42</red>
+            <red>0</red>
             <green>0</green>
-            <blue>127</blue>
+            <blue>0</blue>
            </color>
           </brush>
          </colorrole>
@@ -2754,9 +2894,9 @@ p, li { white-space: pre-wrap; }
          <colorrole role="ButtonText">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>42</red>
+            <red>0</red>
             <green>0</green>
-            <blue>127</blue>
+            <blue>0</blue>
            </color>
           </brush>
          </colorrole>
@@ -3089,8 +3229,8 @@ p, li { white-space: pre-wrap; }
          <colorrole role="Base">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>255</red>
-            <green>255</green>
+            <red>85</red>
+            <green>0</green>
             <blue>255</blue>
            </color>
           </brush>
@@ -3226,8 +3366,8 @@ p, li { white-space: pre-wrap; }
          <colorrole role="Base">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>255</red>
-            <green>255</green>
+            <red>85</red>
+            <green>0</green>
             <blue>255</blue>
            </color>
           </brush>
@@ -3282,9 +3422,9 @@ p, li { white-space: pre-wrap; }
          <colorrole role="WindowText">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>42</red>
+            <red>0</red>
             <green>0</green>
-            <blue>127</blue>
+            <blue>0</blue>
            </color>
           </brush>
          </colorrole>
@@ -3336,9 +3476,9 @@ p, li { white-space: pre-wrap; }
          <colorrole role="Text">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>42</red>
+            <red>0</red>
             <green>0</green>
-            <blue>127</blue>
+            <blue>0</blue>
            </color>
           </brush>
          </colorrole>
@@ -3354,9 +3494,9 @@ p, li { white-space: pre-wrap; }
          <colorrole role="ButtonText">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>42</red>
+            <red>0</red>
             <green>0</green>
-            <blue>127</blue>
+            <blue>0</blue>
            </color>
           </brush>
          </colorrole>
@@ -3624,8 +3764,8 @@ p, li { white-space: pre-wrap; }
          <colorrole role="Base">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>255</red>
-            <green>255</green>
+            <red>85</red>
+            <green>0</green>
             <blue>255</blue>
            </color>
           </brush>
@@ -3761,8 +3901,8 @@ p, li { white-space: pre-wrap; }
          <colorrole role="Base">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>255</red>
-            <green>255</green>
+            <red>85</red>
+            <green>0</green>
             <blue>255</blue>
            </color>
           </brush>
@@ -3817,9 +3957,9 @@ p, li { white-space: pre-wrap; }
          <colorrole role="WindowText">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>42</red>
+            <red>0</red>
             <green>0</green>
-            <blue>127</blue>
+            <blue>0</blue>
            </color>
           </brush>
          </colorrole>
@@ -3871,9 +4011,9 @@ p, li { white-space: pre-wrap; }
          <colorrole role="Text">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>42</red>
+            <red>0</red>
             <green>0</green>
-            <blue>127</blue>
+            <blue>0</blue>
            </color>
           </brush>
          </colorrole>
@@ -3889,9 +4029,9 @@ p, li { white-space: pre-wrap; }
          <colorrole role="ButtonText">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>42</red>
+            <red>0</red>
             <green>0</green>
-            <blue>127</blue>
+            <blue>0</blue>
            </color>
           </brush>
          </colorrole>
@@ -4052,8 +4192,8 @@ p, li { white-space: pre-wrap; }
          <colorrole role="Base">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>255</red>
-            <green>255</green>
+            <red>85</red>
+            <green>0</green>
             <blue>255</blue>
            </color>
           </brush>
@@ -4189,8 +4329,8 @@ p, li { white-space: pre-wrap; }
          <colorrole role="Base">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>255</red>
-            <green>255</green>
+            <red>85</red>
+            <green>0</green>
             <blue>255</blue>
            </color>
           </brush>
@@ -4245,9 +4385,9 @@ p, li { white-space: pre-wrap; }
          <colorrole role="WindowText">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>42</red>
+            <red>0</red>
             <green>0</green>
-            <blue>127</blue>
+            <blue>0</blue>
            </color>
           </brush>
          </colorrole>
@@ -4299,9 +4439,9 @@ p, li { white-space: pre-wrap; }
          <colorrole role="Text">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>42</red>
+            <red>0</red>
             <green>0</green>
-            <blue>127</blue>
+            <blue>0</blue>
            </color>
           </brush>
          </colorrole>
@@ -4317,9 +4457,9 @@ p, li { white-space: pre-wrap; }
          <colorrole role="ButtonText">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>42</red>
+            <red>0</red>
             <green>0</green>
-            <blue>127</blue>
+            <blue>0</blue>
            </color>
           </brush>
          </colorrole>
@@ -4687,8 +4827,8 @@ p, li { white-space: pre-wrap; }
          <colorrole role="Base">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>255</red>
-            <green>255</green>
+            <red>85</red>
+            <green>0</green>
             <blue>255</blue>
            </color>
           </brush>
@@ -4824,8 +4964,8 @@ p, li { white-space: pre-wrap; }
          <colorrole role="Base">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>255</red>
-            <green>255</green>
+            <red>85</red>
+            <green>0</green>
             <blue>255</blue>
            </color>
           </brush>
@@ -4880,9 +5020,9 @@ p, li { white-space: pre-wrap; }
          <colorrole role="WindowText">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>42</red>
+            <red>0</red>
             <green>0</green>
-            <blue>127</blue>
+            <blue>0</blue>
            </color>
           </brush>
          </colorrole>
@@ -4934,9 +5074,9 @@ p, li { white-space: pre-wrap; }
          <colorrole role="Text">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>42</red>
+            <red>0</red>
             <green>0</green>
-            <blue>127</blue>
+            <blue>0</blue>
            </color>
           </brush>
          </colorrole>
@@ -4952,9 +5092,9 @@ p, li { white-space: pre-wrap; }
          <colorrole role="ButtonText">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>42</red>
+            <red>0</red>
             <green>0</green>
-            <blue>127</blue>
+            <blue>0</blue>
            </color>
           </brush>
          </colorrole>
@@ -5747,8 +5887,8 @@ p, li { white-space: pre-wrap; }
        <colorrole role="Base">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>255</red>
-          <green>255</green>
+          <red>85</red>
+          <green>0</green>
           <blue>255</blue>
          </color>
         </brush>
@@ -5884,8 +6024,8 @@ p, li { white-space: pre-wrap; }
        <colorrole role="Base">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>255</red>
-          <green>255</green>
+          <red>85</red>
+          <green>0</green>
           <blue>255</blue>
          </color>
         </brush>
@@ -5940,9 +6080,9 @@ p, li { white-space: pre-wrap; }
        <colorrole role="WindowText">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>42</red>
+          <red>0</red>
           <green>0</green>
-          <blue>127</blue>
+          <blue>0</blue>
          </color>
         </brush>
        </colorrole>
@@ -5994,9 +6134,9 @@ p, li { white-space: pre-wrap; }
        <colorrole role="Text">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>42</red>
+          <red>0</red>
           <green>0</green>
-          <blue>127</blue>
+          <blue>0</blue>
          </color>
         </brush>
        </colorrole>
@@ -6012,9 +6152,9 @@ p, li { white-space: pre-wrap; }
        <colorrole role="ButtonText">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>42</red>
+          <red>0</red>
           <green>0</green>
-          <blue>127</blue>
+          <blue>0</blue>
          </color>
         </brush>
        </colorrole>
@@ -6268,8 +6408,8 @@ p, li { white-space: pre-wrap; }
        <colorrole role="Base">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>255</red>
-          <green>255</green>
+          <red>85</red>
+          <green>0</green>
           <blue>255</blue>
          </color>
         </brush>
@@ -6405,8 +6545,8 @@ p, li { white-space: pre-wrap; }
        <colorrole role="Base">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>255</red>
-          <green>255</green>
+          <red>85</red>
+          <green>0</green>
           <blue>255</blue>
          </color>
         </brush>
@@ -6461,9 +6601,9 @@ p, li { white-space: pre-wrap; }
        <colorrole role="WindowText">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>42</red>
+          <red>0</red>
           <green>0</green>
-          <blue>127</blue>
+          <blue>0</blue>
          </color>
         </brush>
        </colorrole>
@@ -6515,9 +6655,9 @@ p, li { white-space: pre-wrap; }
        <colorrole role="Text">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>42</red>
+          <red>0</red>
           <green>0</green>
-          <blue>127</blue>
+          <blue>0</blue>
          </color>
         </brush>
        </colorrole>
@@ -6533,9 +6673,9 @@ p, li { white-space: pre-wrap; }
        <colorrole role="ButtonText">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>42</red>
+          <red>0</red>
           <green>0</green>
-          <blue>127</blue>
+          <blue>0</blue>
          </color>
         </brush>
        </colorrole>

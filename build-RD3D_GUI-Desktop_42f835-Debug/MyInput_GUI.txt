@@ -12,21 +12,4 @@ NumResidues 51
 ProteinHeavyAtoms Zn 0.333 S 6
 SolventHeavyConc P 425
 SolventFraction 0.64
-##############################################################################
-#                               Beam Block                                   #
-##############################################################################
-Beam
-Type Gaussian
-FWHM 20 70
-Collimation Rectangular 100 100
-FLUX 2e12
-ENERGY 12.1
-##############################################################################
-#                               Wedge Block                                  #
-##############################################################################
-Wedge 0 90
-ExposureTime 50
-ANGULARRESOLUTION 2
-STARTOFFSET 0 0 0
-TRANSLATEPERDEGREE 0 0 0
-ROTAXBEAMOFFSET 0
+Subprogram XFEL
