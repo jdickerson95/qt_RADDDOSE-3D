@@ -23,6 +23,7 @@ CrystalAdvanced::CrystalAdvanced(QWidget *parent) :
     ui->label_containerNum->setVisible(false);
     ui->label_containerMixture->setVisible(false);
     ui->label_containerMatEl->setVisible(false);
+    ui->label_containerMatEl2->setVisible(false);
     ui->label_atomList->setVisible(false);
     ui->textEdit_container->setVisible(false);
     ui->lineEdit_materialMixture->setVisible(false);
@@ -56,6 +57,7 @@ CrystalAdvanced::CrystalAdvanced(QWidget *parent) :
     ui->label_densityDefine->setVisible(false);
     ui->comboBox_Density->setVisible(false);
     ui->label_SurrEl->setVisible(false);
+    ui->label_SurrEl2->setVisible(false);
     ui->label_SurrElNum->setVisible(false);
     ui->label_SurrElSymbol->setVisible(false);
     ui->lineEdit_SurrElSymbol->setVisible(false);
@@ -64,6 +66,7 @@ CrystalAdvanced::CrystalAdvanced(QWidget *parent) :
     ui->label_SurrAtomList->setVisible(false);
     ui->textEdit_SurrEl->setVisible(false);
     ui->label_SurrEl->setText("Surrounding Elements");
+    ui->label_SurrEl2->setText("Surrounding Elements");
 }
 
 CrystalAdvanced::~CrystalAdvanced()
@@ -180,6 +183,7 @@ void CrystalAdvanced::on_comboBox_containerType_activated(const QString &arg1)
         ui->label_containerNum->setVisible(false);
         ui->label_containerMixture->setVisible(false);
         ui->label_containerMatEl->setVisible(false);
+        ui->label_containerMatEl2->setVisible(false);
         ui->label_atomList->setVisible(false);
         ui->textEdit_container->setVisible(false);
         ui->lineEdit_materialMixture->setVisible(false);
@@ -197,6 +201,7 @@ void CrystalAdvanced::on_comboBox_containerType_activated(const QString &arg1)
         ui->label_containerNum->setVisible(false);
         ui->label_containerMixture->setVisible(true);
         ui->label_containerMatEl->setVisible(false);
+        ui->label_containerMatEl2->setVisible(false);
         ui->label_atomList->setVisible(false);
         ui->textEdit_container->setVisible(false);
         ui->lineEdit_materialMixture->setVisible(true);
@@ -214,6 +219,7 @@ void CrystalAdvanced::on_comboBox_containerType_activated(const QString &arg1)
         ui->label_containerNum->setVisible(true);
         ui->label_containerMixture->setVisible(false);
         ui->label_containerMatEl->setVisible(true);
+        ui->label_containerMatEl2->setVisible(true);
         ui->label_atomList->setVisible(true);
         ui->textEdit_container->setVisible(true);
         ui->lineEdit_materialMixture->setVisible(false);
@@ -232,14 +238,18 @@ void CrystalAdvanced::on_comboBox_Density_activated(const QString &arg1)
         ui->comboBox_Density->setCurrentText("Yes");
         ui->label_SurrEl->setVisible(true);
         ui->label_SurrEl->setText("Surrounding Elements");
+        ui->label_SurrEl2->setVisible(true);
+        ui->label_SurrEl2->setText("Surrounding Elements");
         ui->label_Density->setVisible(true);
         ui->lineEdit_Density->setVisible(true);
       //  ui->label_SurrConc->setVisible(false);
     }
     else if (arg1_upper=="No" || arg1_upper=="NO"){
         ui->comboBox_Density->setCurrentText("No");
-            ui->label_SurrEl->setVisible(true);
+        ui->label_SurrEl->setVisible(true);
         ui->label_SurrEl->setText("Surrounding Concentration (mM)");
+        ui->label_SurrEl2->setVisible(true);
+        ui->label_SurrEl2->setText("Surrounding Concentration (mM)");
         ui->label_Density->setVisible(false);
         ui->lineEdit_Density->setVisible(false);
      //   ui->label_SurrConc->setVisible(true);
@@ -295,6 +305,7 @@ void CrystalAdvanced::on_comboBox_Surrounding_activated(const QString &arg1)
         ui->label_densityDefine->setVisible(true);
         ui->comboBox_Density->setVisible(true);
         ui->label_SurrEl->setVisible(true);
+        ui->label_SurrEl2->setVisible(true);
         ui->label_SurrElNum->setVisible(true);
         ui->label_SurrElSymbol->setVisible(true);
         ui->lineEdit_SurrElSymbol->setVisible(true);
@@ -310,6 +321,7 @@ void CrystalAdvanced::on_comboBox_Surrounding_activated(const QString &arg1)
         ui->label_densityDefine->setVisible(false);
         ui->comboBox_Density->setVisible(false);
         ui->label_SurrEl->setVisible(false);
+        ui->label_SurrEl2->setVisible(false);
         ui->label_SurrElNum->setVisible(false);
         ui->label_SurrElSymbol->setVisible(false);
         ui->lineEdit_SurrElSymbol->setVisible(false);

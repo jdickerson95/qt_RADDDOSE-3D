@@ -54,6 +54,7 @@ public:
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_SurrEl;
     QVBoxLayout *verticalLayout_3;
+    QLabel *label_SurrEl2;
     QFormLayout *formLayout_3;
     QLabel *label_SurrElSymbol;
     QLineEdit *lineEdit_SurrElSymbol;
@@ -80,6 +81,7 @@ public:
     QHBoxLayout *horizontalLayout_3;
     QLabel *label_containerMatEl;
     QVBoxLayout *verticalLayout_4;
+    QLabel *label_containerMatEl2;
     QFormLayout *formLayout_6;
     QLabel *label_containerEl;
     QLineEdit *lineEdit_containerEl;
@@ -226,7 +228,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, -376, 453, 877));
+        scrollAreaWidgetContents->setGeometry(QRect(0, -385, 453, 907));
         verticalLayout_2 = new QVBoxLayout(scrollAreaWidgetContents);
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
         label_crystalAngles = new QLabel(scrollAreaWidgetContents);
@@ -327,6 +329,15 @@ public:
         verticalLayout_3 = new QVBoxLayout();
         verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
         verticalLayout_3->setContentsMargins(-1, -1, 0, 0);
+        label_SurrEl2 = new QLabel(scrollAreaWidgetContents);
+        label_SurrEl2->setObjectName(QStringLiteral("label_SurrEl2"));
+        QFont font1;
+        font1.setUnderline(true);
+        label_SurrEl2->setFont(font1);
+        label_SurrEl2->setAlignment(Qt::AlignCenter);
+
+        verticalLayout_3->addWidget(label_SurrEl2);
+
         formLayout_3 = new QFormLayout();
         formLayout_3->setObjectName(QStringLiteral("formLayout_3"));
         label_SurrElSymbol = new QLabel(scrollAreaWidgetContents);
@@ -600,6 +611,13 @@ public:
         verticalLayout_4 = new QVBoxLayout();
         verticalLayout_4->setObjectName(QStringLiteral("verticalLayout_4"));
         verticalLayout_4->setContentsMargins(-1, -1, 0, 0);
+        label_containerMatEl2 = new QLabel(scrollAreaWidgetContents);
+        label_containerMatEl2->setObjectName(QStringLiteral("label_containerMatEl2"));
+        label_containerMatEl2->setFont(font1);
+        label_containerMatEl2->setAlignment(Qt::AlignCenter);
+
+        verticalLayout_4->addWidget(label_containerMatEl2);
+
         formLayout_6 = new QFormLayout();
         formLayout_6->setObjectName(QStringLiteral("formLayout_6"));
         formLayout_6->setContentsMargins(-1, -1, -1, 10);
@@ -984,6 +1002,7 @@ public:
          << QApplication::translate("CrystalAdvanced", "No", Q_NULLPTR)
         );
         label_SurrEl->setText(QApplication::translate("CrystalAdvanced", "Surrounding Elements", Q_NULLPTR));
+        label_SurrEl2->setText(QApplication::translate("CrystalAdvanced", "Surrounding Elements", Q_NULLPTR));
         label_SurrElSymbol->setText(QApplication::translate("CrystalAdvanced", "Element Symbol", Q_NULLPTR));
         label_SurrElNum->setText(QApplication::translate("CrystalAdvanced", "Number", Q_NULLPTR));
         pushButton_SurrEl->setText(QApplication::translate("CrystalAdvanced", "Add Element", Q_NULLPTR));
@@ -1033,6 +1052,7 @@ public:
         label_containerMatEl->setToolTip(QApplication::translate("CrystalAdvanced", "<html><head/><body><p>Specifies the elements in the container</p></body></html>", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         label_containerMatEl->setText(QApplication::translate("CrystalAdvanced", "Material Elements", Q_NULLPTR));
+        label_containerMatEl2->setText(QApplication::translate("CrystalAdvanced", "Material Elements", Q_NULLPTR));
         label_containerEl->setText(QApplication::translate("CrystalAdvanced", "Element Symbol", Q_NULLPTR));
         label_containerNum->setText(QApplication::translate("CrystalAdvanced", "Number", Q_NULLPTR));
         pushButton_container->setText(QApplication::translate("CrystalAdvanced", "Add Element", Q_NULLPTR));
