@@ -14,7 +14,9 @@ CrystalAdvanced::CrystalAdvanced(QWidget *parent) :
     //this->setFixedSize(this->size().width(), this->size().height());
     QPalette *palette = new QPalette();
     ui->label_containerDensity->setVisible(false);
+    ui->label_containerDensity->setText("Container Density (g/cm<sup>3</sup>");
     ui->label_containerThickness->setVisible(false);
+    ui->label_containerThickness->setText( QString::fromUtf8( "Container thickness (\xce\xbc\m)" ) );
     ui->lineEdit_containerDensity->setVisible(false);
     ui->lineEdit_containerThickness->setVisible(false);
     ui->label_containerEl->setVisible(false);
@@ -49,6 +51,7 @@ CrystalAdvanced::CrystalAdvanced(QWidget *parent) :
    // ui->label_SurrConc->setVisible(false);
 
     ui->label_Density->setVisible(false);
+    ui->label_Density->setText("Density (g/cm<sup>3</sup>)");
     ui->lineEdit_Density->setVisible(false);
     ui->label_densityDefine->setVisible(false);
     ui->comboBox_Density->setVisible(false);
@@ -60,6 +63,7 @@ CrystalAdvanced::CrystalAdvanced(QWidget *parent) :
     ui->pushButton_SurrEl->setVisible(false);
     ui->label_SurrAtomList->setVisible(false);
     ui->textEdit_SurrEl->setVisible(false);
+    ui->label_SurrEl->setText("Surrounding Elements");
 }
 
 CrystalAdvanced::~CrystalAdvanced()
@@ -119,9 +123,16 @@ void CrystalAdvanced::updateData(QString anglePIn, QString angleLIn, QString peE
     ui->comboBox_FLE->setCurrentText(flEscapeIn);
     ui->comboBox_Surrounding->setCurrentText(calcSurrIn);
     on_comboBox_Surrounding_activated(calcSurrIn);
-    ui->comboBox_Density->setCurrentText(defineDensityIn);
-    on_comboBox_Density_activated(defineDensityIn);
-    ui->lineEdit_Density->setText(densityIn);
+
+    std::string utf8_arg1 = calcSurrIn.toUtf8().constData();
+    std::transform(utf8_arg1.begin(), utf8_arg1.end(),utf8_arg1.begin(), ::toupper);
+    QString arg1_upper = QString::fromStdString(utf8_arg1);
+    if (arg1_upper == "True" || arg1_upper=="TRUE"){
+        ui->comboBox_Density->setCurrentText(defineDensityIn);
+        on_comboBox_Density_activated(defineDensityIn);
+        ui->lineEdit_Density->setText(densityIn);
+    }
+
     //ui->textEdit_SurrEl->clear();
     //ui->textEdit_SurrEl->setPlainText(surrElementsIn);
     ui->comboBox_goniometer->setCurrentText(goniometerIn);
@@ -227,8 +238,8 @@ void CrystalAdvanced::on_comboBox_Density_activated(const QString &arg1)
     }
     else if (arg1_upper=="No" || arg1_upper=="NO"){
         ui->comboBox_Density->setCurrentText("No");
-        ui->label_SurrEl->setVisible(true);
-        ui->label_SurrEl->setText("Surrounding Concentration");
+            ui->label_SurrEl->setVisible(true);
+        ui->label_SurrEl->setText("Surrounding Concentration (mM)");
         ui->label_Density->setVisible(false);
         ui->lineEdit_Density->setVisible(false);
      //   ui->label_SurrConc->setVisible(true);

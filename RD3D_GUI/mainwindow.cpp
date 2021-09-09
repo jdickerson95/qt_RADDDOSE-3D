@@ -49,6 +49,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->lineEdit_photons->setVisible(false);
     ui->label_runs->setVisible(false);
     ui->lineEdit_runs->setVisible(false);
+    ui->label_Dims->setText( QString::fromUtf8( "Dimensions (\xce\xbc\m)" ) );
+    ui->label_UnitCell->setText( QString::fromUtf8( "Unit cell (\xe2\x84\xab)" ) );
+    ui->label_pConc->setText("Protein Conc (mg/ml)");
 
     //beam stuff
     ui->label_beamFile->setVisible(false);
@@ -63,9 +66,18 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->lineEdit_pulseEn->setVisible(false);
     ui->lineEdit_beamEnFWHM->setReadOnly(true);
     ui->lineEdit_beamEnFWHM->setPalette(*palette);
+    ui->label_pxSize->setText( QString::fromUtf8( "Pixel size (\xce\xbc\m)" ) );
+    ui->label_FWHM->setText( QString::fromUtf8( "FWHM (\xce\xbc\m)" ) );
+    ui->label_collDims->setText( QString::fromUtf8( "Dimensions (\xce\xbc\m)" ) );
 
     //wedge stuff
     //ui->label_pulseLength->setVisible(false);
+    ui->label_startOffset->setText( QString::fromUtf8( "Starting offset (\xce\xbc\m)" ) );
+    ui->label_tns->setText( QString::fromUtf8( "Translation per degree (\xce\xbc\m)" ) );
+    ui->label_rotOffset->setText( QString::fromUtf8( "Rotation offset (\xce\xbc\m)" ) );
+    ui->label_startAngle->setText( QString::fromUtf8( "Start Angle (\xc2\xb0)" ) );
+    ui->label_endAngle->setText( QString::fromUtf8( "End Angle (\xc2\xb0)" ) );
+    ui->label_angleRes->setText( QString::fromUtf8( "Angular Resolution (\xc2\xb0)" ) );
 }
 
 MainWindow::~MainWindow()
@@ -184,6 +196,8 @@ void MainWindow::on_comboBox_AbsCoef_activated(const QString &arg1)
         ui->lineEdit_Residues->setVisible(true);
         ui->label_heavyProt->setVisible(true);
         ui->label_heavyProt->setText("Heavy atoms per monomer");
+        ui->label_heavyProt2->setVisible(true);
+        ui->label_heavyProt2->setText("Heavy atoms per monomer");
         ui->label_heavyEl->setVisible(true);
         ui->label_heavyNum->setVisible(true);
         ui->label_heavyTitle->setVisible(true);
@@ -194,6 +208,7 @@ void MainWindow::on_comboBox_AbsCoef_activated(const QString &arg1)
         ui->textEdit_heavyProt->setVisible(true);
         ui->label_solventEl->setVisible(true);
         ui->label_Solvent->setVisible(true);
+        ui->label_Solvent2->setVisible(true);
         ui->label_solventConc->setVisible(true);
         ui->label_solventTitle->setVisible(true);
         ui->lineEdit_Elsolvent->setVisible(true);
@@ -239,6 +254,7 @@ void MainWindow::on_comboBox_AbsCoef_activated(const QString &arg1)
         ui->label_Residues->setVisible(false);
         ui->lineEdit_Residues->setVisible(false);
         ui->label_heavyProt->setVisible(false);
+        ui->label_heavyProt2->setVisible(false);
         ui->label_heavyEl->setVisible(false);
         ui->label_heavyNum->setVisible(false);
         ui->label_heavyTitle->setVisible(false);
@@ -248,6 +264,7 @@ void MainWindow::on_comboBox_AbsCoef_activated(const QString &arg1)
         ui->textEdit_heavyProt->setVisible(false);
         ui->label_solventEl->setVisible(true);
         ui->label_Solvent->setVisible(true);
+        ui->label_Solvent2->setVisible(true);
         ui->label_solventConc->setVisible(true);
         ui->label_solventTitle->setVisible(true);
         ui->lineEdit_Elsolvent->setVisible(true);
@@ -295,6 +312,7 @@ void MainWindow::on_comboBox_AbsCoef_activated(const QString &arg1)
         ui->label_Residues->setVisible(false);
         ui->lineEdit_Residues->setVisible(false);
         ui->label_heavyProt->setVisible(false);
+        ui->label_heavyProt2->setVisible(false);
         ui->label_heavyEl->setVisible(false);
         ui->label_heavyNum->setVisible(false);
         ui->label_heavyTitle->setVisible(false);
@@ -304,6 +322,7 @@ void MainWindow::on_comboBox_AbsCoef_activated(const QString &arg1)
         ui->textEdit_heavyProt->setVisible(false);
         ui->label_solventEl->setVisible(true);
         ui->label_Solvent->setVisible(true);
+        ui->label_Solvent2->setVisible(true);
         ui->label_solventConc->setVisible(true);
         ui->label_solventTitle->setVisible(true);
         ui->lineEdit_Elsolvent->setVisible(true);
@@ -353,6 +372,8 @@ void MainWindow::on_comboBox_AbsCoef_activated(const QString &arg1)
         ui->lineEdit_Residues->setVisible(true);
         ui->label_heavyProt->setVisible(true);
         ui->label_heavyProt->setText("Heavy atoms per monomer");
+        ui->label_heavyProt2->setVisible(true);
+        ui->label_heavyProt2->setText("Heavy atoms per monomer");
         ui->label_heavyEl->setVisible(true);
         ui->label_heavyNum->setVisible(true);
         ui->label_heavyTitle->setVisible(true);
@@ -363,6 +384,7 @@ void MainWindow::on_comboBox_AbsCoef_activated(const QString &arg1)
         ui->textEdit_heavyProt->setVisible(true);
         ui->label_solventEl->setVisible(true);
         ui->label_Solvent->setVisible(true);
+        ui->label_Solvent2->setVisible(true);
         ui->label_solventConc->setVisible(true);
         ui->label_solventTitle->setVisible(true);
         ui->lineEdit_Elsolvent->setVisible(true);
@@ -408,6 +430,7 @@ void MainWindow::on_comboBox_AbsCoef_activated(const QString &arg1)
         ui->label_Residues->setVisible(false);
         ui->lineEdit_Residues->setVisible(false);
         ui->label_heavyProt->setVisible(false);
+        ui->label_heavyProt2->setVisible(false);
         ui->label_heavyEl->setVisible(false);
         ui->label_heavyNum->setVisible(false);
         ui->label_heavyTitle->setVisible(false);
@@ -417,6 +440,7 @@ void MainWindow::on_comboBox_AbsCoef_activated(const QString &arg1)
         ui->textEdit_heavyProt->setVisible(false);
         ui->label_solventEl->setVisible(true);
         ui->label_Solvent->setVisible(true);
+        ui->label_Solvent2->setVisible(true);
         ui->label_solventConc->setVisible(true);
         ui->label_solventTitle->setVisible(true);
         ui->lineEdit_Elsolvent->setVisible(true);
@@ -466,6 +490,8 @@ void MainWindow::on_comboBox_AbsCoef_activated(const QString &arg1)
         ui->lineEdit_Residues->setVisible(false);
         ui->label_heavyProt->setVisible(true);
         ui->label_heavyProt->setText("Heavy atoms per monomer");
+        ui->label_heavyProt2->setVisible(true);
+        ui->label_heavyProt2->setText("Heavy atoms per monomer");
         ui->label_heavyEl->setVisible(true);
         ui->label_heavyNum->setVisible(true);
         ui->label_heavyTitle->setVisible(true);
@@ -476,6 +502,7 @@ void MainWindow::on_comboBox_AbsCoef_activated(const QString &arg1)
         ui->textEdit_heavyProt->setVisible(true);
         ui->label_solventEl->setVisible(false);
         ui->label_Solvent->setVisible(false);
+        ui->label_Solvent2->setVisible(false);
         ui->label_solventConc->setVisible(false);
         ui->label_solventTitle->setVisible(false);
         ui->lineEdit_Elsolvent->setVisible(false);
@@ -521,6 +548,7 @@ void MainWindow::on_comboBox_AbsCoef_activated(const QString &arg1)
         ui->label_Residues->setVisible(false);
         ui->lineEdit_Residues->setVisible(false);
         ui->label_heavyProt->setVisible(false);
+        ui->label_heavyProt2->setVisible(false);
         ui->label_heavyEl->setVisible(false);
         ui->label_heavyNum->setVisible(false);
         ui->label_heavyTitle->setVisible(false);
@@ -530,6 +558,7 @@ void MainWindow::on_comboBox_AbsCoef_activated(const QString &arg1)
         ui->textEdit_heavyProt->setVisible(false);
         ui->label_solventEl->setVisible(false);
         ui->label_Solvent->setVisible(false);
+        ui->label_Solvent2->setVisible(false);
         ui->label_solventConc->setVisible(false);
         ui->label_solventTitle->setVisible(false);
         ui->lineEdit_Elsolvent->setVisible(false);
@@ -1200,7 +1229,7 @@ void MainWindow::on_comboBox_subprogram_activated(const QString &arg1)
 
        // ui->label_pulseLength->setVisible(false);
         ui->label_expTime->setVisible(true);
-        ui->label_expTime->setText("Exposure time");
+        ui->label_expTime->setText("Exposure time (s)");
     }
     else if (arg1_upper == "XFEL"){
         ui->label_photons->setVisible(true);
@@ -1215,7 +1244,7 @@ void MainWindow::on_comboBox_subprogram_activated(const QString &arg1)
 
        // ui->label_pulseLength->setVisible(true);
         ui->label_expTime->setVisible(true);
-        ui->label_expTime->setText("Pulse Length");
+        ui->label_expTime->setText("Pulse Length (fs)");
     }
     else if (arg1_upper == "MonteCarlo" || arg1_upper == "MONTECARLO"){
         ui->comboBox_subprogram->setCurrentText("MonteCarlo");
@@ -1231,7 +1260,7 @@ void MainWindow::on_comboBox_subprogram_activated(const QString &arg1)
         ui->label_flux->setText("Flux");
         //ui->label_pulseLength->setVisible(false);
         ui->label_expTime->setVisible(true);
-        ui->label_expTime->setText("Exposure time");
+        ui->label_expTime->setText("Exposure time (s)");
     }
 }
 

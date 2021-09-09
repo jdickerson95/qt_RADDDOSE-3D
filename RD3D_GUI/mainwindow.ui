@@ -2628,9 +2628,9 @@ QTabBar::tab:left:only-one, QTabBar::tab:right:only-one {
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>0</y>
+             <y>-507</y>
              <width>564</width>
-             <height>914</height>
+             <height>962</height>
             </rect>
            </property>
            <property name="palette">
@@ -4497,7 +4497,7 @@ QTabBar::tab:left:only-one, QTabBar::tab:right:only-one {
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;In SAXS, this is the concentration of protein in grams per litre&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                 <property name="text">
-                 <string>Protein Conc</string>
+                 <string>Protein Conc (g/l)</string>
                 </property>
                </widget>
               </item>
@@ -5306,23 +5306,40 @@ QTabBar::tab:left:only-one, QTabBar::tab:right:only-one {
                 </property>
                 <item>
                  <layout class="QFormLayout" name="formLayout_3">
-                  <item row="0" column="1">
+                  <item row="2" column="1">
                    <widget class="QLineEdit" name="lineEdit_ElheavyProt"/>
                   </item>
-                  <item row="0" column="0">
+                  <item row="2" column="0">
                    <widget class="QLabel" name="label_heavyEl">
                     <property name="text">
                      <string>Element Symbol</string>
                     </property>
                    </widget>
                   </item>
-                  <item row="1" column="1">
+                  <item row="3" column="1">
                    <widget class="QLineEdit" name="lineEdit_ElheavyProt_2"/>
                   </item>
-                  <item row="1" column="0">
+                  <item row="3" column="0">
                    <widget class="QLabel" name="label_heavyNum">
                     <property name="text">
                      <string>Number</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="0" colspan="2">
+                   <widget class="QLabel" name="label_heavyProt2">
+                    <property name="font">
+                     <font>
+                      <weight>50</weight>
+                      <bold>false</bold>
+                      <underline>true</underline>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Heavy atoms per monomer</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
                     </property>
                    </widget>
                   </item>
@@ -6082,6 +6099,21 @@ p, li { white-space: pre-wrap; }
                  <number>0</number>
                 </property>
                 <item>
+                 <widget class="QLabel" name="label_Solvent2">
+                  <property name="font">
+                   <font>
+                    <underline>true</underline>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Solvent atom concentration</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
                  <layout class="QFormLayout" name="formLayout_4">
                   <item row="0" column="0">
                    <widget class="QLabel" name="label_solventEl">
@@ -6100,7 +6132,7 @@ p, li { white-space: pre-wrap; }
                   <item row="1" column="0">
                    <widget class="QLabel" name="label_solventConc">
                     <property name="text">
-                     <string>Concentration</string>
+                     <string>Concentration (mM)</string>
                     </property>
                    </widget>
                   </item>
@@ -7660,7 +7692,7 @@ p, li { white-space: pre-wrap; }
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>578</width>
+             <width>564</width>
              <height>343</height>
             </rect>
            </property>
@@ -8623,7 +8655,7 @@ p, li { white-space: pre-wrap; }
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The energy of an XFEL pulse in mJ&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                 <property name="text">
-                 <string>Pulse Energy</string>
+                 <string>Pulse Energy (mJ)</string>
                 </property>
                </widget>
               </item>
@@ -8643,7 +8675,7 @@ p, li { white-space: pre-wrap; }
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The flux of the beam in photons per second&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                 <property name="text">
-                 <string>Flux</string>
+                 <string>Flux (photons/s)</string>
                 </property>
                </widget>
               </item>
@@ -8667,7 +8699,7 @@ p, li { white-space: pre-wrap; }
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The energy of the X-ray beam in keV&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                 <property name="text">
-                 <string>Beam Energy</string>
+                 <string>Beam Energy (keV)</string>
                 </property>
                </widget>
               </item>
@@ -8715,7 +8747,7 @@ p, li { white-space: pre-wrap; }
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Teh energy spread of the beam&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                 <property name="text">
-                 <string>Energy FWHM</string>
+                 <string>Energy FWHM (keV)</string>
                 </property>
                </widget>
               </item>
@@ -8802,7 +8834,7 @@ p, li { white-space: pre-wrap; }
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The exposure time in seconds&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                 <property name="text">
-                 <string>Exposure time</string>
+                 <string>Exposure time (s)</string>
                 </property>
                </widget>
               </item>
