@@ -67,6 +67,9 @@ CrystalAdvanced::CrystalAdvanced(QWidget *parent) :
     ui->textEdit_SurrEl->setVisible(false);
     ui->label_SurrEl->setText("Surrounding Elements");
     ui->label_SurrEl2->setText("Surrounding Elements");
+
+    ui->label_angleP->setText( QString::fromUtf8( "AngleP (\xc2\xb0)" ) );
+    ui->label_angleL->setText( QString::fromUtf8( "AngleL (\xc2\xb0)" ) );
 }
 
 CrystalAdvanced::~CrystalAdvanced()
