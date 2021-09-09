@@ -116,6 +116,7 @@ public:
     QHBoxLayout *horizontalLayout_14;
     QLabel *label_heavyProt;
     QVBoxLayout *verticalLayout_3;
+    QLabel *label_heavyProt2;
     QFormLayout *formLayout_3;
     QLineEdit *lineEdit_ElheavyProt;
     QLabel *label_heavyEl;
@@ -127,6 +128,7 @@ public:
     QHBoxLayout *horizontalLayout_16;
     QLabel *label_Solvent;
     QVBoxLayout *verticalLayout_4;
+    QLabel *label_Solvent2;
     QFormLayout *formLayout_4;
     QLabel *label_solventEl;
     QLineEdit *lineEdit_Elsolvent;
@@ -276,6 +278,11 @@ public:
         brush8.setStyle(Qt::SolidPattern);
         palette.setBrush(QPalette::Active, QPalette::ToolTipBase, brush8);
         palette.setBrush(QPalette::Active, QPalette::ToolTipText, brush6);
+        QBrush brush9(QColor(255, 255, 255, 128));
+        brush9.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette.setBrush(QPalette::Active, QPalette::PlaceholderText, brush9);
+#endif
         palette.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
         palette.setBrush(QPalette::Inactive, QPalette::Button, brush1);
         palette.setBrush(QPalette::Inactive, QPalette::Light, brush2);
@@ -291,6 +298,11 @@ public:
         palette.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush4);
         palette.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush8);
         palette.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush6);
+        QBrush brush10(QColor(255, 255, 255, 128));
+        brush10.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush10);
+#endif
         palette.setBrush(QPalette::Disabled, QPalette::WindowText, brush4);
         palette.setBrush(QPalette::Disabled, QPalette::Button, brush1);
         palette.setBrush(QPalette::Disabled, QPalette::Light, brush2);
@@ -306,6 +318,11 @@ public:
         palette.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush7);
         palette.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush8);
         palette.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush6);
+        QBrush brush11(QColor(255, 255, 255, 128));
+        brush11.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush11);
+#endif
         MainWindow->setPalette(palette);
         MainWindow->setStyleSheet(QString::fromUtf8("QMenuBar {\n"
 "    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
@@ -342,9 +359,9 @@ public:
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         QPalette palette1;
         palette1.setBrush(QPalette::Active, QPalette::WindowText, brush);
-        QBrush brush9(QColor(0, 34, 85, 255));
-        brush9.setStyle(Qt::SolidPattern);
-        palette1.setBrush(QPalette::Active, QPalette::Button, brush9);
+        QBrush brush12(QColor(0, 34, 85, 255));
+        brush12.setStyle(Qt::SolidPattern);
+        palette1.setBrush(QPalette::Active, QPalette::Button, brush12);
         palette1.setBrush(QPalette::Active, QPalette::Light, brush2);
         palette1.setBrush(QPalette::Active, QPalette::Midlight, brush3);
         palette1.setBrush(QPalette::Active, QPalette::Dark, brush4);
@@ -352,14 +369,19 @@ public:
         palette1.setBrush(QPalette::Active, QPalette::Text, brush);
         palette1.setBrush(QPalette::Active, QPalette::BrightText, brush);
         palette1.setBrush(QPalette::Active, QPalette::ButtonText, brush);
-        palette1.setBrush(QPalette::Active, QPalette::Base, brush9);
-        palette1.setBrush(QPalette::Active, QPalette::Window, brush9);
+        palette1.setBrush(QPalette::Active, QPalette::Base, brush12);
+        palette1.setBrush(QPalette::Active, QPalette::Window, brush12);
         palette1.setBrush(QPalette::Active, QPalette::Shadow, brush6);
         palette1.setBrush(QPalette::Active, QPalette::AlternateBase, brush4);
         palette1.setBrush(QPalette::Active, QPalette::ToolTipBase, brush8);
         palette1.setBrush(QPalette::Active, QPalette::ToolTipText, brush6);
+        QBrush brush13(QColor(255, 255, 255, 128));
+        brush13.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette1.setBrush(QPalette::Active, QPalette::PlaceholderText, brush13);
+#endif
         palette1.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
-        palette1.setBrush(QPalette::Inactive, QPalette::Button, brush9);
+        palette1.setBrush(QPalette::Inactive, QPalette::Button, brush12);
         palette1.setBrush(QPalette::Inactive, QPalette::Light, brush2);
         palette1.setBrush(QPalette::Inactive, QPalette::Midlight, brush3);
         palette1.setBrush(QPalette::Inactive, QPalette::Dark, brush4);
@@ -367,14 +389,19 @@ public:
         palette1.setBrush(QPalette::Inactive, QPalette::Text, brush);
         palette1.setBrush(QPalette::Inactive, QPalette::BrightText, brush);
         palette1.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
-        palette1.setBrush(QPalette::Inactive, QPalette::Base, brush9);
-        palette1.setBrush(QPalette::Inactive, QPalette::Window, brush9);
+        palette1.setBrush(QPalette::Inactive, QPalette::Base, brush12);
+        palette1.setBrush(QPalette::Inactive, QPalette::Window, brush12);
         palette1.setBrush(QPalette::Inactive, QPalette::Shadow, brush6);
         palette1.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush4);
         palette1.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush8);
         palette1.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush6);
+        QBrush brush14(QColor(255, 255, 255, 128));
+        brush14.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette1.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush14);
+#endif
         palette1.setBrush(QPalette::Disabled, QPalette::WindowText, brush4);
-        palette1.setBrush(QPalette::Disabled, QPalette::Button, brush9);
+        palette1.setBrush(QPalette::Disabled, QPalette::Button, brush12);
         palette1.setBrush(QPalette::Disabled, QPalette::Light, brush2);
         palette1.setBrush(QPalette::Disabled, QPalette::Midlight, brush3);
         palette1.setBrush(QPalette::Disabled, QPalette::Dark, brush4);
@@ -382,12 +409,17 @@ public:
         palette1.setBrush(QPalette::Disabled, QPalette::Text, brush4);
         palette1.setBrush(QPalette::Disabled, QPalette::BrightText, brush);
         palette1.setBrush(QPalette::Disabled, QPalette::ButtonText, brush4);
-        palette1.setBrush(QPalette::Disabled, QPalette::Base, brush9);
-        palette1.setBrush(QPalette::Disabled, QPalette::Window, brush9);
+        palette1.setBrush(QPalette::Disabled, QPalette::Base, brush12);
+        palette1.setBrush(QPalette::Disabled, QPalette::Window, brush12);
         palette1.setBrush(QPalette::Disabled, QPalette::Shadow, brush6);
         palette1.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush7);
         palette1.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush8);
         palette1.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush6);
+        QBrush brush15(QColor(255, 255, 255, 128));
+        brush15.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette1.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush15);
+#endif
         centralWidget->setPalette(palette1);
         centralWidget->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "color: black;\n"
@@ -609,20 +641,20 @@ public:
         gradient.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush10(gradient);
-        palette2.setBrush(QPalette::Active, QPalette::Button, brush10);
-        QBrush brush11(QColor(170, 127, 255, 255));
-        brush11.setStyle(Qt::SolidPattern);
-        palette2.setBrush(QPalette::Active, QPalette::Light, brush11);
-        QBrush brush12(QColor(127, 63, 255, 255));
-        brush12.setStyle(Qt::SolidPattern);
-        palette2.setBrush(QPalette::Active, QPalette::Midlight, brush12);
-        QBrush brush13(QColor(42, 0, 127, 255));
-        brush13.setStyle(Qt::SolidPattern);
-        palette2.setBrush(QPalette::Active, QPalette::Dark, brush13);
-        QBrush brush14(QColor(56, 0, 170, 255));
-        brush14.setStyle(Qt::SolidPattern);
-        palette2.setBrush(QPalette::Active, QPalette::Mid, brush14);
+        QBrush brush16(gradient);
+        palette2.setBrush(QPalette::Active, QPalette::Button, brush16);
+        QBrush brush17(QColor(170, 127, 255, 255));
+        brush17.setStyle(Qt::SolidPattern);
+        palette2.setBrush(QPalette::Active, QPalette::Light, brush17);
+        QBrush brush18(QColor(127, 63, 255, 255));
+        brush18.setStyle(Qt::SolidPattern);
+        palette2.setBrush(QPalette::Active, QPalette::Midlight, brush18);
+        QBrush brush19(QColor(42, 0, 127, 255));
+        brush19.setStyle(Qt::SolidPattern);
+        palette2.setBrush(QPalette::Active, QPalette::Dark, brush19);
+        QBrush brush20(QColor(56, 0, 170, 255));
+        brush20.setStyle(Qt::SolidPattern);
+        palette2.setBrush(QPalette::Active, QPalette::Mid, brush20);
         palette2.setBrush(QPalette::Active, QPalette::Text, brush6);
         palette2.setBrush(QPalette::Active, QPalette::BrightText, brush);
         palette2.setBrush(QPalette::Active, QPalette::ButtonText, brush6);
@@ -634,8 +666,8 @@ public:
         gradient1.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient1.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient1.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush15(gradient1);
-        palette2.setBrush(QPalette::Active, QPalette::Base, brush15);
+        QBrush brush21(gradient1);
+        palette2.setBrush(QPalette::Active, QPalette::Base, brush21);
         QLinearGradient gradient2(0, 0, 0, 1);
         gradient2.setSpread(QGradient::PadSpread);
         gradient2.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -644,12 +676,17 @@ public:
         gradient2.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient2.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient2.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush16(gradient2);
-        palette2.setBrush(QPalette::Active, QPalette::Window, brush16);
+        QBrush brush22(gradient2);
+        palette2.setBrush(QPalette::Active, QPalette::Window, brush22);
         palette2.setBrush(QPalette::Active, QPalette::Shadow, brush6);
-        palette2.setBrush(QPalette::Active, QPalette::AlternateBase, brush11);
+        palette2.setBrush(QPalette::Active, QPalette::AlternateBase, brush17);
         palette2.setBrush(QPalette::Active, QPalette::ToolTipBase, brush8);
         palette2.setBrush(QPalette::Active, QPalette::ToolTipText, brush6);
+        QBrush brush23(QColor(0, 0, 0, 128));
+        brush23.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette2.setBrush(QPalette::Active, QPalette::PlaceholderText, brush23);
+#endif
         palette2.setBrush(QPalette::Inactive, QPalette::WindowText, brush6);
         QLinearGradient gradient3(0, 0, 0, 1);
         gradient3.setSpread(QGradient::PadSpread);
@@ -659,12 +696,12 @@ public:
         gradient3.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient3.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient3.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush17(gradient3);
-        palette2.setBrush(QPalette::Inactive, QPalette::Button, brush17);
-        palette2.setBrush(QPalette::Inactive, QPalette::Light, brush11);
-        palette2.setBrush(QPalette::Inactive, QPalette::Midlight, brush12);
-        palette2.setBrush(QPalette::Inactive, QPalette::Dark, brush13);
-        palette2.setBrush(QPalette::Inactive, QPalette::Mid, brush14);
+        QBrush brush24(gradient3);
+        palette2.setBrush(QPalette::Inactive, QPalette::Button, brush24);
+        palette2.setBrush(QPalette::Inactive, QPalette::Light, brush17);
+        palette2.setBrush(QPalette::Inactive, QPalette::Midlight, brush18);
+        palette2.setBrush(QPalette::Inactive, QPalette::Dark, brush19);
+        palette2.setBrush(QPalette::Inactive, QPalette::Mid, brush20);
         palette2.setBrush(QPalette::Inactive, QPalette::Text, brush6);
         palette2.setBrush(QPalette::Inactive, QPalette::BrightText, brush);
         palette2.setBrush(QPalette::Inactive, QPalette::ButtonText, brush6);
@@ -676,8 +713,8 @@ public:
         gradient4.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient4.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient4.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush18(gradient4);
-        palette2.setBrush(QPalette::Inactive, QPalette::Base, brush18);
+        QBrush brush25(gradient4);
+        palette2.setBrush(QPalette::Inactive, QPalette::Base, brush25);
         QLinearGradient gradient5(0, 0, 0, 1);
         gradient5.setSpread(QGradient::PadSpread);
         gradient5.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -686,12 +723,17 @@ public:
         gradient5.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient5.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient5.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush19(gradient5);
-        palette2.setBrush(QPalette::Inactive, QPalette::Window, brush19);
+        QBrush brush26(gradient5);
+        palette2.setBrush(QPalette::Inactive, QPalette::Window, brush26);
         palette2.setBrush(QPalette::Inactive, QPalette::Shadow, brush6);
-        palette2.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush11);
+        palette2.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush17);
         palette2.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush8);
         palette2.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush6);
+        QBrush brush27(QColor(0, 0, 0, 128));
+        brush27.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette2.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush27);
+#endif
         palette2.setBrush(QPalette::Disabled, QPalette::WindowText, brush6);
         QLinearGradient gradient6(0, 0, 0, 1);
         gradient6.setSpread(QGradient::PadSpread);
@@ -701,12 +743,12 @@ public:
         gradient6.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient6.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient6.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush20(gradient6);
-        palette2.setBrush(QPalette::Disabled, QPalette::Button, brush20);
-        palette2.setBrush(QPalette::Disabled, QPalette::Light, brush11);
-        palette2.setBrush(QPalette::Disabled, QPalette::Midlight, brush12);
-        palette2.setBrush(QPalette::Disabled, QPalette::Dark, brush13);
-        palette2.setBrush(QPalette::Disabled, QPalette::Mid, brush14);
+        QBrush brush28(gradient6);
+        palette2.setBrush(QPalette::Disabled, QPalette::Button, brush28);
+        palette2.setBrush(QPalette::Disabled, QPalette::Light, brush17);
+        palette2.setBrush(QPalette::Disabled, QPalette::Midlight, brush18);
+        palette2.setBrush(QPalette::Disabled, QPalette::Dark, brush19);
+        palette2.setBrush(QPalette::Disabled, QPalette::Mid, brush20);
         palette2.setBrush(QPalette::Disabled, QPalette::Text, brush6);
         palette2.setBrush(QPalette::Disabled, QPalette::BrightText, brush);
         palette2.setBrush(QPalette::Disabled, QPalette::ButtonText, brush6);
@@ -718,8 +760,8 @@ public:
         gradient7.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient7.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient7.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush21(gradient7);
-        palette2.setBrush(QPalette::Disabled, QPalette::Base, brush21);
+        QBrush brush29(gradient7);
+        palette2.setBrush(QPalette::Disabled, QPalette::Base, brush29);
         QLinearGradient gradient8(0, 0, 0, 1);
         gradient8.setSpread(QGradient::PadSpread);
         gradient8.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -728,14 +770,19 @@ public:
         gradient8.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient8.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient8.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush22(gradient8);
-        palette2.setBrush(QPalette::Disabled, QPalette::Window, brush22);
+        QBrush brush30(gradient8);
+        palette2.setBrush(QPalette::Disabled, QPalette::Window, brush30);
         palette2.setBrush(QPalette::Disabled, QPalette::Shadow, brush6);
-        QBrush brush23(QColor(85, 0, 255, 255));
-        brush23.setStyle(Qt::SolidPattern);
-        palette2.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush23);
+        QBrush brush31(QColor(85, 0, 255, 255));
+        brush31.setStyle(Qt::SolidPattern);
+        palette2.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush31);
         palette2.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush8);
         palette2.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush6);
+        QBrush brush32(QColor(0, 0, 0, 128));
+        brush32.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette2.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush32);
+#endif
         pushButton_manualEdit->setPalette(palette2);
 
         gridLayout->addWidget(pushButton_manualEdit, 5, 0, 1, 2);
@@ -752,12 +799,12 @@ public:
         gradient9.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient9.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient9.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush24(gradient9);
-        palette3.setBrush(QPalette::Active, QPalette::Button, brush24);
-        palette3.setBrush(QPalette::Active, QPalette::Light, brush11);
-        palette3.setBrush(QPalette::Active, QPalette::Midlight, brush12);
-        palette3.setBrush(QPalette::Active, QPalette::Dark, brush13);
-        palette3.setBrush(QPalette::Active, QPalette::Mid, brush14);
+        QBrush brush33(gradient9);
+        palette3.setBrush(QPalette::Active, QPalette::Button, brush33);
+        palette3.setBrush(QPalette::Active, QPalette::Light, brush17);
+        palette3.setBrush(QPalette::Active, QPalette::Midlight, brush18);
+        palette3.setBrush(QPalette::Active, QPalette::Dark, brush19);
+        palette3.setBrush(QPalette::Active, QPalette::Mid, brush20);
         palette3.setBrush(QPalette::Active, QPalette::Text, brush6);
         palette3.setBrush(QPalette::Active, QPalette::BrightText, brush);
         palette3.setBrush(QPalette::Active, QPalette::ButtonText, brush6);
@@ -769,8 +816,8 @@ public:
         gradient10.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient10.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient10.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush25(gradient10);
-        palette3.setBrush(QPalette::Active, QPalette::Base, brush25);
+        QBrush brush34(gradient10);
+        palette3.setBrush(QPalette::Active, QPalette::Base, brush34);
         QLinearGradient gradient11(0, 0, 0, 1);
         gradient11.setSpread(QGradient::PadSpread);
         gradient11.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -779,12 +826,17 @@ public:
         gradient11.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient11.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient11.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush26(gradient11);
-        palette3.setBrush(QPalette::Active, QPalette::Window, brush26);
+        QBrush brush35(gradient11);
+        palette3.setBrush(QPalette::Active, QPalette::Window, brush35);
         palette3.setBrush(QPalette::Active, QPalette::Shadow, brush6);
-        palette3.setBrush(QPalette::Active, QPalette::AlternateBase, brush11);
+        palette3.setBrush(QPalette::Active, QPalette::AlternateBase, brush17);
         palette3.setBrush(QPalette::Active, QPalette::ToolTipBase, brush8);
         palette3.setBrush(QPalette::Active, QPalette::ToolTipText, brush6);
+        QBrush brush36(QColor(0, 0, 0, 128));
+        brush36.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette3.setBrush(QPalette::Active, QPalette::PlaceholderText, brush36);
+#endif
         palette3.setBrush(QPalette::Inactive, QPalette::WindowText, brush6);
         QLinearGradient gradient12(0, 0, 0, 1);
         gradient12.setSpread(QGradient::PadSpread);
@@ -794,12 +846,12 @@ public:
         gradient12.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient12.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient12.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush27(gradient12);
-        palette3.setBrush(QPalette::Inactive, QPalette::Button, brush27);
-        palette3.setBrush(QPalette::Inactive, QPalette::Light, brush11);
-        palette3.setBrush(QPalette::Inactive, QPalette::Midlight, brush12);
-        palette3.setBrush(QPalette::Inactive, QPalette::Dark, brush13);
-        palette3.setBrush(QPalette::Inactive, QPalette::Mid, brush14);
+        QBrush brush37(gradient12);
+        palette3.setBrush(QPalette::Inactive, QPalette::Button, brush37);
+        palette3.setBrush(QPalette::Inactive, QPalette::Light, brush17);
+        palette3.setBrush(QPalette::Inactive, QPalette::Midlight, brush18);
+        palette3.setBrush(QPalette::Inactive, QPalette::Dark, brush19);
+        palette3.setBrush(QPalette::Inactive, QPalette::Mid, brush20);
         palette3.setBrush(QPalette::Inactive, QPalette::Text, brush6);
         palette3.setBrush(QPalette::Inactive, QPalette::BrightText, brush);
         palette3.setBrush(QPalette::Inactive, QPalette::ButtonText, brush6);
@@ -811,8 +863,8 @@ public:
         gradient13.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient13.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient13.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush28(gradient13);
-        palette3.setBrush(QPalette::Inactive, QPalette::Base, brush28);
+        QBrush brush38(gradient13);
+        palette3.setBrush(QPalette::Inactive, QPalette::Base, brush38);
         QLinearGradient gradient14(0, 0, 0, 1);
         gradient14.setSpread(QGradient::PadSpread);
         gradient14.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -821,12 +873,17 @@ public:
         gradient14.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient14.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient14.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush29(gradient14);
-        palette3.setBrush(QPalette::Inactive, QPalette::Window, brush29);
+        QBrush brush39(gradient14);
+        palette3.setBrush(QPalette::Inactive, QPalette::Window, brush39);
         palette3.setBrush(QPalette::Inactive, QPalette::Shadow, brush6);
-        palette3.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush11);
+        palette3.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush17);
         palette3.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush8);
         palette3.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush6);
+        QBrush brush40(QColor(0, 0, 0, 128));
+        brush40.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette3.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush40);
+#endif
         palette3.setBrush(QPalette::Disabled, QPalette::WindowText, brush6);
         QLinearGradient gradient15(0, 0, 0, 1);
         gradient15.setSpread(QGradient::PadSpread);
@@ -836,12 +893,12 @@ public:
         gradient15.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient15.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient15.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush30(gradient15);
-        palette3.setBrush(QPalette::Disabled, QPalette::Button, brush30);
-        palette3.setBrush(QPalette::Disabled, QPalette::Light, brush11);
-        palette3.setBrush(QPalette::Disabled, QPalette::Midlight, brush12);
-        palette3.setBrush(QPalette::Disabled, QPalette::Dark, brush13);
-        palette3.setBrush(QPalette::Disabled, QPalette::Mid, brush14);
+        QBrush brush41(gradient15);
+        palette3.setBrush(QPalette::Disabled, QPalette::Button, brush41);
+        palette3.setBrush(QPalette::Disabled, QPalette::Light, brush17);
+        palette3.setBrush(QPalette::Disabled, QPalette::Midlight, brush18);
+        palette3.setBrush(QPalette::Disabled, QPalette::Dark, brush19);
+        palette3.setBrush(QPalette::Disabled, QPalette::Mid, brush20);
         palette3.setBrush(QPalette::Disabled, QPalette::Text, brush6);
         palette3.setBrush(QPalette::Disabled, QPalette::BrightText, brush);
         palette3.setBrush(QPalette::Disabled, QPalette::ButtonText, brush6);
@@ -853,8 +910,8 @@ public:
         gradient16.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient16.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient16.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush31(gradient16);
-        palette3.setBrush(QPalette::Disabled, QPalette::Base, brush31);
+        QBrush brush42(gradient16);
+        palette3.setBrush(QPalette::Disabled, QPalette::Base, brush42);
         QLinearGradient gradient17(0, 0, 0, 1);
         gradient17.setSpread(QGradient::PadSpread);
         gradient17.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -863,12 +920,17 @@ public:
         gradient17.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient17.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient17.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush32(gradient17);
-        palette3.setBrush(QPalette::Disabled, QPalette::Window, brush32);
+        QBrush brush43(gradient17);
+        palette3.setBrush(QPalette::Disabled, QPalette::Window, brush43);
         palette3.setBrush(QPalette::Disabled, QPalette::Shadow, brush6);
-        palette3.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush23);
+        palette3.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush31);
         palette3.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush8);
         palette3.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush6);
+        QBrush brush44(QColor(0, 0, 0, 128));
+        brush44.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette3.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush44);
+#endif
         pushButton_run->setPalette(palette3);
 
         gridLayout->addWidget(pushButton_run, 6, 0, 1, 2);
@@ -885,30 +947,30 @@ public:
         scrollArea = new QScrollArea(tabCrystal);
         scrollArea->setObjectName(QString::fromUtf8("scrollArea"));
         QPalette palette4;
-        palette4.setBrush(QPalette::Active, QPalette::Button, brush9);
-        palette4.setBrush(QPalette::Active, QPalette::Base, brush9);
-        palette4.setBrush(QPalette::Active, QPalette::Window, brush9);
-        palette4.setBrush(QPalette::Inactive, QPalette::Button, brush9);
-        palette4.setBrush(QPalette::Inactive, QPalette::Base, brush9);
-        palette4.setBrush(QPalette::Inactive, QPalette::Window, brush9);
-        palette4.setBrush(QPalette::Disabled, QPalette::Button, brush9);
-        palette4.setBrush(QPalette::Disabled, QPalette::Base, brush9);
-        palette4.setBrush(QPalette::Disabled, QPalette::Window, brush9);
+        palette4.setBrush(QPalette::Active, QPalette::Button, brush12);
+        palette4.setBrush(QPalette::Active, QPalette::Base, brush12);
+        palette4.setBrush(QPalette::Active, QPalette::Window, brush12);
+        palette4.setBrush(QPalette::Inactive, QPalette::Button, brush12);
+        palette4.setBrush(QPalette::Inactive, QPalette::Base, brush12);
+        palette4.setBrush(QPalette::Inactive, QPalette::Window, brush12);
+        palette4.setBrush(QPalette::Disabled, QPalette::Button, brush12);
+        palette4.setBrush(QPalette::Disabled, QPalette::Base, brush12);
+        palette4.setBrush(QPalette::Disabled, QPalette::Window, brush12);
         scrollArea->setPalette(palette4);
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents_2 = new QWidget();
         scrollAreaWidgetContents_2->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_2"));
-        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 564, 914));
+        scrollAreaWidgetContents_2->setGeometry(QRect(0, -30, 561, 900));
         QPalette palette5;
-        palette5.setBrush(QPalette::Active, QPalette::Button, brush9);
-        palette5.setBrush(QPalette::Active, QPalette::Base, brush9);
-        palette5.setBrush(QPalette::Active, QPalette::Window, brush9);
-        palette5.setBrush(QPalette::Inactive, QPalette::Button, brush9);
-        palette5.setBrush(QPalette::Inactive, QPalette::Base, brush9);
-        palette5.setBrush(QPalette::Inactive, QPalette::Window, brush9);
-        palette5.setBrush(QPalette::Disabled, QPalette::Button, brush9);
-        palette5.setBrush(QPalette::Disabled, QPalette::Base, brush9);
-        palette5.setBrush(QPalette::Disabled, QPalette::Window, brush9);
+        palette5.setBrush(QPalette::Active, QPalette::Button, brush12);
+        palette5.setBrush(QPalette::Active, QPalette::Base, brush12);
+        palette5.setBrush(QPalette::Active, QPalette::Window, brush12);
+        palette5.setBrush(QPalette::Inactive, QPalette::Button, brush12);
+        palette5.setBrush(QPalette::Inactive, QPalette::Base, brush12);
+        palette5.setBrush(QPalette::Inactive, QPalette::Window, brush12);
+        palette5.setBrush(QPalette::Disabled, QPalette::Button, brush12);
+        palette5.setBrush(QPalette::Disabled, QPalette::Base, brush12);
+        palette5.setBrush(QPalette::Disabled, QPalette::Window, brush12);
         scrollAreaWidgetContents_2->setPalette(palette5);
         verticalLayout = new QVBoxLayout(scrollAreaWidgetContents_2);
         verticalLayout->setSpacing(6);
@@ -1003,12 +1065,12 @@ public:
         gradient18.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient18.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient18.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush33(gradient18);
-        palette6.setBrush(QPalette::Active, QPalette::Button, brush33);
-        palette6.setBrush(QPalette::Active, QPalette::Light, brush11);
-        palette6.setBrush(QPalette::Active, QPalette::Midlight, brush12);
-        palette6.setBrush(QPalette::Active, QPalette::Dark, brush13);
-        palette6.setBrush(QPalette::Active, QPalette::Mid, brush14);
+        QBrush brush45(gradient18);
+        palette6.setBrush(QPalette::Active, QPalette::Button, brush45);
+        palette6.setBrush(QPalette::Active, QPalette::Light, brush17);
+        palette6.setBrush(QPalette::Active, QPalette::Midlight, brush18);
+        palette6.setBrush(QPalette::Active, QPalette::Dark, brush19);
+        palette6.setBrush(QPalette::Active, QPalette::Mid, brush20);
         palette6.setBrush(QPalette::Active, QPalette::Text, brush6);
         palette6.setBrush(QPalette::Active, QPalette::BrightText, brush);
         palette6.setBrush(QPalette::Active, QPalette::ButtonText, brush6);
@@ -1020,8 +1082,8 @@ public:
         gradient19.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient19.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient19.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush34(gradient19);
-        palette6.setBrush(QPalette::Active, QPalette::Base, brush34);
+        QBrush brush46(gradient19);
+        palette6.setBrush(QPalette::Active, QPalette::Base, brush46);
         QLinearGradient gradient20(0, 0, 0, 1);
         gradient20.setSpread(QGradient::PadSpread);
         gradient20.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1030,12 +1092,17 @@ public:
         gradient20.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient20.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient20.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush35(gradient20);
-        palette6.setBrush(QPalette::Active, QPalette::Window, brush35);
+        QBrush brush47(gradient20);
+        palette6.setBrush(QPalette::Active, QPalette::Window, brush47);
         palette6.setBrush(QPalette::Active, QPalette::Shadow, brush6);
-        palette6.setBrush(QPalette::Active, QPalette::AlternateBase, brush11);
+        palette6.setBrush(QPalette::Active, QPalette::AlternateBase, brush17);
         palette6.setBrush(QPalette::Active, QPalette::ToolTipBase, brush8);
         palette6.setBrush(QPalette::Active, QPalette::ToolTipText, brush6);
+        QBrush brush48(QColor(0, 0, 0, 128));
+        brush48.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette6.setBrush(QPalette::Active, QPalette::PlaceholderText, brush48);
+#endif
         palette6.setBrush(QPalette::Inactive, QPalette::WindowText, brush6);
         QLinearGradient gradient21(0, 0, 0, 1);
         gradient21.setSpread(QGradient::PadSpread);
@@ -1045,12 +1112,12 @@ public:
         gradient21.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient21.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient21.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush36(gradient21);
-        palette6.setBrush(QPalette::Inactive, QPalette::Button, brush36);
-        palette6.setBrush(QPalette::Inactive, QPalette::Light, brush11);
-        palette6.setBrush(QPalette::Inactive, QPalette::Midlight, brush12);
-        palette6.setBrush(QPalette::Inactive, QPalette::Dark, brush13);
-        palette6.setBrush(QPalette::Inactive, QPalette::Mid, brush14);
+        QBrush brush49(gradient21);
+        palette6.setBrush(QPalette::Inactive, QPalette::Button, brush49);
+        palette6.setBrush(QPalette::Inactive, QPalette::Light, brush17);
+        palette6.setBrush(QPalette::Inactive, QPalette::Midlight, brush18);
+        palette6.setBrush(QPalette::Inactive, QPalette::Dark, brush19);
+        palette6.setBrush(QPalette::Inactive, QPalette::Mid, brush20);
         palette6.setBrush(QPalette::Inactive, QPalette::Text, brush6);
         palette6.setBrush(QPalette::Inactive, QPalette::BrightText, brush);
         palette6.setBrush(QPalette::Inactive, QPalette::ButtonText, brush6);
@@ -1062,8 +1129,8 @@ public:
         gradient22.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient22.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient22.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush37(gradient22);
-        palette6.setBrush(QPalette::Inactive, QPalette::Base, brush37);
+        QBrush brush50(gradient22);
+        palette6.setBrush(QPalette::Inactive, QPalette::Base, brush50);
         QLinearGradient gradient23(0, 0, 0, 1);
         gradient23.setSpread(QGradient::PadSpread);
         gradient23.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1072,12 +1139,17 @@ public:
         gradient23.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient23.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient23.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush38(gradient23);
-        palette6.setBrush(QPalette::Inactive, QPalette::Window, brush38);
+        QBrush brush51(gradient23);
+        palette6.setBrush(QPalette::Inactive, QPalette::Window, brush51);
         palette6.setBrush(QPalette::Inactive, QPalette::Shadow, brush6);
-        palette6.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush11);
+        palette6.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush17);
         palette6.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush8);
         palette6.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush6);
+        QBrush brush52(QColor(0, 0, 0, 128));
+        brush52.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette6.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush52);
+#endif
         palette6.setBrush(QPalette::Disabled, QPalette::WindowText, brush6);
         QLinearGradient gradient24(0, 0, 0, 1);
         gradient24.setSpread(QGradient::PadSpread);
@@ -1087,12 +1159,12 @@ public:
         gradient24.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient24.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient24.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush39(gradient24);
-        palette6.setBrush(QPalette::Disabled, QPalette::Button, brush39);
-        palette6.setBrush(QPalette::Disabled, QPalette::Light, brush11);
-        palette6.setBrush(QPalette::Disabled, QPalette::Midlight, brush12);
-        palette6.setBrush(QPalette::Disabled, QPalette::Dark, brush13);
-        palette6.setBrush(QPalette::Disabled, QPalette::Mid, brush14);
+        QBrush brush53(gradient24);
+        palette6.setBrush(QPalette::Disabled, QPalette::Button, brush53);
+        palette6.setBrush(QPalette::Disabled, QPalette::Light, brush17);
+        palette6.setBrush(QPalette::Disabled, QPalette::Midlight, brush18);
+        palette6.setBrush(QPalette::Disabled, QPalette::Dark, brush19);
+        palette6.setBrush(QPalette::Disabled, QPalette::Mid, brush20);
         palette6.setBrush(QPalette::Disabled, QPalette::Text, brush6);
         palette6.setBrush(QPalette::Disabled, QPalette::BrightText, brush);
         palette6.setBrush(QPalette::Disabled, QPalette::ButtonText, brush6);
@@ -1104,8 +1176,8 @@ public:
         gradient25.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient25.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient25.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush40(gradient25);
-        palette6.setBrush(QPalette::Disabled, QPalette::Base, brush40);
+        QBrush brush54(gradient25);
+        palette6.setBrush(QPalette::Disabled, QPalette::Base, brush54);
         QLinearGradient gradient26(0, 0, 0, 1);
         gradient26.setSpread(QGradient::PadSpread);
         gradient26.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1114,12 +1186,17 @@ public:
         gradient26.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient26.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient26.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush41(gradient26);
-        palette6.setBrush(QPalette::Disabled, QPalette::Window, brush41);
+        QBrush brush55(gradient26);
+        palette6.setBrush(QPalette::Disabled, QPalette::Window, brush55);
         palette6.setBrush(QPalette::Disabled, QPalette::Shadow, brush6);
-        palette6.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush23);
+        palette6.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush31);
         palette6.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush8);
         palette6.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush6);
+        QBrush brush56(QColor(0, 0, 0, 128));
+        brush56.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette6.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush56);
+#endif
         pushButton_browsemodel->setPalette(palette6);
 
         horizontalLayout_4->addWidget(pushButton_browsemodel);
@@ -1283,12 +1360,12 @@ public:
         gradient27.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient27.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient27.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush42(gradient27);
-        palette7.setBrush(QPalette::Active, QPalette::Button, brush42);
-        palette7.setBrush(QPalette::Active, QPalette::Light, brush11);
-        palette7.setBrush(QPalette::Active, QPalette::Midlight, brush12);
-        palette7.setBrush(QPalette::Active, QPalette::Dark, brush13);
-        palette7.setBrush(QPalette::Active, QPalette::Mid, brush14);
+        QBrush brush57(gradient27);
+        palette7.setBrush(QPalette::Active, QPalette::Button, brush57);
+        palette7.setBrush(QPalette::Active, QPalette::Light, brush17);
+        palette7.setBrush(QPalette::Active, QPalette::Midlight, brush18);
+        palette7.setBrush(QPalette::Active, QPalette::Dark, brush19);
+        palette7.setBrush(QPalette::Active, QPalette::Mid, brush20);
         palette7.setBrush(QPalette::Active, QPalette::Text, brush6);
         palette7.setBrush(QPalette::Active, QPalette::BrightText, brush);
         palette7.setBrush(QPalette::Active, QPalette::ButtonText, brush6);
@@ -1300,8 +1377,8 @@ public:
         gradient28.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient28.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient28.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush43(gradient28);
-        palette7.setBrush(QPalette::Active, QPalette::Base, brush43);
+        QBrush brush58(gradient28);
+        palette7.setBrush(QPalette::Active, QPalette::Base, brush58);
         QLinearGradient gradient29(0, 0, 0, 1);
         gradient29.setSpread(QGradient::PadSpread);
         gradient29.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1310,12 +1387,17 @@ public:
         gradient29.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient29.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient29.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush44(gradient29);
-        palette7.setBrush(QPalette::Active, QPalette::Window, brush44);
+        QBrush brush59(gradient29);
+        palette7.setBrush(QPalette::Active, QPalette::Window, brush59);
         palette7.setBrush(QPalette::Active, QPalette::Shadow, brush6);
-        palette7.setBrush(QPalette::Active, QPalette::AlternateBase, brush11);
+        palette7.setBrush(QPalette::Active, QPalette::AlternateBase, brush17);
         palette7.setBrush(QPalette::Active, QPalette::ToolTipBase, brush8);
         palette7.setBrush(QPalette::Active, QPalette::ToolTipText, brush6);
+        QBrush brush60(QColor(0, 0, 0, 128));
+        brush60.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette7.setBrush(QPalette::Active, QPalette::PlaceholderText, brush60);
+#endif
         palette7.setBrush(QPalette::Inactive, QPalette::WindowText, brush6);
         QLinearGradient gradient30(0, 0, 0, 1);
         gradient30.setSpread(QGradient::PadSpread);
@@ -1325,12 +1407,12 @@ public:
         gradient30.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient30.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient30.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush45(gradient30);
-        palette7.setBrush(QPalette::Inactive, QPalette::Button, brush45);
-        palette7.setBrush(QPalette::Inactive, QPalette::Light, brush11);
-        palette7.setBrush(QPalette::Inactive, QPalette::Midlight, brush12);
-        palette7.setBrush(QPalette::Inactive, QPalette::Dark, brush13);
-        palette7.setBrush(QPalette::Inactive, QPalette::Mid, brush14);
+        QBrush brush61(gradient30);
+        palette7.setBrush(QPalette::Inactive, QPalette::Button, brush61);
+        palette7.setBrush(QPalette::Inactive, QPalette::Light, brush17);
+        palette7.setBrush(QPalette::Inactive, QPalette::Midlight, brush18);
+        palette7.setBrush(QPalette::Inactive, QPalette::Dark, brush19);
+        palette7.setBrush(QPalette::Inactive, QPalette::Mid, brush20);
         palette7.setBrush(QPalette::Inactive, QPalette::Text, brush6);
         palette7.setBrush(QPalette::Inactive, QPalette::BrightText, brush);
         palette7.setBrush(QPalette::Inactive, QPalette::ButtonText, brush6);
@@ -1342,8 +1424,8 @@ public:
         gradient31.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient31.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient31.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush46(gradient31);
-        palette7.setBrush(QPalette::Inactive, QPalette::Base, brush46);
+        QBrush brush62(gradient31);
+        palette7.setBrush(QPalette::Inactive, QPalette::Base, brush62);
         QLinearGradient gradient32(0, 0, 0, 1);
         gradient32.setSpread(QGradient::PadSpread);
         gradient32.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1352,12 +1434,17 @@ public:
         gradient32.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient32.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient32.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush47(gradient32);
-        palette7.setBrush(QPalette::Inactive, QPalette::Window, brush47);
+        QBrush brush63(gradient32);
+        palette7.setBrush(QPalette::Inactive, QPalette::Window, brush63);
         palette7.setBrush(QPalette::Inactive, QPalette::Shadow, brush6);
-        palette7.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush11);
+        palette7.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush17);
         palette7.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush8);
         palette7.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush6);
+        QBrush brush64(QColor(0, 0, 0, 128));
+        brush64.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette7.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush64);
+#endif
         palette7.setBrush(QPalette::Disabled, QPalette::WindowText, brush6);
         QLinearGradient gradient33(0, 0, 0, 1);
         gradient33.setSpread(QGradient::PadSpread);
@@ -1367,12 +1454,12 @@ public:
         gradient33.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient33.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient33.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush48(gradient33);
-        palette7.setBrush(QPalette::Disabled, QPalette::Button, brush48);
-        palette7.setBrush(QPalette::Disabled, QPalette::Light, brush11);
-        palette7.setBrush(QPalette::Disabled, QPalette::Midlight, brush12);
-        palette7.setBrush(QPalette::Disabled, QPalette::Dark, brush13);
-        palette7.setBrush(QPalette::Disabled, QPalette::Mid, brush14);
+        QBrush brush65(gradient33);
+        palette7.setBrush(QPalette::Disabled, QPalette::Button, brush65);
+        palette7.setBrush(QPalette::Disabled, QPalette::Light, brush17);
+        palette7.setBrush(QPalette::Disabled, QPalette::Midlight, brush18);
+        palette7.setBrush(QPalette::Disabled, QPalette::Dark, brush19);
+        palette7.setBrush(QPalette::Disabled, QPalette::Mid, brush20);
         palette7.setBrush(QPalette::Disabled, QPalette::Text, brush6);
         palette7.setBrush(QPalette::Disabled, QPalette::BrightText, brush);
         palette7.setBrush(QPalette::Disabled, QPalette::ButtonText, brush6);
@@ -1384,8 +1471,8 @@ public:
         gradient34.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient34.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient34.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush49(gradient34);
-        palette7.setBrush(QPalette::Disabled, QPalette::Base, brush49);
+        QBrush brush66(gradient34);
+        palette7.setBrush(QPalette::Disabled, QPalette::Base, brush66);
         QLinearGradient gradient35(0, 0, 0, 1);
         gradient35.setSpread(QGradient::PadSpread);
         gradient35.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1394,12 +1481,17 @@ public:
         gradient35.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient35.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient35.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush50(gradient35);
-        palette7.setBrush(QPalette::Disabled, QPalette::Window, brush50);
+        QBrush brush67(gradient35);
+        palette7.setBrush(QPalette::Disabled, QPalette::Window, brush67);
         palette7.setBrush(QPalette::Disabled, QPalette::Shadow, brush6);
-        palette7.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush23);
+        palette7.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush31);
         palette7.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush8);
         palette7.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush6);
+        QBrush brush68(QColor(0, 0, 0, 128));
+        brush68.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette7.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush68);
+#endif
         pushButton_CIF->setPalette(palette7);
 
         horizontalLayout_9->addWidget(pushButton_CIF);
@@ -1487,12 +1579,12 @@ public:
         gradient36.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient36.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient36.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush51(gradient36);
-        palette8.setBrush(QPalette::Active, QPalette::Button, brush51);
-        palette8.setBrush(QPalette::Active, QPalette::Light, brush11);
-        palette8.setBrush(QPalette::Active, QPalette::Midlight, brush12);
-        palette8.setBrush(QPalette::Active, QPalette::Dark, brush13);
-        palette8.setBrush(QPalette::Active, QPalette::Mid, brush14);
+        QBrush brush69(gradient36);
+        palette8.setBrush(QPalette::Active, QPalette::Button, brush69);
+        palette8.setBrush(QPalette::Active, QPalette::Light, brush17);
+        palette8.setBrush(QPalette::Active, QPalette::Midlight, brush18);
+        palette8.setBrush(QPalette::Active, QPalette::Dark, brush19);
+        palette8.setBrush(QPalette::Active, QPalette::Mid, brush20);
         palette8.setBrush(QPalette::Active, QPalette::Text, brush6);
         palette8.setBrush(QPalette::Active, QPalette::BrightText, brush);
         palette8.setBrush(QPalette::Active, QPalette::ButtonText, brush6);
@@ -1504,8 +1596,8 @@ public:
         gradient37.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient37.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient37.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush52(gradient37);
-        palette8.setBrush(QPalette::Active, QPalette::Base, brush52);
+        QBrush brush70(gradient37);
+        palette8.setBrush(QPalette::Active, QPalette::Base, brush70);
         QLinearGradient gradient38(0, 0, 0, 1);
         gradient38.setSpread(QGradient::PadSpread);
         gradient38.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1514,12 +1606,17 @@ public:
         gradient38.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient38.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient38.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush53(gradient38);
-        palette8.setBrush(QPalette::Active, QPalette::Window, brush53);
+        QBrush brush71(gradient38);
+        palette8.setBrush(QPalette::Active, QPalette::Window, brush71);
         palette8.setBrush(QPalette::Active, QPalette::Shadow, brush6);
-        palette8.setBrush(QPalette::Active, QPalette::AlternateBase, brush11);
+        palette8.setBrush(QPalette::Active, QPalette::AlternateBase, brush17);
         palette8.setBrush(QPalette::Active, QPalette::ToolTipBase, brush8);
         palette8.setBrush(QPalette::Active, QPalette::ToolTipText, brush6);
+        QBrush brush72(QColor(0, 0, 0, 128));
+        brush72.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette8.setBrush(QPalette::Active, QPalette::PlaceholderText, brush72);
+#endif
         palette8.setBrush(QPalette::Inactive, QPalette::WindowText, brush6);
         QLinearGradient gradient39(0, 0, 0, 1);
         gradient39.setSpread(QGradient::PadSpread);
@@ -1529,12 +1626,12 @@ public:
         gradient39.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient39.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient39.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush54(gradient39);
-        palette8.setBrush(QPalette::Inactive, QPalette::Button, brush54);
-        palette8.setBrush(QPalette::Inactive, QPalette::Light, brush11);
-        palette8.setBrush(QPalette::Inactive, QPalette::Midlight, brush12);
-        palette8.setBrush(QPalette::Inactive, QPalette::Dark, brush13);
-        palette8.setBrush(QPalette::Inactive, QPalette::Mid, brush14);
+        QBrush brush73(gradient39);
+        palette8.setBrush(QPalette::Inactive, QPalette::Button, brush73);
+        palette8.setBrush(QPalette::Inactive, QPalette::Light, brush17);
+        palette8.setBrush(QPalette::Inactive, QPalette::Midlight, brush18);
+        palette8.setBrush(QPalette::Inactive, QPalette::Dark, brush19);
+        palette8.setBrush(QPalette::Inactive, QPalette::Mid, brush20);
         palette8.setBrush(QPalette::Inactive, QPalette::Text, brush6);
         palette8.setBrush(QPalette::Inactive, QPalette::BrightText, brush);
         palette8.setBrush(QPalette::Inactive, QPalette::ButtonText, brush6);
@@ -1546,8 +1643,8 @@ public:
         gradient40.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient40.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient40.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush55(gradient40);
-        palette8.setBrush(QPalette::Inactive, QPalette::Base, brush55);
+        QBrush brush74(gradient40);
+        palette8.setBrush(QPalette::Inactive, QPalette::Base, brush74);
         QLinearGradient gradient41(0, 0, 0, 1);
         gradient41.setSpread(QGradient::PadSpread);
         gradient41.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1556,12 +1653,17 @@ public:
         gradient41.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient41.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient41.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush56(gradient41);
-        palette8.setBrush(QPalette::Inactive, QPalette::Window, brush56);
+        QBrush brush75(gradient41);
+        palette8.setBrush(QPalette::Inactive, QPalette::Window, brush75);
         palette8.setBrush(QPalette::Inactive, QPalette::Shadow, brush6);
-        palette8.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush11);
+        palette8.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush17);
         palette8.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush8);
         palette8.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush6);
+        QBrush brush76(QColor(0, 0, 0, 128));
+        brush76.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette8.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush76);
+#endif
         palette8.setBrush(QPalette::Disabled, QPalette::WindowText, brush6);
         QLinearGradient gradient42(0, 0, 0, 1);
         gradient42.setSpread(QGradient::PadSpread);
@@ -1571,12 +1673,12 @@ public:
         gradient42.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient42.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient42.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush57(gradient42);
-        palette8.setBrush(QPalette::Disabled, QPalette::Button, brush57);
-        palette8.setBrush(QPalette::Disabled, QPalette::Light, brush11);
-        palette8.setBrush(QPalette::Disabled, QPalette::Midlight, brush12);
-        palette8.setBrush(QPalette::Disabled, QPalette::Dark, brush13);
-        palette8.setBrush(QPalette::Disabled, QPalette::Mid, brush14);
+        QBrush brush77(gradient42);
+        palette8.setBrush(QPalette::Disabled, QPalette::Button, brush77);
+        palette8.setBrush(QPalette::Disabled, QPalette::Light, brush17);
+        palette8.setBrush(QPalette::Disabled, QPalette::Midlight, brush18);
+        palette8.setBrush(QPalette::Disabled, QPalette::Dark, brush19);
+        palette8.setBrush(QPalette::Disabled, QPalette::Mid, brush20);
         palette8.setBrush(QPalette::Disabled, QPalette::Text, brush6);
         palette8.setBrush(QPalette::Disabled, QPalette::BrightText, brush);
         palette8.setBrush(QPalette::Disabled, QPalette::ButtonText, brush6);
@@ -1588,8 +1690,8 @@ public:
         gradient43.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient43.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient43.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush58(gradient43);
-        palette8.setBrush(QPalette::Disabled, QPalette::Base, brush58);
+        QBrush brush78(gradient43);
+        palette8.setBrush(QPalette::Disabled, QPalette::Base, brush78);
         QLinearGradient gradient44(0, 0, 0, 1);
         gradient44.setSpread(QGradient::PadSpread);
         gradient44.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1598,12 +1700,17 @@ public:
         gradient44.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient44.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient44.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush59(gradient44);
-        palette8.setBrush(QPalette::Disabled, QPalette::Window, brush59);
+        QBrush brush79(gradient44);
+        palette8.setBrush(QPalette::Disabled, QPalette::Window, brush79);
         palette8.setBrush(QPalette::Disabled, QPalette::Shadow, brush6);
-        palette8.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush23);
+        palette8.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush31);
         palette8.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush8);
         palette8.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush6);
+        QBrush brush80(QColor(0, 0, 0, 128));
+        brush80.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette8.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush80);
+#endif
         pushButton_browseFasta->setPalette(palette8);
 
         horizontalLayout_13->addWidget(pushButton_browseFasta);
@@ -1624,6 +1731,15 @@ public:
         verticalLayout_3->setSpacing(6);
         verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
         verticalLayout_3->setContentsMargins(-1, -1, 0, -1);
+        label_heavyProt2 = new QLabel(scrollAreaWidgetContents_2);
+        label_heavyProt2->setObjectName(QString::fromUtf8("label_heavyProt2"));
+        QFont font;
+        font.setUnderline(true);
+        label_heavyProt2->setFont(font);
+        label_heavyProt2->setAlignment(Qt::AlignCenter);
+
+        verticalLayout_3->addWidget(label_heavyProt2);
+
         formLayout_3 = new QFormLayout();
         formLayout_3->setSpacing(6);
         formLayout_3->setObjectName(QString::fromUtf8("formLayout_3"));
@@ -1662,12 +1778,12 @@ public:
         gradient45.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient45.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient45.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush60(gradient45);
-        palette9.setBrush(QPalette::Active, QPalette::Button, brush60);
-        palette9.setBrush(QPalette::Active, QPalette::Light, brush11);
-        palette9.setBrush(QPalette::Active, QPalette::Midlight, brush12);
-        palette9.setBrush(QPalette::Active, QPalette::Dark, brush13);
-        palette9.setBrush(QPalette::Active, QPalette::Mid, brush14);
+        QBrush brush81(gradient45);
+        palette9.setBrush(QPalette::Active, QPalette::Button, brush81);
+        palette9.setBrush(QPalette::Active, QPalette::Light, brush17);
+        palette9.setBrush(QPalette::Active, QPalette::Midlight, brush18);
+        palette9.setBrush(QPalette::Active, QPalette::Dark, brush19);
+        palette9.setBrush(QPalette::Active, QPalette::Mid, brush20);
         palette9.setBrush(QPalette::Active, QPalette::Text, brush6);
         palette9.setBrush(QPalette::Active, QPalette::BrightText, brush);
         palette9.setBrush(QPalette::Active, QPalette::ButtonText, brush6);
@@ -1679,8 +1795,8 @@ public:
         gradient46.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient46.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient46.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush61(gradient46);
-        palette9.setBrush(QPalette::Active, QPalette::Base, brush61);
+        QBrush brush82(gradient46);
+        palette9.setBrush(QPalette::Active, QPalette::Base, brush82);
         QLinearGradient gradient47(0, 0, 0, 1);
         gradient47.setSpread(QGradient::PadSpread);
         gradient47.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1689,12 +1805,17 @@ public:
         gradient47.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient47.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient47.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush62(gradient47);
-        palette9.setBrush(QPalette::Active, QPalette::Window, brush62);
+        QBrush brush83(gradient47);
+        palette9.setBrush(QPalette::Active, QPalette::Window, brush83);
         palette9.setBrush(QPalette::Active, QPalette::Shadow, brush6);
-        palette9.setBrush(QPalette::Active, QPalette::AlternateBase, brush11);
+        palette9.setBrush(QPalette::Active, QPalette::AlternateBase, brush17);
         palette9.setBrush(QPalette::Active, QPalette::ToolTipBase, brush8);
         palette9.setBrush(QPalette::Active, QPalette::ToolTipText, brush6);
+        QBrush brush84(QColor(0, 0, 0, 128));
+        brush84.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette9.setBrush(QPalette::Active, QPalette::PlaceholderText, brush84);
+#endif
         palette9.setBrush(QPalette::Inactive, QPalette::WindowText, brush6);
         QLinearGradient gradient48(0, 0, 0, 1);
         gradient48.setSpread(QGradient::PadSpread);
@@ -1704,12 +1825,12 @@ public:
         gradient48.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient48.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient48.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush63(gradient48);
-        palette9.setBrush(QPalette::Inactive, QPalette::Button, brush63);
-        palette9.setBrush(QPalette::Inactive, QPalette::Light, brush11);
-        palette9.setBrush(QPalette::Inactive, QPalette::Midlight, brush12);
-        palette9.setBrush(QPalette::Inactive, QPalette::Dark, brush13);
-        palette9.setBrush(QPalette::Inactive, QPalette::Mid, brush14);
+        QBrush brush85(gradient48);
+        palette9.setBrush(QPalette::Inactive, QPalette::Button, brush85);
+        palette9.setBrush(QPalette::Inactive, QPalette::Light, brush17);
+        palette9.setBrush(QPalette::Inactive, QPalette::Midlight, brush18);
+        palette9.setBrush(QPalette::Inactive, QPalette::Dark, brush19);
+        palette9.setBrush(QPalette::Inactive, QPalette::Mid, brush20);
         palette9.setBrush(QPalette::Inactive, QPalette::Text, brush6);
         palette9.setBrush(QPalette::Inactive, QPalette::BrightText, brush);
         palette9.setBrush(QPalette::Inactive, QPalette::ButtonText, brush6);
@@ -1721,8 +1842,8 @@ public:
         gradient49.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient49.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient49.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush64(gradient49);
-        palette9.setBrush(QPalette::Inactive, QPalette::Base, brush64);
+        QBrush brush86(gradient49);
+        palette9.setBrush(QPalette::Inactive, QPalette::Base, brush86);
         QLinearGradient gradient50(0, 0, 0, 1);
         gradient50.setSpread(QGradient::PadSpread);
         gradient50.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1731,12 +1852,17 @@ public:
         gradient50.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient50.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient50.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush65(gradient50);
-        palette9.setBrush(QPalette::Inactive, QPalette::Window, brush65);
+        QBrush brush87(gradient50);
+        palette9.setBrush(QPalette::Inactive, QPalette::Window, brush87);
         palette9.setBrush(QPalette::Inactive, QPalette::Shadow, brush6);
-        palette9.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush11);
+        palette9.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush17);
         palette9.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush8);
         palette9.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush6);
+        QBrush brush88(QColor(0, 0, 0, 128));
+        brush88.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette9.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush88);
+#endif
         palette9.setBrush(QPalette::Disabled, QPalette::WindowText, brush6);
         QLinearGradient gradient51(0, 0, 0, 1);
         gradient51.setSpread(QGradient::PadSpread);
@@ -1746,12 +1872,12 @@ public:
         gradient51.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient51.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient51.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush66(gradient51);
-        palette9.setBrush(QPalette::Disabled, QPalette::Button, brush66);
-        palette9.setBrush(QPalette::Disabled, QPalette::Light, brush11);
-        palette9.setBrush(QPalette::Disabled, QPalette::Midlight, brush12);
-        palette9.setBrush(QPalette::Disabled, QPalette::Dark, brush13);
-        palette9.setBrush(QPalette::Disabled, QPalette::Mid, brush14);
+        QBrush brush89(gradient51);
+        palette9.setBrush(QPalette::Disabled, QPalette::Button, brush89);
+        palette9.setBrush(QPalette::Disabled, QPalette::Light, brush17);
+        palette9.setBrush(QPalette::Disabled, QPalette::Midlight, brush18);
+        palette9.setBrush(QPalette::Disabled, QPalette::Dark, brush19);
+        palette9.setBrush(QPalette::Disabled, QPalette::Mid, brush20);
         palette9.setBrush(QPalette::Disabled, QPalette::Text, brush6);
         palette9.setBrush(QPalette::Disabled, QPalette::BrightText, brush);
         palette9.setBrush(QPalette::Disabled, QPalette::ButtonText, brush6);
@@ -1763,8 +1889,8 @@ public:
         gradient52.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient52.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient52.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush67(gradient52);
-        palette9.setBrush(QPalette::Disabled, QPalette::Base, brush67);
+        QBrush brush90(gradient52);
+        palette9.setBrush(QPalette::Disabled, QPalette::Base, brush90);
         QLinearGradient gradient53(0, 0, 0, 1);
         gradient53.setSpread(QGradient::PadSpread);
         gradient53.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1773,18 +1899,24 @@ public:
         gradient53.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient53.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient53.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush68(gradient53);
-        palette9.setBrush(QPalette::Disabled, QPalette::Window, brush68);
+        QBrush brush91(gradient53);
+        palette9.setBrush(QPalette::Disabled, QPalette::Window, brush91);
         palette9.setBrush(QPalette::Disabled, QPalette::Shadow, brush6);
-        palette9.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush23);
+        palette9.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush31);
         palette9.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush8);
         palette9.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush6);
+        QBrush brush92(QColor(0, 0, 0, 128));
+        brush92.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette9.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush92);
+#endif
         pushButton_heavyProt->setPalette(palette9);
 
         verticalLayout_3->addWidget(pushButton_heavyProt);
 
         label_heavyTitle = new QLabel(scrollAreaWidgetContents_2);
         label_heavyTitle->setObjectName(QString::fromUtf8("label_heavyTitle"));
+        label_heavyTitle->setAlignment(Qt::AlignCenter);
 
         verticalLayout_3->addWidget(label_heavyTitle);
 
@@ -1812,6 +1944,13 @@ public:
         verticalLayout_4->setSpacing(6);
         verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
         verticalLayout_4->setContentsMargins(-1, -1, -1, 0);
+        label_Solvent2 = new QLabel(scrollAreaWidgetContents_2);
+        label_Solvent2->setObjectName(QString::fromUtf8("label_Solvent2"));
+        label_Solvent2->setFont(font);
+        label_Solvent2->setAlignment(Qt::AlignCenter);
+
+        verticalLayout_4->addWidget(label_Solvent2);
+
         formLayout_4 = new QFormLayout();
         formLayout_4->setSpacing(6);
         formLayout_4->setObjectName(QString::fromUtf8("formLayout_4"));
@@ -1850,12 +1989,12 @@ public:
         gradient54.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient54.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient54.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush69(gradient54);
-        palette10.setBrush(QPalette::Active, QPalette::Button, brush69);
-        palette10.setBrush(QPalette::Active, QPalette::Light, brush11);
-        palette10.setBrush(QPalette::Active, QPalette::Midlight, brush12);
-        palette10.setBrush(QPalette::Active, QPalette::Dark, brush13);
-        palette10.setBrush(QPalette::Active, QPalette::Mid, brush14);
+        QBrush brush93(gradient54);
+        palette10.setBrush(QPalette::Active, QPalette::Button, brush93);
+        palette10.setBrush(QPalette::Active, QPalette::Light, brush17);
+        palette10.setBrush(QPalette::Active, QPalette::Midlight, brush18);
+        palette10.setBrush(QPalette::Active, QPalette::Dark, brush19);
+        palette10.setBrush(QPalette::Active, QPalette::Mid, brush20);
         palette10.setBrush(QPalette::Active, QPalette::Text, brush6);
         palette10.setBrush(QPalette::Active, QPalette::BrightText, brush);
         palette10.setBrush(QPalette::Active, QPalette::ButtonText, brush6);
@@ -1867,8 +2006,8 @@ public:
         gradient55.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient55.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient55.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush70(gradient55);
-        palette10.setBrush(QPalette::Active, QPalette::Base, brush70);
+        QBrush brush94(gradient55);
+        palette10.setBrush(QPalette::Active, QPalette::Base, brush94);
         QLinearGradient gradient56(0, 0, 0, 1);
         gradient56.setSpread(QGradient::PadSpread);
         gradient56.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1877,12 +2016,17 @@ public:
         gradient56.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient56.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient56.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush71(gradient56);
-        palette10.setBrush(QPalette::Active, QPalette::Window, brush71);
+        QBrush brush95(gradient56);
+        palette10.setBrush(QPalette::Active, QPalette::Window, brush95);
         palette10.setBrush(QPalette::Active, QPalette::Shadow, brush6);
-        palette10.setBrush(QPalette::Active, QPalette::AlternateBase, brush11);
+        palette10.setBrush(QPalette::Active, QPalette::AlternateBase, brush17);
         palette10.setBrush(QPalette::Active, QPalette::ToolTipBase, brush8);
         palette10.setBrush(QPalette::Active, QPalette::ToolTipText, brush6);
+        QBrush brush96(QColor(0, 0, 0, 128));
+        brush96.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette10.setBrush(QPalette::Active, QPalette::PlaceholderText, brush96);
+#endif
         palette10.setBrush(QPalette::Inactive, QPalette::WindowText, brush6);
         QLinearGradient gradient57(0, 0, 0, 1);
         gradient57.setSpread(QGradient::PadSpread);
@@ -1892,12 +2036,12 @@ public:
         gradient57.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient57.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient57.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush72(gradient57);
-        palette10.setBrush(QPalette::Inactive, QPalette::Button, brush72);
-        palette10.setBrush(QPalette::Inactive, QPalette::Light, brush11);
-        palette10.setBrush(QPalette::Inactive, QPalette::Midlight, brush12);
-        palette10.setBrush(QPalette::Inactive, QPalette::Dark, brush13);
-        palette10.setBrush(QPalette::Inactive, QPalette::Mid, brush14);
+        QBrush brush97(gradient57);
+        palette10.setBrush(QPalette::Inactive, QPalette::Button, brush97);
+        palette10.setBrush(QPalette::Inactive, QPalette::Light, brush17);
+        palette10.setBrush(QPalette::Inactive, QPalette::Midlight, brush18);
+        palette10.setBrush(QPalette::Inactive, QPalette::Dark, brush19);
+        palette10.setBrush(QPalette::Inactive, QPalette::Mid, brush20);
         palette10.setBrush(QPalette::Inactive, QPalette::Text, brush6);
         palette10.setBrush(QPalette::Inactive, QPalette::BrightText, brush);
         palette10.setBrush(QPalette::Inactive, QPalette::ButtonText, brush6);
@@ -1909,8 +2053,8 @@ public:
         gradient58.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient58.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient58.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush73(gradient58);
-        palette10.setBrush(QPalette::Inactive, QPalette::Base, brush73);
+        QBrush brush98(gradient58);
+        palette10.setBrush(QPalette::Inactive, QPalette::Base, brush98);
         QLinearGradient gradient59(0, 0, 0, 1);
         gradient59.setSpread(QGradient::PadSpread);
         gradient59.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1919,12 +2063,17 @@ public:
         gradient59.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient59.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient59.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush74(gradient59);
-        palette10.setBrush(QPalette::Inactive, QPalette::Window, brush74);
+        QBrush brush99(gradient59);
+        palette10.setBrush(QPalette::Inactive, QPalette::Window, brush99);
         palette10.setBrush(QPalette::Inactive, QPalette::Shadow, brush6);
-        palette10.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush11);
+        palette10.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush17);
         palette10.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush8);
         palette10.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush6);
+        QBrush brush100(QColor(0, 0, 0, 128));
+        brush100.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette10.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush100);
+#endif
         palette10.setBrush(QPalette::Disabled, QPalette::WindowText, brush6);
         QLinearGradient gradient60(0, 0, 0, 1);
         gradient60.setSpread(QGradient::PadSpread);
@@ -1934,12 +2083,12 @@ public:
         gradient60.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient60.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient60.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush75(gradient60);
-        palette10.setBrush(QPalette::Disabled, QPalette::Button, brush75);
-        palette10.setBrush(QPalette::Disabled, QPalette::Light, brush11);
-        palette10.setBrush(QPalette::Disabled, QPalette::Midlight, brush12);
-        palette10.setBrush(QPalette::Disabled, QPalette::Dark, brush13);
-        palette10.setBrush(QPalette::Disabled, QPalette::Mid, brush14);
+        QBrush brush101(gradient60);
+        palette10.setBrush(QPalette::Disabled, QPalette::Button, brush101);
+        palette10.setBrush(QPalette::Disabled, QPalette::Light, brush17);
+        palette10.setBrush(QPalette::Disabled, QPalette::Midlight, brush18);
+        palette10.setBrush(QPalette::Disabled, QPalette::Dark, brush19);
+        palette10.setBrush(QPalette::Disabled, QPalette::Mid, brush20);
         palette10.setBrush(QPalette::Disabled, QPalette::Text, brush6);
         palette10.setBrush(QPalette::Disabled, QPalette::BrightText, brush);
         palette10.setBrush(QPalette::Disabled, QPalette::ButtonText, brush6);
@@ -1951,8 +2100,8 @@ public:
         gradient61.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient61.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient61.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush76(gradient61);
-        palette10.setBrush(QPalette::Disabled, QPalette::Base, brush76);
+        QBrush brush102(gradient61);
+        palette10.setBrush(QPalette::Disabled, QPalette::Base, brush102);
         QLinearGradient gradient62(0, 0, 0, 1);
         gradient62.setSpread(QGradient::PadSpread);
         gradient62.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -1961,18 +2110,24 @@ public:
         gradient62.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient62.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient62.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush77(gradient62);
-        palette10.setBrush(QPalette::Disabled, QPalette::Window, brush77);
+        QBrush brush103(gradient62);
+        palette10.setBrush(QPalette::Disabled, QPalette::Window, brush103);
         palette10.setBrush(QPalette::Disabled, QPalette::Shadow, brush6);
-        palette10.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush23);
+        palette10.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush31);
         palette10.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush8);
         palette10.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush6);
+        QBrush brush104(QColor(0, 0, 0, 128));
+        brush104.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette10.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush104);
+#endif
         pushButton_solventConc->setPalette(palette10);
 
         verticalLayout_4->addWidget(pushButton_solventConc);
 
         label_solventTitle = new QLabel(scrollAreaWidgetContents_2);
         label_solventTitle->setObjectName(QString::fromUtf8("label_solventTitle"));
+        label_solventTitle->setAlignment(Qt::AlignCenter);
 
         verticalLayout_4->addWidget(label_solventTitle);
 
@@ -2065,12 +2220,12 @@ public:
         gradient63.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient63.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient63.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush78(gradient63);
-        palette11.setBrush(QPalette::Active, QPalette::Button, brush78);
-        palette11.setBrush(QPalette::Active, QPalette::Light, brush11);
-        palette11.setBrush(QPalette::Active, QPalette::Midlight, brush12);
-        palette11.setBrush(QPalette::Active, QPalette::Dark, brush13);
-        palette11.setBrush(QPalette::Active, QPalette::Mid, brush14);
+        QBrush brush105(gradient63);
+        palette11.setBrush(QPalette::Active, QPalette::Button, brush105);
+        palette11.setBrush(QPalette::Active, QPalette::Light, brush17);
+        palette11.setBrush(QPalette::Active, QPalette::Midlight, brush18);
+        palette11.setBrush(QPalette::Active, QPalette::Dark, brush19);
+        palette11.setBrush(QPalette::Active, QPalette::Mid, brush20);
         palette11.setBrush(QPalette::Active, QPalette::Text, brush6);
         palette11.setBrush(QPalette::Active, QPalette::BrightText, brush);
         palette11.setBrush(QPalette::Active, QPalette::ButtonText, brush6);
@@ -2082,8 +2237,8 @@ public:
         gradient64.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient64.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient64.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush79(gradient64);
-        palette11.setBrush(QPalette::Active, QPalette::Base, brush79);
+        QBrush brush106(gradient64);
+        palette11.setBrush(QPalette::Active, QPalette::Base, brush106);
         QLinearGradient gradient65(0, 0, 0, 1);
         gradient65.setSpread(QGradient::PadSpread);
         gradient65.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -2092,12 +2247,17 @@ public:
         gradient65.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient65.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient65.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush80(gradient65);
-        palette11.setBrush(QPalette::Active, QPalette::Window, brush80);
+        QBrush brush107(gradient65);
+        palette11.setBrush(QPalette::Active, QPalette::Window, brush107);
         palette11.setBrush(QPalette::Active, QPalette::Shadow, brush6);
-        palette11.setBrush(QPalette::Active, QPalette::AlternateBase, brush11);
+        palette11.setBrush(QPalette::Active, QPalette::AlternateBase, brush17);
         palette11.setBrush(QPalette::Active, QPalette::ToolTipBase, brush8);
         palette11.setBrush(QPalette::Active, QPalette::ToolTipText, brush6);
+        QBrush brush108(QColor(0, 0, 0, 128));
+        brush108.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette11.setBrush(QPalette::Active, QPalette::PlaceholderText, brush108);
+#endif
         palette11.setBrush(QPalette::Inactive, QPalette::WindowText, brush6);
         QLinearGradient gradient66(0, 0, 0, 1);
         gradient66.setSpread(QGradient::PadSpread);
@@ -2107,12 +2267,12 @@ public:
         gradient66.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient66.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient66.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush81(gradient66);
-        palette11.setBrush(QPalette::Inactive, QPalette::Button, brush81);
-        palette11.setBrush(QPalette::Inactive, QPalette::Light, brush11);
-        palette11.setBrush(QPalette::Inactive, QPalette::Midlight, brush12);
-        palette11.setBrush(QPalette::Inactive, QPalette::Dark, brush13);
-        palette11.setBrush(QPalette::Inactive, QPalette::Mid, brush14);
+        QBrush brush109(gradient66);
+        palette11.setBrush(QPalette::Inactive, QPalette::Button, brush109);
+        palette11.setBrush(QPalette::Inactive, QPalette::Light, brush17);
+        palette11.setBrush(QPalette::Inactive, QPalette::Midlight, brush18);
+        palette11.setBrush(QPalette::Inactive, QPalette::Dark, brush19);
+        palette11.setBrush(QPalette::Inactive, QPalette::Mid, brush20);
         palette11.setBrush(QPalette::Inactive, QPalette::Text, brush6);
         palette11.setBrush(QPalette::Inactive, QPalette::BrightText, brush);
         palette11.setBrush(QPalette::Inactive, QPalette::ButtonText, brush6);
@@ -2124,8 +2284,8 @@ public:
         gradient67.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient67.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient67.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush82(gradient67);
-        palette11.setBrush(QPalette::Inactive, QPalette::Base, brush82);
+        QBrush brush110(gradient67);
+        palette11.setBrush(QPalette::Inactive, QPalette::Base, brush110);
         QLinearGradient gradient68(0, 0, 0, 1);
         gradient68.setSpread(QGradient::PadSpread);
         gradient68.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -2134,12 +2294,17 @@ public:
         gradient68.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient68.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient68.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush83(gradient68);
-        palette11.setBrush(QPalette::Inactive, QPalette::Window, brush83);
+        QBrush brush111(gradient68);
+        palette11.setBrush(QPalette::Inactive, QPalette::Window, brush111);
         palette11.setBrush(QPalette::Inactive, QPalette::Shadow, brush6);
-        palette11.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush11);
+        palette11.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush17);
         palette11.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush8);
         palette11.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush6);
+        QBrush brush112(QColor(0, 0, 0, 128));
+        brush112.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette11.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush112);
+#endif
         palette11.setBrush(QPalette::Disabled, QPalette::WindowText, brush6);
         QLinearGradient gradient69(0, 0, 0, 1);
         gradient69.setSpread(QGradient::PadSpread);
@@ -2149,12 +2314,12 @@ public:
         gradient69.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient69.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient69.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush84(gradient69);
-        palette11.setBrush(QPalette::Disabled, QPalette::Button, brush84);
-        palette11.setBrush(QPalette::Disabled, QPalette::Light, brush11);
-        palette11.setBrush(QPalette::Disabled, QPalette::Midlight, brush12);
-        palette11.setBrush(QPalette::Disabled, QPalette::Dark, brush13);
-        palette11.setBrush(QPalette::Disabled, QPalette::Mid, brush14);
+        QBrush brush113(gradient69);
+        palette11.setBrush(QPalette::Disabled, QPalette::Button, brush113);
+        palette11.setBrush(QPalette::Disabled, QPalette::Light, brush17);
+        palette11.setBrush(QPalette::Disabled, QPalette::Midlight, brush18);
+        palette11.setBrush(QPalette::Disabled, QPalette::Dark, brush19);
+        palette11.setBrush(QPalette::Disabled, QPalette::Mid, brush20);
         palette11.setBrush(QPalette::Disabled, QPalette::Text, brush6);
         palette11.setBrush(QPalette::Disabled, QPalette::BrightText, brush);
         palette11.setBrush(QPalette::Disabled, QPalette::ButtonText, brush6);
@@ -2166,8 +2331,8 @@ public:
         gradient70.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient70.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient70.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush85(gradient70);
-        palette11.setBrush(QPalette::Disabled, QPalette::Base, brush85);
+        QBrush brush114(gradient70);
+        palette11.setBrush(QPalette::Disabled, QPalette::Base, brush114);
         QLinearGradient gradient71(0, 0, 0, 1);
         gradient71.setSpread(QGradient::PadSpread);
         gradient71.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -2176,12 +2341,17 @@ public:
         gradient71.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient71.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient71.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush86(gradient71);
-        palette11.setBrush(QPalette::Disabled, QPalette::Window, brush86);
+        QBrush brush115(gradient71);
+        palette11.setBrush(QPalette::Disabled, QPalette::Window, brush115);
         palette11.setBrush(QPalette::Disabled, QPalette::Shadow, brush6);
-        palette11.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush23);
+        palette11.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush31);
         palette11.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush8);
         palette11.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush6);
+        QBrush brush116(QColor(0, 0, 0, 128));
+        brush116.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette11.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush116);
+#endif
         pushButton_crystalAdvanced->setPalette(palette11);
 
         verticalLayout->addWidget(pushButton_crystalAdvanced);
@@ -2202,7 +2372,7 @@ public:
         scrollArea_2->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 578, 343));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 578, 331));
         verticalLayout_2 = new QVBoxLayout(scrollAreaWidgetContents);
         verticalLayout_2->setSpacing(6);
         verticalLayout_2->setContentsMargins(11, 11, 11, 11);
@@ -2253,12 +2423,12 @@ public:
         gradient72.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient72.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient72.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush87(gradient72);
-        palette12.setBrush(QPalette::Active, QPalette::Button, brush87);
-        palette12.setBrush(QPalette::Active, QPalette::Light, brush11);
-        palette12.setBrush(QPalette::Active, QPalette::Midlight, brush12);
-        palette12.setBrush(QPalette::Active, QPalette::Dark, brush13);
-        palette12.setBrush(QPalette::Active, QPalette::Mid, brush14);
+        QBrush brush117(gradient72);
+        palette12.setBrush(QPalette::Active, QPalette::Button, brush117);
+        palette12.setBrush(QPalette::Active, QPalette::Light, brush17);
+        palette12.setBrush(QPalette::Active, QPalette::Midlight, brush18);
+        palette12.setBrush(QPalette::Active, QPalette::Dark, brush19);
+        palette12.setBrush(QPalette::Active, QPalette::Mid, brush20);
         palette12.setBrush(QPalette::Active, QPalette::Text, brush6);
         palette12.setBrush(QPalette::Active, QPalette::BrightText, brush);
         palette12.setBrush(QPalette::Active, QPalette::ButtonText, brush6);
@@ -2270,8 +2440,8 @@ public:
         gradient73.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient73.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient73.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush88(gradient73);
-        palette12.setBrush(QPalette::Active, QPalette::Base, brush88);
+        QBrush brush118(gradient73);
+        palette12.setBrush(QPalette::Active, QPalette::Base, brush118);
         QLinearGradient gradient74(0, 0, 0, 1);
         gradient74.setSpread(QGradient::PadSpread);
         gradient74.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -2280,12 +2450,17 @@ public:
         gradient74.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient74.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient74.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush89(gradient74);
-        palette12.setBrush(QPalette::Active, QPalette::Window, brush89);
+        QBrush brush119(gradient74);
+        palette12.setBrush(QPalette::Active, QPalette::Window, brush119);
         palette12.setBrush(QPalette::Active, QPalette::Shadow, brush6);
-        palette12.setBrush(QPalette::Active, QPalette::AlternateBase, brush11);
+        palette12.setBrush(QPalette::Active, QPalette::AlternateBase, brush17);
         palette12.setBrush(QPalette::Active, QPalette::ToolTipBase, brush8);
         palette12.setBrush(QPalette::Active, QPalette::ToolTipText, brush6);
+        QBrush brush120(QColor(0, 0, 0, 128));
+        brush120.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette12.setBrush(QPalette::Active, QPalette::PlaceholderText, brush120);
+#endif
         palette12.setBrush(QPalette::Inactive, QPalette::WindowText, brush6);
         QLinearGradient gradient75(0, 0, 0, 1);
         gradient75.setSpread(QGradient::PadSpread);
@@ -2295,12 +2470,12 @@ public:
         gradient75.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient75.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient75.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush90(gradient75);
-        palette12.setBrush(QPalette::Inactive, QPalette::Button, brush90);
-        palette12.setBrush(QPalette::Inactive, QPalette::Light, brush11);
-        palette12.setBrush(QPalette::Inactive, QPalette::Midlight, brush12);
-        palette12.setBrush(QPalette::Inactive, QPalette::Dark, brush13);
-        palette12.setBrush(QPalette::Inactive, QPalette::Mid, brush14);
+        QBrush brush121(gradient75);
+        palette12.setBrush(QPalette::Inactive, QPalette::Button, brush121);
+        palette12.setBrush(QPalette::Inactive, QPalette::Light, brush17);
+        palette12.setBrush(QPalette::Inactive, QPalette::Midlight, brush18);
+        palette12.setBrush(QPalette::Inactive, QPalette::Dark, brush19);
+        palette12.setBrush(QPalette::Inactive, QPalette::Mid, brush20);
         palette12.setBrush(QPalette::Inactive, QPalette::Text, brush6);
         palette12.setBrush(QPalette::Inactive, QPalette::BrightText, brush);
         palette12.setBrush(QPalette::Inactive, QPalette::ButtonText, brush6);
@@ -2312,8 +2487,8 @@ public:
         gradient76.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient76.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient76.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush91(gradient76);
-        palette12.setBrush(QPalette::Inactive, QPalette::Base, brush91);
+        QBrush brush122(gradient76);
+        palette12.setBrush(QPalette::Inactive, QPalette::Base, brush122);
         QLinearGradient gradient77(0, 0, 0, 1);
         gradient77.setSpread(QGradient::PadSpread);
         gradient77.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -2322,12 +2497,17 @@ public:
         gradient77.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient77.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient77.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush92(gradient77);
-        palette12.setBrush(QPalette::Inactive, QPalette::Window, brush92);
+        QBrush brush123(gradient77);
+        palette12.setBrush(QPalette::Inactive, QPalette::Window, brush123);
         palette12.setBrush(QPalette::Inactive, QPalette::Shadow, brush6);
-        palette12.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush11);
+        palette12.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush17);
         palette12.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush8);
         palette12.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush6);
+        QBrush brush124(QColor(0, 0, 0, 128));
+        brush124.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette12.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush124);
+#endif
         palette12.setBrush(QPalette::Disabled, QPalette::WindowText, brush6);
         QLinearGradient gradient78(0, 0, 0, 1);
         gradient78.setSpread(QGradient::PadSpread);
@@ -2337,12 +2517,12 @@ public:
         gradient78.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient78.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient78.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush93(gradient78);
-        palette12.setBrush(QPalette::Disabled, QPalette::Button, brush93);
-        palette12.setBrush(QPalette::Disabled, QPalette::Light, brush11);
-        palette12.setBrush(QPalette::Disabled, QPalette::Midlight, brush12);
-        palette12.setBrush(QPalette::Disabled, QPalette::Dark, brush13);
-        palette12.setBrush(QPalette::Disabled, QPalette::Mid, brush14);
+        QBrush brush125(gradient78);
+        palette12.setBrush(QPalette::Disabled, QPalette::Button, brush125);
+        palette12.setBrush(QPalette::Disabled, QPalette::Light, brush17);
+        palette12.setBrush(QPalette::Disabled, QPalette::Midlight, brush18);
+        palette12.setBrush(QPalette::Disabled, QPalette::Dark, brush19);
+        palette12.setBrush(QPalette::Disabled, QPalette::Mid, brush20);
         palette12.setBrush(QPalette::Disabled, QPalette::Text, brush6);
         palette12.setBrush(QPalette::Disabled, QPalette::BrightText, brush);
         palette12.setBrush(QPalette::Disabled, QPalette::ButtonText, brush6);
@@ -2354,8 +2534,8 @@ public:
         gradient79.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient79.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient79.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush94(gradient79);
-        palette12.setBrush(QPalette::Disabled, QPalette::Base, brush94);
+        QBrush brush126(gradient79);
+        palette12.setBrush(QPalette::Disabled, QPalette::Base, brush126);
         QLinearGradient gradient80(0, 0, 0, 1);
         gradient80.setSpread(QGradient::PadSpread);
         gradient80.setCoordinateMode(QGradient::ObjectBoundingMode);
@@ -2364,12 +2544,17 @@ public:
         gradient80.setColorAt(0.49, QColor(119, 119, 204, 255));
         gradient80.setColorAt(0.5, QColor(102, 102, 187, 255));
         gradient80.setColorAt(1, QColor(119, 119, 204, 255));
-        QBrush brush95(gradient80);
-        palette12.setBrush(QPalette::Disabled, QPalette::Window, brush95);
+        QBrush brush127(gradient80);
+        palette12.setBrush(QPalette::Disabled, QPalette::Window, brush127);
         palette12.setBrush(QPalette::Disabled, QPalette::Shadow, brush6);
-        palette12.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush23);
+        palette12.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush31);
         palette12.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush8);
         palette12.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush6);
+        QBrush brush128(QColor(0, 0, 0, 128));
+        brush128.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette12.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush128);
+#endif
         pushButton_beamFile->setPalette(palette12);
 
         horizontalLayout_3->addWidget(pushButton_beamFile);
@@ -2608,7 +2793,7 @@ public:
         scrollArea_3->setWidgetResizable(true);
         scrollAreaWidgetContents_3 = new QWidget();
         scrollAreaWidgetContents_3->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_3"));
-        scrollAreaWidgetContents_3->setGeometry(QRect(0, 0, 578, 314));
+        scrollAreaWidgetContents_3->setGeometry(QRect(0, 0, 578, 331));
         verticalLayout_6 = new QVBoxLayout(scrollAreaWidgetContents_3);
         verticalLayout_6->setSpacing(6);
         verticalLayout_6->setContentsMargins(11, 11, 11, 11);
@@ -2778,7 +2963,7 @@ public:
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 616, 17));
+        menuBar->setGeometry(QRect(0, 0, 616, 18));
         menuFile = new QMenu(menuBar);
         menuFile->setObjectName(QString::fromUtf8("menuFile"));
         MainWindow->setMenuBar(menuBar);
@@ -2900,7 +3085,7 @@ public:
 #if QT_CONFIG(tooltip)
         label_pConc->setToolTip(QCoreApplication::translate("MainWindow", "<html><head/><body><p>In SAXS, this is the concentration of protein in grams per litre</p></body></html>", nullptr));
 #endif // QT_CONFIG(tooltip)
-        label_pConc->setText(QCoreApplication::translate("MainWindow", "Protein Conc", nullptr));
+        label_pConc->setText(QCoreApplication::translate("MainWindow", "Protein Conc (mg/ml)", nullptr));
 #if QT_CONFIG(tooltip)
         label_Monomers->setToolTip(QCoreApplication::translate("MainWindow", "<html><head/><body><p>The number of monomers in the unit cell</p></body></html>", nullptr));
 #endif // QT_CONFIG(tooltip)
@@ -2917,6 +3102,7 @@ public:
         label_heavyProt->setToolTip(QCoreApplication::translate("MainWindow", "<html><head/><body><p>The elemental symbol and number present per monomer of heavy atoms (above oxygen) present in the sample</p></body></html>", nullptr));
 #endif // QT_CONFIG(tooltip)
         label_heavyProt->setText(QCoreApplication::translate("MainWindow", "Heavy atoms per monomer", nullptr));
+        label_heavyProt2->setText(QCoreApplication::translate("MainWindow", "Heavy atoms per monomer", nullptr));
         label_heavyEl->setText(QCoreApplication::translate("MainWindow", "Element Symbol", nullptr));
         label_heavyNum->setText(QCoreApplication::translate("MainWindow", "Number", nullptr));
         pushButton_heavyProt->setText(QCoreApplication::translate("MainWindow", "Add Element", nullptr));
@@ -2924,24 +3110,25 @@ public:
         textEdit_heavyProt->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Zn 0.333</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">S 6</p></body></html>", nullptr));
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Sans Serif'; font-size:9pt;\">Zn 0.333</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Sans Serif'; font-size:9pt;\">S 6</span></p></body></html>", nullptr));
 #if QT_CONFIG(tooltip)
         label_Solvent->setToolTip(QCoreApplication::translate("MainWindow", "<html><head/><body><p>The concentration in mM of heavy atoms (above oxygen) present in the sample</p></body></html>", nullptr));
 #endif // QT_CONFIG(tooltip)
         label_Solvent->setText(QCoreApplication::translate("MainWindow", "Solvent atom concentration", nullptr));
+        label_Solvent2->setText(QCoreApplication::translate("MainWindow", "Solvent atom concentration", nullptr));
         label_solventEl->setText(QCoreApplication::translate("MainWindow", "Element Symbol", nullptr));
         lineEdit_Elsolvent->setText(QString());
-        label_solventConc->setText(QCoreApplication::translate("MainWindow", "Concentration", nullptr));
+        label_solventConc->setText(QCoreApplication::translate("MainWindow", "Concentration (mM)", nullptr));
         lineEdit_Elconc->setText(QString());
         pushButton_solventConc->setText(QCoreApplication::translate("MainWindow", "Add Element", nullptr));
         label_solventTitle->setText(QCoreApplication::translate("MainWindow", "Solvent atom list", nullptr));
         textEdit_solventConc->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">P 425</p></body></html>", nullptr));
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Sans Serif'; font-size:9pt;\">P 425</span></p></body></html>", nullptr));
 #if QT_CONFIG(tooltip)
         label_SolventFr->setToolTip(QCoreApplication::translate("MainWindow", "<html><head/><body><p>The fraction of unit cell occupied by solvent</p></body></html>", nullptr));
 #endif // QT_CONFIG(tooltip)
@@ -3006,16 +3193,16 @@ public:
 #if QT_CONFIG(tooltip)
         label_pulseEn->setToolTip(QCoreApplication::translate("MainWindow", "<html><head/><body><p>The energy of an XFEL pulse in mJ</p></body></html>", nullptr));
 #endif // QT_CONFIG(tooltip)
-        label_pulseEn->setText(QCoreApplication::translate("MainWindow", "Pulse Energy", nullptr));
+        label_pulseEn->setText(QCoreApplication::translate("MainWindow", "Pulse Energy (mJ)", nullptr));
 #if QT_CONFIG(tooltip)
         label_flux->setToolTip(QCoreApplication::translate("MainWindow", "<html><head/><body><p>The flux of the beam in photons per second</p></body></html>", nullptr));
 #endif // QT_CONFIG(tooltip)
-        label_flux->setText(QCoreApplication::translate("MainWindow", "Flux", nullptr));
+        label_flux->setText(QCoreApplication::translate("MainWindow", "Flux (photons/s)", nullptr));
         lineEdit_flux->setText(QCoreApplication::translate("MainWindow", "2e12", nullptr));
 #if QT_CONFIG(tooltip)
         label_beamEn->setToolTip(QCoreApplication::translate("MainWindow", "<html><head/><body><p>The energy of the X-ray beam in keV</p></body></html>", nullptr));
 #endif // QT_CONFIG(tooltip)
-        label_beamEn->setText(QCoreApplication::translate("MainWindow", "Beam Energy", nullptr));
+        label_beamEn->setText(QCoreApplication::translate("MainWindow", "Beam Energy (keV)", nullptr));
         lineEdit_beamEn->setText(QCoreApplication::translate("MainWindow", "12.1", nullptr));
 #if QT_CONFIG(tooltip)
         label_monochrome->setToolTip(QCoreApplication::translate("MainWindow", "<html><head/><body><p>Whether the beam is monochramtic or pink/white</p></body></html>", nullptr));
@@ -3027,7 +3214,7 @@ public:
 #if QT_CONFIG(tooltip)
         label_beamEnFWHM->setToolTip(QCoreApplication::translate("MainWindow", "<html><head/><body><p>Teh energy spread of the beam</p></body></html>", nullptr));
 #endif // QT_CONFIG(tooltip)
-        label_beamEnFWHM->setText(QCoreApplication::translate("MainWindow", "Energy FWHM", nullptr));
+        label_beamEnFWHM->setText(QCoreApplication::translate("MainWindow", "Energy FWHM (keV)", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tabBeam), QCoreApplication::translate("MainWindow", "Beam", nullptr));
 #if QT_CONFIG(tooltip)
         label_startAngle->setToolTip(QCoreApplication::translate("MainWindow", "<html><head/><body><p>Start rotation angle in degrees</p></body></html>", nullptr));
@@ -3042,7 +3229,7 @@ public:
 #if QT_CONFIG(tooltip)
         label_expTime->setToolTip(QCoreApplication::translate("MainWindow", "<html><head/><body><p>The exposure time in seconds</p></body></html>", nullptr));
 #endif // QT_CONFIG(tooltip)
-        label_expTime->setText(QCoreApplication::translate("MainWindow", "Exposure time", nullptr));
+        label_expTime->setText(QCoreApplication::translate("MainWindow", "Exposure time (s)", nullptr));
         lineEdit_exposureTime->setText(QCoreApplication::translate("MainWindow", "50", nullptr));
 #if QT_CONFIG(tooltip)
         label_angleRes->setToolTip(QCoreApplication::translate("MainWindow", "<html><head/><body><p>Specifies the angular step size used for wedge iterations in degrees</p></body></html>", nullptr));
