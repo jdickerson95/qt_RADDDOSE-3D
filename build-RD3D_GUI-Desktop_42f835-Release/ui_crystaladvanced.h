@@ -228,7 +228,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, -385, 453, 907));
+        scrollAreaWidgetContents->setGeometry(QRect(0, -406, 453, 907));
         verticalLayout_2 = new QVBoxLayout(scrollAreaWidgetContents);
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
         label_crystalAngles = new QLabel(scrollAreaWidgetContents);
@@ -508,6 +508,7 @@ public:
 
         label_SurrAtomList = new QLabel(scrollAreaWidgetContents);
         label_SurrAtomList->setObjectName(QStringLiteral("label_SurrAtomList"));
+        label_SurrAtomList->setAlignment(Qt::AlignCenter);
 
         verticalLayout_3->addWidget(label_SurrAtomList);
 
@@ -779,6 +780,7 @@ public:
 
         label_atomList = new QLabel(scrollAreaWidgetContents);
         label_atomList->setObjectName(QStringLiteral("label_atomList"));
+        label_atomList->setAlignment(Qt::AlignCenter);
 
         verticalLayout_4->addWidget(label_atomList);
 

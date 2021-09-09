@@ -2628,7 +2628,7 @@ QTabBar::tab:left:only-one, QTabBar::tab:right:only-one {
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>-507</y>
+             <y>-300</y>
              <width>564</width>
              <height>962</height>
             </rect>
@@ -6060,6 +6060,9 @@ QTabBar::tab:left:only-one, QTabBar::tab:right:only-one {
                   <property name="text">
                    <string>Heavy atom list</string>
                   </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
                  </widget>
                 </item>
                 <item>
@@ -6859,6 +6862,9 @@ p, li { white-space: pre-wrap; }
                  <widget class="QLabel" name="label_solventTitle">
                   <property name="text">
                    <string>Solvent atom list</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
                   </property>
                  </widget>
                 </item>

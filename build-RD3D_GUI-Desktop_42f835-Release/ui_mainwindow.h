@@ -899,7 +899,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents_2 = new QWidget();
         scrollAreaWidgetContents_2->setObjectName(QStringLiteral("scrollAreaWidgetContents_2"));
-        scrollAreaWidgetContents_2->setGeometry(QRect(0, -507, 564, 962));
+        scrollAreaWidgetContents_2->setGeometry(QRect(0, -300, 564, 962));
         QPalette palette5;
         palette5.setBrush(QPalette::Active, QPalette::Button, brush9);
         palette5.setBrush(QPalette::Active, QPalette::Base, brush9);
@@ -1786,6 +1786,7 @@ public:
 
         label_heavyTitle = new QLabel(scrollAreaWidgetContents_2);
         label_heavyTitle->setObjectName(QStringLiteral("label_heavyTitle"));
+        label_heavyTitle->setAlignment(Qt::AlignCenter);
 
         verticalLayout_3->addWidget(label_heavyTitle);
 
@@ -1983,6 +1984,7 @@ public:
 
         label_solventTitle = new QLabel(scrollAreaWidgetContents_2);
         label_solventTitle->setObjectName(QStringLiteral("label_solventTitle"));
+        label_solventTitle->setAlignment(Qt::AlignCenter);
 
         verticalLayout_4->addWidget(label_solventTitle);
 
