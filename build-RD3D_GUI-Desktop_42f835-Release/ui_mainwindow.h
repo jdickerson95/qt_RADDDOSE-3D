@@ -899,7 +899,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents_2 = new QWidget();
         scrollAreaWidgetContents_2->setObjectName(QStringLiteral("scrollAreaWidgetContents_2"));
-        scrollAreaWidgetContents_2->setGeometry(QRect(0, -300, 564, 962));
+        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 564, 962));
         QPalette palette5;
         palette5.setBrush(QPalette::Active, QPalette::Button, brush9);
         palette5.setBrush(QPalette::Active, QPalette::Base, brush9);
@@ -2910,7 +2910,7 @@ public:
 #ifndef QT_NO_TOOLTIP
         label_pConc->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>In SAXS, this is the concentration of protein in grams per litre</p></body></html>", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        label_pConc->setText(QApplication::translate("MainWindow", "Protein Conc (g/l)", Q_NULLPTR));
+        label_pConc->setText(QApplication::translate("MainWindow", "Protein Conc (mg/ml)", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
         label_Monomers->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>The number of monomers in the unit cell</p></body></html>", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP

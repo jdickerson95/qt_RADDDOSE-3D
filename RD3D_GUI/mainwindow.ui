@@ -2628,7 +2628,7 @@ QTabBar::tab:left:only-one, QTabBar::tab:right:only-one {
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>-300</y>
+             <y>0</y>
              <width>564</width>
              <height>962</height>
             </rect>
@@ -4497,7 +4497,7 @@ QTabBar::tab:left:only-one, QTabBar::tab:right:only-one {
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;In SAXS, this is the concentration of protein in grams per litre&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                 <property name="text">
-                 <string>Protein Conc (g/l)</string>
+                 <string>Protein Conc (mg/ml)</string>
                 </property>
                </widget>
               </item>
