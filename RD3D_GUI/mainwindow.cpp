@@ -64,6 +64,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->label_pxY->setVisible(false);
     ui->label_pulseEn->setVisible(false);
     ui->lineEdit_pulseEn->setVisible(false);
+    ui->label_exposure->setVisible(false);
+    ui->lineEdit_exposure->setVisible(false);
     ui->lineEdit_beamEnFWHM->setReadOnly(true);
     ui->lineEdit_beamEnFWHM->setPalette(*palette);
     ui->label_pxSize->setText( QString::fromUtf8( "Pixel size (\xce\xbc\m)" ) );
@@ -1039,6 +1041,15 @@ void MainWindow::writeInput(QString filename){ //this writes the RADDOSE-3D inpu
             return;
         }
     }
+    else if(subprogram == "EMED"){
+        if (beamFlux != ""){
+            outfile << "EXPOSURE " << beamFlux.toUtf8().constData() << std::endl;
+        }
+        else{
+            QMessageBox::critical(this, tr("RADDOSE-3D Input Error"), tr("Error! Must specify the total exposure"));
+            return;
+        }
+    }
     else{
         if (beamFlux != ""){
             outfile << "FLUX " << beamFlux.toUtf8().constData() << std::endl;
@@ -1224,6 +1235,8 @@ void MainWindow::on_comboBox_subprogram_activated(const QString &arg1)
         simulation = false;
         ui->label_pulseEn->setVisible(false);
         ui->lineEdit_pulseEn->setVisible(false);
+        ui->label_exposure->setVisible(false);
+        ui->lineEdit_exposure->setVisible(false);
         ui->label_flux->setVisible(true);
         ui->lineEdit_flux->setVisible(true);
 
@@ -1241,6 +1254,8 @@ void MainWindow::on_comboBox_subprogram_activated(const QString &arg1)
         ui->lineEdit_pulseEn->setVisible(true);
         ui->label_flux->setVisible(false);
         ui->lineEdit_flux->setVisible(false);
+        ui->label_exposure->setVisible(false);
+        ui->lineEdit_exposure->setVisible(false);
 
        // ui->label_pulseLength->setVisible(true);
         ui->label_expTime->setVisible(true);
@@ -1257,8 +1272,30 @@ void MainWindow::on_comboBox_subprogram_activated(const QString &arg1)
         ui->lineEdit_pulseEn->setVisible(false);
         ui->label_flux->setVisible(true);
         ui->lineEdit_flux->setVisible(true);
+        ui->label_exposure->setVisible(false);
+        ui->lineEdit_exposure->setVisible(false);
         ui->label_flux->setText("Flux");
         //ui->label_pulseLength->setVisible(false);
+        ui->label_expTime->setVisible(true);
+        ui->label_expTime->setText("Exposure time (s)");
+    }
+    else if (arg1_upper == "EMED"){
+        ui->comboBox_subprogram->setCurrentText("Standard RADDOSE-3D");
+        ui->label_photons->setVisible(false);
+        ui->lineEdit_photons->setVisible(false);
+        ui->lineEdit_photons->setText("");
+        ui->label_runs->setVisible(false);
+        ui->lineEdit_runs->setVisible(false);
+        ui->lineEdit_runs->setText("");
+        simulation = false;
+        ui->label_pulseEn->setVisible(false);
+        ui->lineEdit_pulseEn->setVisible(false);
+        ui->label_exposure->setVisible(true);
+        ui->lineEdit_exposure->setVisible(true);
+        ui->label_flux->setVisible(false);
+        ui->lineEdit_flux->setVisible(false);
+
+       // ui->label_pulseLength->setVisible(false);
         ui->label_expTime->setVisible(true);
         ui->label_expTime->setText("Exposure time (s)");
     }
